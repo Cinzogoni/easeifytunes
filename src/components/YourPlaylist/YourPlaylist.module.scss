@@ -1,0 +1,71 @@
+.playlists {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.your-playlist {
+  width: 38px;
+  height: 23px;
+  border: var(--child-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+}
+
+.playlist-check {
+  color: var(--main-move-color);
+  width: 16px;
+  height: 14px;
+}
+
+.caret-right {
+  color: var(--main-move-color);
+  width: 16px;
+  height: 20px;
+  margin-right: 2px;
+}
+
+.show-yourPlaylist {
+  position: absolute;
+  bottom: 30px;
+}
+
+.yourPlaylist-note {
+  width: 300px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  border: var(--main-border);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+.login {
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.2;
+  color: rgba(12, 12, 20, 1);
+  margin-bottom: 6px;
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+//Other
+.caretNone {
+  display: none;
+}
+
+.yourPlaylistNone {
+  width: 40px;
+  height: 36px;
+  border: none;
+}

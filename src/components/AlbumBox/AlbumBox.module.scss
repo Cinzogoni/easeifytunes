@@ -1,0 +1,54 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-image: var(--child-background-color);
+  border: var(--main-border);
+  border-radius: var(--main-border-radius);
+
+  position: relative;
+}
+
+.link {
+  width: 280px;
+  height: 298px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.frame {
+  margin-top: 18px;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--main-border-radius);
+  border: var(--main-border);
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.desc {
+  width: 200px;
+  height: 78px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transform: translateY(-6px);
+}
+
+.album-name {
+  font-size: 0.8rem;
+  margin: 2px 0;
+}
+
+.album-performer {
+  font-size: 0.65rem;
+  margin: 2px 0;
+  opacity: 0.6;
+}

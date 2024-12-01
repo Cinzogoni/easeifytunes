@@ -1,0 +1,140 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  border: var(--main-border);
+  border-radius: var(--main-border-radius);
+  background-color: var(--main-move-color);
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.4rem;
+  color: rgba(12, 12, 20, 1);
+  margin-bottom: 16px;
+}
+
+.login {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  font-size: 1rem;
+  color: rgba(12, 12, 20, 1);
+  margin-bottom: 6px;
+}
+
+.box {
+  width: 340px;
+  height: 40px;
+  background-color: rgba(12, 12, 20, 1);
+  border-radius: var(--main-border-radius);
+  border: var(--main-border);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.frame {
+  width: 302px;
+  height: 100%;
+  font-size: 0.8rem;
+  padding: 0 6px 0 6px;
+  background-color: rgba(12, 12, 20, 0.8);
+  color: var(--main--text-color);
+  border-radius: var(--main-border-radius);
+  position: absolute;
+}
+
+.hide-show {
+  color: white;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 6px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.notification {
+  height: 22px;
+  color: rgba(255, 0, 0, 0.8);
+  font-size: 0.55rem;
+  display: flex;
+  align-items: center;
+  padding-left: 6px;
+}
+
+.submit-bg {
+  width: 340px;
+  height: 60px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.submit-button {
+  width: 100px;
+  height: 40px;
+  margin: 8px;
+  background-color: rgba(12, 12, 20, 1);
+  border-radius: var(--main-border-radius);
+  border: var(--main-border);
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(12, 12, 20, 0.8);
+  }
+}
+
+.submit-text {
+  font-size: 0.8rem;
+  color: var(--main--text-color);
+}
+
+.actions {
+  margin-top: 16px;
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gap {
+  width: 2px;
+  height: 100%;
+  background-color: rgba(12, 12, 20, 1);
+  margin: 0 12px 0 12px;
+  border-radius: 7px;
+}
+
+.action {
+  font-size: 0.6rem;
+  color: rgba(12, 12, 20, 1);
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}

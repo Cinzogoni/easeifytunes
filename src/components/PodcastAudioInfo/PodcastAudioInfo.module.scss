@@ -1,0 +1,261 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.back {
+  width: 40px;
+  height: 40px;
+  margin: 15px;
+  background-color: var(--main-move-color);
+  border: var(--main-border);
+  border-radius: 999px;
+  transform: translateY(-84px);
+  position: relative;
+}
+
+.arrow-left {
+  width: 25px;
+  height: 25px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  width: 100%;
+  margin: 15px 0;
+  display: flex;
+}
+
+.avatar {
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+  border: var(--main-border);
+  border-radius: var(--main-border-radius);
+}
+
+.info {
+  margin-left: 30px;
+}
+
+.title {
+  font-size: 1.1rem;
+  margin-bottom: 3px;
+}
+
+.publisher {
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+}
+
+.author {
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+}
+
+.release-day {
+  font-size: 0.7rem;
+  opacity: 0.6;
+  margin-bottom: 3px;
+}
+
+.more {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+.streams {
+  width: 158px;
+  height: 35px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.listeners {
+  color: var(--main-move-color);
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+
+.streamed {
+  width: 100%;
+  height: 100%;
+  font-size: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.share {
+  width: 30px;
+  height: 35px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.link {
+  color: var(--main-move-color);
+  width: 20px;
+  height: 20px;
+}
+
+.add {
+  width: 30px;
+  height: 35px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.plus {
+  color: var(--main-move-color);
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 980px) and (max-width: 1256px) {
+  .back-home {
+    margin: 10px;
+    transform: translateY(-84px);
+  }
+
+  .avatar {
+    width: 207px;
+    height: 207px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .publisher,
+  .author {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 887px) and (max-width: 979px) {
+  .back-home {
+    margin: 10px;
+    transform: translateY(-80px);
+  }
+
+  .avatar {
+    width: 201px;
+    height: 201px;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .publisher,
+  .author {
+    font-size: 0.7rem;
+  }
+
+  .streams {
+    width: 159px;
+  }
+
+  .listeners {
+    width: 20px;
+    height: 20px;
+  }
+
+  .streamed {
+    font-size: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .link {
+    width: 20px;
+    height: 20px;
+  }
+
+  .plus {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 886px) {
+  .back-home {
+    margin: 10px;
+    transform: translateY(-74px);
+  }
+
+  .avatar {
+    width: 192px;
+    height: 192px;
+  }
+
+  .title {
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+
+  .publisher,
+  .author {
+    font-size: 0.65rem;
+    margin: 5px 0;
+  }
+  .release-day {
+    font-size: 0.6rem;
+  }
+
+  .streams {
+    width: 170px;
+    height: 33px;
+  }
+
+  .listeners {
+    width: 20px;
+    height: 20px;
+  }
+
+  .streamed {
+    font-size: 0.45rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .share {
+    width: 30px;
+    height: 33px;
+  }
+
+  .link {
+    width: 20px;
+    height: 20px;
+  }
+
+  .add {
+    width: 30px;
+    height: 33px;
+  }
+
+  .plus {
+    width: 20px;
+    height: 20px;
+  }
+}

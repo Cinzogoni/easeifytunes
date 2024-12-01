@@ -1,0 +1,75 @@
+import classNames from "classnames/bind";
+import styles from "./AlbumPageSocial.module.scss";
+const cx = classNames.bind(styles);
+
+import { useRef, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+
+import GridSystem from "../GridSystem";
+
+import { Link } from "react-router-dom";
+import routesConfig from "~/config/routes";
+
+function AlbumPageSocial({ socialAlbums }) {
+  const { t } = useTranslation();
+  const [shuffledAlbums, setShuffledAlbums] = useState([]);
+  const isShuffled = useRef(false);
+
+  useEffect(() => {
+    if (!isShuffled.current && socialAlbums.length > 0) {
+      const shuffled = [...socialAlbums]
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 8);
+
+      setShuffledAlbums(shuffled);
+      isShuffled.current = true;
+    }
+  }, [socialAlbums]);
+
+  return (
+    <div className={cx("wrapper")}>
+      <h6 className={cx("title")}>{t("suggestions")}</h6>
+      <div className={cx("container")}>
+        <GridSystem rowClass={cx("row")}>
+          <div className={cx("frame")}>
+            {shuffledAlbums.map((album, index) => (
+              <GridSystem
+                key={index}
+                colClass={cx("col")}
+                colL={cx("l-1-8")}
+                colML={cx("ml-2")}
+                colM={cx("m-3")}
+                colSM={cx("sm-4")}
+              >
+                <div className={cx("box")}>
+                  <Link
+                    to={routesConfig.albumPage
+                      .replace(
+                        `:albumPerformer`,
+                        album.albumPerformer.replace(/\//g, "-")
+                      )
+                      .replace(
+                        `:albumName`,
+                        album.albumName.replace(/\//g, "-")
+                      )}
+                    className={cx("track-link")}
+                  />
+                  <div className={cx("avatar-box")}>
+                    <img
+                      className={cx("avatar")}
+                      src={album.albumAvatar}
+                      alt={album.albumName}
+                    />
+                  </div>
+                  <h6 className={cx("album-name")}>{album.albumName}</h6>
+                </div>
+              </GridSystem>
+            ))}
+          </div>
+        </GridSystem>
+      </div>
+    </div>
+  );
+}
+
+export default AlbumPageSocial;

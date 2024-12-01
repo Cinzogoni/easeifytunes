@@ -1,0 +1,184 @@
+.wrapper {
+  width: 100%;
+}
+
+.container {
+  max-width: 1630px;
+  height: 100vh;
+  max-height: calc(100vh - 224px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: auto;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--main-background-color);
+    border-radius: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(235, 235, 235, 1);
+    border-radius: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(150, 150, 150, 1);
+  }
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  border: var(--main-border);
+  border-radius: var(--main-border-radius);
+  background-image: var(--parent-background-color);
+}
+
+.top {
+  display: flex;
+}
+
+.back-home {
+  width: 40px;
+  height: 40px;
+  margin: 15px;
+  background-color: var(--main-move-color);
+  border: var(--main-border);
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+}
+
+.arrow-left {
+  width: 25px;
+  height: 25px;
+  color: rgba(0, 0, 0, 1);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-box {
+  position: relative;
+}
+
+.avatar {
+  width: 210px;
+  height: 210px;
+  margin: 15px 0 30px 0;
+  object-fit: cover;
+  border: var(--main-border);
+  border-radius: var(--main-border-radius);
+}
+
+.image-desc {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  color: rgba(0, 0, 0, 1);
+  padding-bottom: 15px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.change-avatar {
+  position: relative;
+  transform: translate(15px, 65px);
+}
+
+.avatar-input {
+  display: none;
+}
+
+.change-avatar-label {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--main--text-color);
+  color: rgba(0, 0, 0, 1);
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.5rem;
+  text-align: center;
+}
+
+.change-avatar-label:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.body {
+  margin: 15px 70px 0 70px;
+}
+
+.full-name,
+.email,
+.phone-number,
+.password {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.change-password {
+  width: 17.151%;
+  height: 40px;
+  background-color: var(--main--text-color);
+  border: 1px solid rgba(116, 108, 107, 0.4588235294);
+  border-radius: 10px;
+  transform: translateX(12px);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+  }
+}
+
+.verifying {
+  width: 17.151%;
+  height: 40px;
+  background-color: var(--main--text-color);
+  border: 1px solid rgba(116, 108, 107, 0.4588235294);
+  border-radius: 10px;
+  transform: translateX(12px);
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 1);
+    cursor: pointer;
+  }
+}
+
+.verified {
+  width: 17.151%;
+  height: 40px;
+  background-color: var(--main--text-color);
+  border: 1px solid rgba(116, 108, 107, 0.4588235294);
+  border-radius: 10px;
+  transform: translateX(12px);
+}
+
+.title {
+  width: 28%;
+  font-size: 1rem;
+}
+
+.bold {
+  width: 54%;
+  font-size: 1rem;
+  color: var(--main--text-color);
+}
+
+.desc {
+  color: rgba(12, 12, 20, 1);
+}

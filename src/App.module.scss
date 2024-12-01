@@ -1,0 +1,12 @@
+.App {
+  width: 100%;
+  max-width: calc(100% - 12px);
+  min-width: 788px;
+  height: 100%;
+  max-height: calc(100% - 12px);
+  min-height: 675px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}

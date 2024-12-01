@@ -1,0 +1,139 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  border: var(--main-border);
+  border-radius: var(--main-border-radius);
+  background-color: var(--main-move-color);
+}
+
+.container {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 1.4rem;
+  color: rgba(12, 12, 20, 1);
+  margin-bottom: 12px;
+}
+
+.full-name,
+.phone-number,
+.email,
+.password {
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  width: 340px;
+  height: 34px;
+  background-color: rgba(12, 12, 20, 1);
+  border-radius: var(--main-border-radius);
+  border: var(--main-border);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.frame {
+  width: 100%;
+  height: 100%;
+  font-size: 0.6rem;
+  padding: 0 6px 0 6px;
+  background-color: rgba(12, 12, 20, 0.8);
+  color: var(--main--text-color);
+  border-radius: var(--main-border-radius);
+  position: absolute;
+}
+
+.hide-show {
+  color: white;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  right: 6px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.notification {
+  height: 22px;
+  color: rgba(255, 0, 0, 0.8);
+  font-size: 0.5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 6px;
+}
+
+.desc {
+  height: 22px;
+  font-size: 0.55rem;
+  color: rgba(12, 12, 20, 1);
+  display: flex;
+  align-items: center;
+  padding-left: 6px;
+}
+
+.submit-bg {
+  width: 340px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.submit-button {
+  width: 100px;
+  height: 40px;
+  background-color: rgba(12, 12, 20, 1);
+  border-radius: var(--main-border-radius);
+  border: var(--main-border);
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(12, 12, 20, 0.8);
+  }
+}
+
+.submit-text {
+  font-size: 0.8rem;
+  color: var(--main--text-color);
+}
+
+.actions {
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action {
+  font-size: 0.6rem;
+  color: rgba(12, 12, 20, 1);
+}
+
+.link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

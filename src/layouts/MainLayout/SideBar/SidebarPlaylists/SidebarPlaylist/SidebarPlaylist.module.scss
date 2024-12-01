@@ -1,0 +1,26 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  max-height: calc(100vh - 476px);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--main-background-color);
+    border-radius: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(235, 235, 235, 1);
+    border-radius: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(150, 150, 150, 1);
+  }
+}
