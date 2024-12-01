@@ -115,7 +115,7 @@ function UserPage() {
               <div className={cx("full-name")}>
                 <h4 className={cx("title")}>{t("fullName")}:</h4>
                 <strong className={cx("bold")}>
-                  {currentUser ? currentUser.name : ""}
+                  {currentUser ? currentUser.userName : ""}
                 </strong>
               </div>
               <div className={cx("phone-number")}>

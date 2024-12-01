@@ -43,7 +43,7 @@ function Image() {
   const handleInfo = useCallback(() => {
     setVisible(false);
     if (currentUser) {
-      navigate(`/info/${currentUser.name}`);
+      navigate(`/info/${currentUser.userName}`);
     }
   }, [currentUser, navigate]);
 
