@@ -2,13 +2,14 @@ import classNames from "classnames/bind";
 import styles from "./YourPlaylistAdd.module.scss";
 const cx = classNames.bind(styles);
 
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useYourPlaylist } from "../YourPlaylistProvider";
 import { useUser } from "../UserProvider";
 
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
+
+import { baseName } from "~/bassName";
 
 function YourPlaylistAdd({
   itemName,
@@ -87,11 +88,11 @@ function YourPlaylistAdd({
 
     if (userName && itemName) {
       const newPlaylistName = encodeURIComponent(itemName);
-      const playlistPath1 = `/yourPlaylistPage/${userName}/${yourPlaylistName}`;
-      const playlistPath2 = `/yourPlaylistPage/${userName}/${newPlaylistName}`;
+      const playlistPath1 = `${baseName}/yourPlaylistPage/${userName}/${yourPlaylistName}`;
+      const playlistPath2 = `${baseName}/yourPlaylistPage/${userName}/${newPlaylistName}`;
 
       if (currentPath === playlistPath1 || currentPath === playlistPath2) {
-        navigate(`/yourPlaylistPage/${userName}/${newPlaylistName}`);
+        navigate(`${baseName}/yourPlaylistPage/${userName}/${newPlaylistName}`);
       }
     }
   };

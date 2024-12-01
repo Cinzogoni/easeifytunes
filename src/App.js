@@ -61,11 +61,12 @@ function App() {
                   key={index}
                   path={route.path}
                   element={
-                    <Layout>
-                      <Page>
-                        <LocationHandler />
-                      </Page>
-                    </Layout>
+                    <Fragment>
+                      <LocationHandler />
+                      <Layout>
+                        <Page />
+                      </Layout>
+                    </Fragment>
                   }
                 />
               );
