@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/easeifytunes-fe/static/css/main.413f3f07.css",
-    "main.js": "/easeifytunes-fe/static/js/main.6d31ce82.js",
+    "main.js": "/easeifytunes-fe/static/js/main.67e1588b.js",
     "static/js/453.606c54db.chunk.js": "/easeifytunes-fe/static/js/453.606c54db.chunk.js",
     "static/media/Chị Dâu Tôi.mp3": "/easeifytunes-fe/static/media/Chị Dâu Tôi.925a667ec92845da8b57.mp3",
     "static/media/비비 BIBI  가면무도회 Animal Farm.mp3": "/easeifytunes-fe/static/media/비비 BIBI  가면무도회 Animal Farm.8c627c211d6581100947.mp3",
@@ -96,11 +96,11 @@
     "static/media/ProximaNovaT-Thin.woff2": "/easeifytunes-fe/static/media/ProximaNovaT-Thin.bd087ed2c1c95fc74e2c.woff2",
     "index.html": "/easeifytunes-fe/index.html",
     "main.413f3f07.css.map": "/easeifytunes-fe/static/css/main.413f3f07.css.map",
-    "main.6d31ce82.js.map": "/easeifytunes-fe/static/js/main.6d31ce82.js.map",
+    "main.67e1588b.js.map": "/easeifytunes-fe/static/js/main.67e1588b.js.map",
     "453.606c54db.chunk.js.map": "/easeifytunes-fe/static/js/453.606c54db.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.413f3f07.css",
-    "static/js/main.6d31ce82.js"
+    "static/js/main.67e1588b.js"
   ]
 }
