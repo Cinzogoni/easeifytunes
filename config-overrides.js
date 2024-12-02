@@ -8,7 +8,7 @@ module.exports = override(useBabelRc(), (config) => {
       patterns: [
         {
           from: "src/assets/videos/**/*.{mp4,avi,mov}",
-          to: "videos",
+          to: "videos/[name][ext]",
         },
       ],
     })
