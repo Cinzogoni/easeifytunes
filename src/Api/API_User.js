@@ -1,12 +1,15 @@
 const API_USER = {
   userList: [
     {
-      id: "user01",
+      id: "user1",
       avatar: "",
       userName: "Cinzogoni",
       email: "contactwork.huytc@gmail.com",
       phoneNumber: "0386479893",
       password: "User@001",
+      emailVerification: true,
+      phoneNumberVerification: true,
+      passwordRecoveryCode: "",
       recentTrack: [
         {
           recentId: "",
@@ -20,12 +23,15 @@ const API_USER = {
       ],
     },
     {
-      id: "user02",
+      id: "user2",
       avatar: "",
       userName: "Trần Văn Quốc Kỳ",
       email: "Kyasd666@gmail.com",
       phoneNumber: "0386479893",
       password: "User@002",
+      emailVerification: true,
+      phoneNumberVerification: true,
+      passwordRecoveryCode: "",
       recentTrack: [
         {
           recentId: "",
@@ -39,12 +45,15 @@ const API_USER = {
       ],
     },
     {
-      id: "user03",
+      id: "user3",
       avatar: "",
       userName: "Brownie Benie",
       email: "Br.benie@gmail.com",
       phoneNumber: "0386479893",
       password: "User@003",
+      emailVerification: true,
+      phoneNumberVerification: true,
+      passwordRecoveryCode: "",
       recentTrack: [
         {
           recentId: "",
@@ -58,12 +67,15 @@ const API_USER = {
       ],
     },
     {
-      id: "user04",
+      id: "user4",
       avatar: "",
       userName: "Tuyền Lâm",
       email: "tuyenlam987@gmail.com",
       phoneNumber: "0386479893",
       password: "User@004",
+      emailVerification: true,
+      phoneNumberVerification: true,
+      passwordRecoveryCode: "",
       recentTrack: [
         {
           recentId: "",
@@ -77,12 +89,15 @@ const API_USER = {
       ],
     },
     {
-      id: "user05",
+      id: "user5",
       avatar: "",
       userName: "Rockoz",
       email: "rockozdanny@gmail.com",
       phoneNumber: "0386479893",
       password: "User@004",
+      emailVerification: true,
+      phoneNumberVerification: true,
+      passwordRecoveryCode: "",
       recentTrack: [
         {
           recentId: "",

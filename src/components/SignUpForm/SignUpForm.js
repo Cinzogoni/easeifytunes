@@ -8,12 +8,12 @@ import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { usePopUp } from "../PopUpProvider";
 import { useTranslation } from "react-i18next";
-
-import API_USER from "~/Api/API_User";
+import { useUser } from "../UserProvider";
 
 function SignUpForm({ onSignUp }) {
   const { t } = useTranslation();
   const { closeSignUpPopUp, openLoginPopUp } = usePopUp();
+  const { user } = useUser();
 
   const [showPassword, setShowPassword] = useState(false);
   const [fullName, setFullName] = useState("");
@@ -29,10 +29,10 @@ function SignUpForm({ onSignUp }) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const phoneExistsCheck = API_USER.some(
+    const phoneExistsCheck = user.find(
       (user) => user.phoneNumber === phoneNumber
     );
-    const emailExistsCheck = API_USER.some((user) => user.email === email);
+    const emailExistsCheck = user.find((user) => user.email === email);
 
     const passwordCheck =
       /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/.test(

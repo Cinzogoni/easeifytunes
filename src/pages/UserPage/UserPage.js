@@ -2,7 +2,7 @@ import classNames from "classnames/bind";
 import styles from "./UserPage.module.scss";
 const cx = classNames.bind(styles);
 
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
@@ -21,8 +21,6 @@ import ChangePassword from "~/components/ChangePassword";
 function UserPage() {
   const { t } = useTranslation();
 
-  const [phoneVerify, setPhoneVerify] = useState(true);
-  const [emailVerify, setEmailVerify] = useState(true);
   const navigate = useNavigate();
 
   const {
@@ -124,7 +122,7 @@ function UserPage() {
                   {currentUser ? currentUser.phoneNumber : ""}
                 </strong>
 
-                {phoneVerify ? (
+                {currentUser.phoneNumberVerification === true ? (
                   <button className={cx("verified")}>
                     <p className={cx("desc")}>{t("verified")}</p>
                   </button>
@@ -142,7 +140,7 @@ function UserPage() {
                 <strong className={cx("bold")}>
                   {currentUser ? currentUser.email : ""}
                 </strong>
-                {emailVerify ? (
+                {currentUser.emailVerification === true ? (
                   <button className={cx("verified")}>
                     <p className={cx("desc")}>{t("verified")}</p>
                   </button>

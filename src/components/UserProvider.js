@@ -83,6 +83,8 @@ export function UserProvider({ children }) {
     return <h1 style={{ color: "var(--main--text-color)" }}>Loading...</h1>;
   }
 
+  // console.log(user);
+
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 }
 
