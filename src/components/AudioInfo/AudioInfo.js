@@ -16,7 +16,6 @@ function AudioInfo() {
       <div className={cx("search")}>
         <Searchbar />
       </div>
-
       <div className={cx("container")}>
         <NewReleases />
         <div className={cx("separate")} />
@@ -27,8 +26,13 @@ function AudioInfo() {
         <Album />
         <div className={cx("separate")} />
         <Podcast />
-        <div className={cx("separate")} />
-        <Moment />
+
+        {process.env.NODE_ENV === "development" ? (
+          <Fragment>
+            <div className={cx("separate")} />
+            <Moment />
+          </Fragment>
+        ) : null}
       </div>
     </div>
   );
