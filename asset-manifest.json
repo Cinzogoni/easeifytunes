@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/easeifytunes-fe/static/css/main.413f3f07.css",
-    "main.js": "/easeifytunes-fe/static/js/main.c71dd6b7.js",
+    "main.js": "/easeifytunes-fe/static/js/main.8017500d.js",
     "static/js/453.606c54db.chunk.js": "/easeifytunes-fe/static/js/453.606c54db.chunk.js",
     "static/media/Chị Dâu Tôi.mp3": "/easeifytunes-fe/static/media/Chị Dâu Tôi.925a667ec92845da8b57.mp3",
     "static/media/비비 BIBI  가면무도회 Animal Farm.mp3": "/easeifytunes-fe/static/media/비비 BIBI  가면무도회 Animal Farm.8c627c211d6581100947.mp3",
@@ -31,7 +31,6 @@
     "static/media/Rhymastic  Side Effects feat Touliver  BWine.mp3": "/easeifytunes-fe/static/media/Rhymastic  Side Effects feat Touliver  BWine.51502b5b4277b8df8eb1.mp3",
     "static/media/RỐILOẠNBẠOLỰC.mp3": "/easeifytunes-fe/static/media/RỐILOẠNBẠOLỰC.5d068c35e53115cf7616.mp3",
     "static/media/ĐÀO LIỄU TOULIVER TRIPLE D.mp4": "/easeifytunes-fe/static/media/ĐÀO LIỄU TOULIVER TRIPLE D.04889523848caf442acb.mp4",
-    "videos/ĐÀO LIỄU TOULIVER TRIPLE D.mp4": "/easeifytunes-fe/videos/ĐÀO LIỄU TOULIVER TRIPLE D.mp4",
     "static/media/Eminem  We Made You.mp3": "/easeifytunes-fe/static/media/Eminem  We Made You.6c6ec731e5c3bdb7a58c.mp3",
     "static/media/Eminem  Nowhere Fast ft Kehlani.mp3": "/easeifytunes-fe/static/media/Eminem  Nowhere Fast ft Kehlani.fbcda4f2ae34de25a439.mp3",
     "static/media/Eminem  Love the Way You Lie feat Rihanna.mp3": "/easeifytunes-fe/static/media/Eminem  Love the Way You Lie feat Rihanna.7d8ac14de6d8f0981797.mp3",
@@ -79,7 +78,6 @@
     "static/media/Jack Harlow  Lovin On Me.mp3": "/easeifytunes-fe/static/media/Jack Harlow  Lovin On Me.e3aa08e98389967b81e4.mp3",
     "static/media/Birthday Cake Birthday Cake.mp3": "/easeifytunes-fe/static/media/Birthday Cake Birthday Cake.21ed71320276c651d0e1.mp3",
     "static/media/BEAT TRỐNG CƠM-ATVNTG.mp4": "/easeifytunes-fe/static/media/BEAT TRỐNG CƠM-ATVNTG.eb09e64bbf7b4be698d7.mp4",
-    "videos/BEAT TRỐNG CƠM-ATVNTG.mp4": "/easeifytunes-fe/videos/BEAT TRỐNG CƠM-ATVNTG.mp4",
     "static/media/MIN  PHẢI LÒNG ANH DREAM VER.mp3": "/easeifytunes-fe/static/media/MIN  PHẢI LÒNG ANH DREAM VER.0e9259fcc95fee0386a6.mp3",
     "static/media/MIN  PHẢI LÒNG ANH.mp3": "/easeifytunes-fe/static/media/MIN  PHẢI LÒNG ANH.171bca9b751949028a40.mp3",
     "static/media/MIN  CÀ PHÊ.mp3": "/easeifytunes-fe/static/media/MIN  CÀ PHÊ.7048a3e51ba99c7e695e.mp3",
@@ -87,7 +85,6 @@
     "static/media/MIN  ANH QUA ĐÂY ĐI OFFICIAL AUDIO.mp3": "/easeifytunes-fe/static/media/MIN  ANH QUA ĐÂY ĐI OFFICIAL AUDIO.5378fcc1eb41406a3e2f.mp3",
     "static/media/BIBI비비  BAD SAD AND MAD.mp3": "/easeifytunes-fe/static/media/BIBI비비  BAD SAD AND MAD.bd2e0cfc9f3a2e4c45ed.mp3",
     "static/media/MAKING 12H03 TOULIVER MASTAL.mp4": "/easeifytunes-fe/static/media/MAKING 12H03 TOULIVER MASTAL.f05c333542ceeaacbcd0.mp4",
-    "videos/MAKING 12H03 TOULIVER MASTAL.mp4": "/easeifytunes-fe/videos/MAKING 12H03 TOULIVER MASTAL.mp4",
     "static/media/BIBI비비  Umm Life.mp3": "/easeifytunes-fe/static/media/BIBI비비  Umm Life.1ea148a32f5a132e5928.mp3",
     "static/media/MIN  WATCHING THE STARS.mp3": "/easeifytunes-fe/static/media/MIN  WATCHING THE STARS.9f3bdbba26e08cdd516a.mp3",
     "static/media/Country Roads - The Southern RamBlers.mp3": "/easeifytunes-fe/static/media/Country Roads - The Southern RamBlers.6223b5c2ff1626d2d5a1.mp3",
@@ -99,11 +96,11 @@
     "static/media/ProximaNovaT-Thin.woff2": "/easeifytunes-fe/static/media/ProximaNovaT-Thin.bd087ed2c1c95fc74e2c.woff2",
     "index.html": "/easeifytunes-fe/index.html",
     "main.413f3f07.css.map": "/easeifytunes-fe/static/css/main.413f3f07.css.map",
-    "main.c71dd6b7.js.map": "/easeifytunes-fe/static/js/main.c71dd6b7.js.map",
+    "main.8017500d.js.map": "/easeifytunes-fe/static/js/main.8017500d.js.map",
     "453.606c54db.chunk.js.map": "/easeifytunes-fe/static/js/453.606c54db.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.413f3f07.css",
-    "static/js/main.c71dd6b7.js"
+    "static/js/main.8017500d.js"
   ]
 }
