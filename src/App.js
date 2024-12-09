@@ -51,7 +51,7 @@ function App() {
   return (
     <Router basename={baseName}>
       <AppProviders>
-        <div className={cx("App")}>
+        <div className={cx("app")}>
           <Routes>
             {publicRouter.map((route, index) => {
               const Page = route.component;

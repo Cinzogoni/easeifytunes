@@ -1,5 +1,6 @@
 import classNames from "classnames/bind";
 import styles from "./Header.module.scss";
+const cx = classNames.bind(styles);
 
 import { useState } from "react";
 
@@ -19,8 +20,6 @@ import PopUp from "~/components/PopUp";
 import LoginForm from "~/components/LoginForm";
 import SignUpForm from "~/components/SignUpForm";
 import ForgotPasswordForm from "~/components/ForgotPasswordForm";
-
-const cx = classNames.bind(styles);
 
 function Header() {
   const { t } = useTranslation();

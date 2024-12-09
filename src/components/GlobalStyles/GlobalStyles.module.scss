@@ -3,61 +3,43 @@
 :root {
   //Fonts
   --main-title-font: "ProximaNova", sans-serif;
-  --main--text-color: rgba(255, 255, 255, 0.8);
-  --secondary--text-color: rgba(12, 12, 20, 1);
-  //Color
-  --frame-background-color: rgba(255, 255, 255, 0.9);
-  --popper-background-color: rgba(12, 12, 20, 0.8);
-  --playlist--background-color: rgba(27, 27, 33, 1);
-  --secondary-background-color: rgba(12, 12, 20, 1);
-  --outer-background-color: rgba(5, 5, 5, 0.8);
-  --parent-background-color: linear-gradient(
-    to top,
-    rgba(102, 128, 150, 0.1) 30%,
-    rgba(58, 123, 189, 0.2) 50%,
-    rgba(145, 187, 229, 0.1) 100%
-  );
-  --hover-background-color: rgba(120, 100, 120, 0.2);
 
-  --child-background-color: linear-gradient(
-    to top,
-    rgba(102, 128, 150, 0.2) 30%,
-    rgba(58, 123, 189, 0.2) 50%,
-    rgba(145, 187, 229, 0.2) 100%
+  //Text
+  --1st--text-color: rgba(255, 255, 255, 0.8);
+  --2nd--text-color: rgb(12, 12, 20);
+
+  //Color
+  --main--background-linear: linear-gradient(
+    to right,
+    #0c1522,
+    #3b4f6d,
+    #0c1522
   );
-  --main-move-color: rgba(255, 255, 255, 1);
-  --secondary-move-color: rgba(12, 12, 20, 1);
+  --main--button-color: rgba(255, 255, 255, 1);
+  --waveform--animate-color: rgba(255, 255, 255, 1);
+  --1st--element-bg: rgba(255, 255, 255, 1);
 
   //Border
-  --main-border: 0.2px solid #746c6b75;
-  --frame-border: 2px solid #746c6b75;
-  --main-border-radius: 15px;
-  --child-border: 0.1px solid rgba(255, 255, 255, 0.5);
+  --border--main-layout: 1px solid #746c6b75;
+  --1st--border-element: 0.2px solid #746c6b75;
+  --2nd--border-element: 2px solid #746c6b75;
+
+  //Border-Radius
+  --1st--border-radius: 15px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-  font-size: 62.5%;
-  font-family: var(--main-title-font);
-  font-size: 1.6rem;
-  width: 100vw;
-  min-width: 768px;
-  text-rendering: optimizeSpeed;
-  background-color: rgba(12, 12, 20, 0.8);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  overflow-x: auto;
-  overflow-y: auto;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   user-select: none;
+  font-family: var(--main-title-font);
+  font-size: 62.5%;
+  text-rendering: optimizeSpeed;
 }
 
 h1,

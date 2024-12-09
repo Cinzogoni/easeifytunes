@@ -4,7 +4,7 @@ import styles from "./MainLayout.module.scss";
 import Header from "./Header";
 import AudioPlayer from "./AudioPlayer";
 
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import Sidebar from "./SideBar/Sidebar";
 
 const cx = classNames.bind(styles);
@@ -19,11 +19,8 @@ function MainLayout({ children }) {
 
       {/* ----- MAIN ----- */}
       <main className={cx("main")}>
-        <div className={cx("sidebar")}>
-          <Sidebar />
-        </div>
-
-        <section className={cx("content")}>{children}</section>
+        {/* <div className={cx("sidebar")}>{<Sidebar />}</div> */}
+        {/* <section className={cx("content")}>{children}</section>  */}
       </main>
 
       {/* ----- FOOTER ----- */}
@@ -34,7 +31,7 @@ function MainLayout({ children }) {
   );
 }
 
-MainLayout.propTypes = {
-  children: PropTypes.node.isRequired,
-};
+// MainLayout.propTypes = {
+//   children: PropTypes.node.isRequired,
+// };
 export default MainLayout;

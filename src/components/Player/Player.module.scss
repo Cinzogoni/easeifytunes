@@ -52,7 +52,7 @@ audio {
   margin: 0 3px;
   border: 1px solid rgba(0, 0, 0, 1);
   border-radius: 30%;
-  background-color: var(--main-move-color);
+  background-color: var(--waveform--animate-color);
   animation: animate 1.2s linear infinite;
 }
 
@@ -91,7 +91,7 @@ audio {
   margin: 0 3px;
   border: 1px solid rgba(0, 0, 0, 1);
   border-radius: 30%;
-  background-color: var(--main-move-color);
+  background-color: var(--waveform--animate-color);
   animation: animate 1.2s linear infinite;
 }
 
@@ -118,9 +118,9 @@ audio {
 .player-btn {
   width: 48px;
   height: 48px;
-  border: var(--main-border);
+  background-color: var(--1st--element-bg);
+  border: var(--1st--border-element);
   border-radius: 999px;
-  background-color: var(--main-move-color);
   margin: 0 auto;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
@@ -145,9 +145,9 @@ audio {
   margin: 0 auto;
   width: 48px;
   height: 48px;
-  border: var(--main-border);
+  background-color: var(--1st--element-bg);
+  border: var(--1st--border-element);
   border-radius: 999px;
-  background-color: var(--main-move-color);
   position: absolute;
   left: 50px;
   transform: translate(50%);
@@ -174,11 +174,11 @@ audio {
 }
 
 .list-note {
-  width: 200px;
-  background-color: rgba(255, 255, 255, 1);
+  width: 220px;
+  background-color: var(--1st--element-bg);
+  border: var(--2nd--border-element);
   border-radius: 10px;
-  border: var(--main-border);
-  font-size: 1rem;
+  font-size: 1.8rem;
   display: flex;
   align-items: center;
   text-align: center;
@@ -188,7 +188,7 @@ audio {
 .list-mode {
   width: 38px;
   height: 23px;
-  border: var(--child-border);
+  border: var(--1st--border-element);
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -197,20 +197,20 @@ audio {
 
 .mode-notify {
   width: 100%;
-  color: var(--secondary-text-color);
+  color: var(--2nd--text-color);
   line-height: 1.5;
   margin: 5px;
   text-align: center;
 }
 
 .disc {
-  color: var(--main-move-color);
+  color: var(--main--button-color);
   width: 16px;
   height: 14px;
 }
 
 .caret-left {
-  color: var(--main-move-color);
+  color: var(--main--button-color);
   width: 16px;
   height: 20px;
   margin-left: 2px;
@@ -256,7 +256,6 @@ audio {
   width: 50px;
   height: 50px;
   top: 0px;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -266,9 +265,9 @@ audio {
   margin: 0 auto;
   width: 36px;
   height: 36px;
-  border: var(--main-border);
+  background-color: var(--1st--element-bg);
+  border: var(--1st--border-element);
   border-radius: 999px;
-  background-color: var(--main-move-color);
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
 }
@@ -283,9 +282,9 @@ audio {
   width: 36px;
   height: 36px;
   left: -11px;
-  border: var(--main-border);
+  background-color: var(--1st--element-bg);
+  border: var(--1st--border-element);
   border-radius: 999px;
-  background-color: var(--main-move-color);
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
 }
@@ -379,9 +378,10 @@ audio {
 }
 
 .title {
-  font-size: 0.6rem;
+  font-size: 1.4rem;
   white-space: nowrap;
   animation: scroll 12s linear infinite;
+  color: var(--1st--text-color);
 }
 
 .title:hover {
@@ -408,7 +408,8 @@ audio {
 .time-start {
   width: 40px;
   height: 100%;
-  font-size: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--1st--text-color);
   display: flex;
   align-items: center;
 }
@@ -416,12 +417,11 @@ audio {
 .time-bar {
   width: 528px;
   height: 10px;
-  border: 1px solid #746c6b75;
-  border-radius: var(--main-border-radius);
-  background-color: rgba(12, 12, 20, 0.8);
+  border: var(--1st--border-element-1);
+  border-radius: var(--1st--border-radius);
+  background-color: var(--1st--element-bg);
   display: flex;
   align-items: center;
-
   position: relative;
 }
 
@@ -429,7 +429,7 @@ audio {
   width: 20px;
   height: 20px;
   border: 2px solid rgba(128, 128, 128, 0.5);
-  border-radius: var(--main-border-radius);
+  border-radius: var(--1st--border-radius);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -439,20 +439,21 @@ audio {
 .breakpoint {
   width: 16px;
   height: 16px;
-  color: var(--main-move-color);
+  color: var(--main--button-color);
 }
 
 .timing {
   width: 0%;
   height: 8px;
-  border-radius: var(--main-border-radius);
-  background-color: var(--main-move-color);
+  border-radius: var(--1st--border-radius);
+  background-color: var(--1st--element-bg);
 }
 
 .time-end {
   width: 40px;
   height: 100%;
-  font-size: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--1st--text-color);
   display: flex;
   justify-content: end;
   display: flex;
@@ -477,7 +478,7 @@ audio {
   height: 25px;
   width: 25px;
   margin: 0 9px;
-  color: var(--main-move-color);
+  color: var(--1st--text-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -546,8 +547,8 @@ audio {
 .volume-bar {
   width: 62px;
   height: 5px;
-  border: 1px solid #746c6b75;
-  border-radius: var(--main-border-radius);
+  border: var(--1st--border-element);
+  border-radius: var(--1st--border-radius);
   background-color: rgba(12, 12, 20, 0.8);
   display: flex;
   align-items: center;
@@ -558,15 +559,15 @@ audio {
   // vol: 0.0 (w:0), vol: 1 (w:100%)
   width: 100%;
   height: 6px;
-  border-radius: var(--main-border-radius);
-  background-color: var(--main-move-color);
+  border-radius: var(--1st--border-radius);
+  background-color: var(--1st--element-bg);
 }
 
 .volume-dot {
   width: 10px;
   height: 10px;
-  border: 2px solid rgba(128, 128, 128, 1);
-  border-radius: var(--main-border-radius);
+  border: var(--2nd--border-element);
+  border-radius: var(--1st--border-radius);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -576,8 +577,8 @@ audio {
 .volume-point {
   width: 12px;
   height: 12px;
-  color: var(--main-move-color);
-  border: var(--main-border);
+  color: var(--main--button-color);
+  border: var(--2nd--border-element);
   border-radius: 999px;
 }
 

@@ -7,42 +7,33 @@
 }
 
 .header {
-  width: 100%;
   height: 100px;
 }
 
 .footer {
-  width: 100%;
   height: 100px;
-
-  background-image: var(--child-background-color);
-  border-radius: var(--main-border-radius);
-  border: var(--main-border);
-
+  background: var(--main--background-linear);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .main {
-  width: 100%;
-  height: 100%;
-  margin: 6px 0;
-  max-height: calc(100% - 200px);
+  flex: 1;
   display: flex;
 }
 
-.sidebar {
-  width: 308px;
-  height: 100%;
-  margin-right: 6px;
-}
+// .sidebar {
+//   width: 308px;
+//   height: 100%;
+//   margin-right: 6px;
+// }
 
-.content {
-  width: 100%;
-  height: 100%;
-  border-radius: var(--main-border-radius);
-}
+// .content {
+//   width: 100%;
+//   height: 100%;
+//   border-radius: var(--main-border-radius);
+// }
 
 @media (max-width: 1280px) {
   .sidebar {

@@ -428,7 +428,7 @@ const Player = ({
                 : "transparent",
             backgroundImage:
               !activeModeList && !focus
-                ? "linear-gradient(to top, rgba(102, 128, 150, 0.1) 30%, rgba(58, 123, 189, 0.2) 50%, rgba(145, 187, 229, 0.1) 100%)"
+                ? "linear-gradient(to top, rgba(102, 128, 150, 0.2) 30%, rgba(58, 123, 189, 0.4) 50%, rgba(145, 187, 229, 0.2) 100%)"
                 : undefined,
           }}
         >
