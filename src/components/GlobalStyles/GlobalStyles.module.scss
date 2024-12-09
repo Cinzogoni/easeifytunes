@@ -6,18 +6,18 @@
 
   //Text
   --1st--text-color: rgba(255, 255, 255, 0.8);
-  --2nd--text-color: rgb(12, 12, 20);
+  --2nd--text-color: rgba(12, 12, 20, 0.8);
 
   //Color
   --main--background-linear: linear-gradient(
     to right,
-    #0c1522,
-    #3b4f6d,
-    #0c1522
+    #0a0f1b,
+    #2d4b74 50%,
+    #0a0f1b
   );
-  --main--button-color: rgba(255, 255, 255, 1);
-  --waveform--animate-color: rgba(255, 255, 255, 1);
-  --1st--element-bg: rgba(255, 255, 255, 1);
+  --main--button-color: #ffffff;
+  --waveform--animate-color: #ffffff;
+  --1st--element-bg: #ffffff;
 
   //Border
   --border--main-layout: 1px solid #746c6b75;
