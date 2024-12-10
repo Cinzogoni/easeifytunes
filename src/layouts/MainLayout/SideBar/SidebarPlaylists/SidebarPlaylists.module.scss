@@ -51,7 +51,7 @@
 }
 
 .exp {
-  width: 212px;
+  width: 86%;
   height: 80px;
   display: flex;
   align-items: center;
@@ -73,5 +73,15 @@
   &:hover {
     cursor: pointer;
     text-decoration: underline;
+  }
+}
+
+@media (max-width: 1919px) {
+  .desc {
+    font-size: 1.6rem;
+  }
+
+  .bold {
+    font-size: 1.4rem;
   }
 }

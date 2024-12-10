@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  height: 318.5px;
+  height: 371.665px;
 }
 
 .actions {
@@ -37,7 +37,7 @@
 
 .frame {
   width: 100%;
-  height: 282.5px;
+  height: 305.675px;
   display: flex;
 
   background-color: rgba(128, 128, 128, 0.2);
@@ -55,28 +55,4 @@
   width: 100%;
   height: 100%;
   position: absolute;
-}
-
-@media (min-width: 784px) and (max-width: 892px) {
-  .title {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width: 783px) {
-  .title {
-    font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 939px) {
-  .link-route {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 827px) {
-  .link-route {
-    font-size: 0.7rem;
-  }
 }
