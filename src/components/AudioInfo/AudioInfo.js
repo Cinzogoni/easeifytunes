@@ -2,6 +2,8 @@ import classNames from "classnames/bind";
 import styles from "./AudioInfo.module.scss";
 
 import Searchbar from "../Searchbar";
+
+import GridSystem from "../GridSystem";
 import NewReleases from "../NewReleases";
 import TrendingSongs from "../TrendingSongs";
 import MusicMaker from "../MusicMaker";
@@ -13,22 +15,21 @@ const cx = classNames.bind(styles);
 function AudioInfo() {
   return (
     <div className={cx("wrapper")}>
-      <div className={cx("search")}>
-        <Searchbar />
-      </div>
-
       <div className={cx("container")}>
-        <NewReleases />
-        <div className={cx("separate")} />
-        {/* <TrendingSongs /> */}
-        <div className={cx("separate")} />
-        {/* <MusicMaker /> */}
-        <div className={cx("separate")} />
-        {/* <Album /> */}
-        <div className={cx("separate")} />
-        {/* <Podcast /> */}
-        <div className={cx("separate")} />
-        {/* <Moment /> */}
+        <div className={cx("search")}>
+          <Searchbar />
+        </div>
+
+        <div className={cx("audios")}>
+          <GridSystem gridClass={cx("grid")} wideClass={cx("wide")}>
+            <NewReleases />
+            {/* <TrendingSongs /> */}
+            {/* <MusicMaker /> */}
+            {/* <Album /> */}
+            {/* <Podcast /> */}
+            {/* <Moment /> */}
+          </GridSystem>
+        </div>
       </div>
     </div>
   );

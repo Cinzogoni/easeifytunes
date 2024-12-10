@@ -1,23 +1,17 @@
-.wrapper {
-  border: var(--main-border);
-  border-radius: var(--main-border-radius);
-  background-image: var(--parent-background-color);
-}
-
 .container {
-  margin-bottom: 16px;
+  width: 100%;
+  height: 318.5px;
 }
 
 .actions {
-  margin: 12px 36px;
+  padding: 15px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .title {
-  font-size: 1.8rem;
-  color: var(--main--text-color);
+  font-size: var(--1st--font-size);
 }
 
 .actions-btn {
@@ -26,12 +20,14 @@
 }
 
 .move {
+  width: 36px;
+  height: 36px;
   margin-right: 12px;
-  color: var(--main-move-color);
+  color: var(--main--button-color);
 }
 
 .link-route {
-  font-size: 1.3rem;
+  font-size: var(--2nd--font-size);
   transition: transform 0.1s ease-in-out;
 
   &:hover {
@@ -41,21 +37,23 @@
 
 .frame {
   width: 100%;
-  height: 100%;
+  height: 282.5px;
   display: flex;
+
+  background-color: rgba(128, 128, 128, 0.2);
 }
 
 .boxes {
-  width: 100%;
-  height: 300px;
+  width: 246px;
+  height: 270.5px;
   display: flex;
   justify-content: center;
   position: relative;
 }
 
 .song-box {
-  width: 280px;
-  height: 300px;
+  width: 100%;
+  height: 100%;
   position: absolute;
 }
 

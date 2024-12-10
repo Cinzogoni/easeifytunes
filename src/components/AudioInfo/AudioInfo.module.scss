@@ -1,20 +1,30 @@
 .wrapper {
-  width: 100%;
-  height: 100%;
-  background: var(--1st-background-color);
-}
-
-.search {
-  max-width: 1630px;
-  margin: 0 auto 12px auto;
+  flex: 1;
 }
 
 .container {
   max-width: 1630px;
-  height: 100vh;
-  max-height: calc(100vh - 352px);
+  height: 100%;
+  background: var(--1st-background-color);
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
+.search {
+  width: 100%;
+  min-width: 400px;
+  margin: 0 auto;
+}
+
+.audios {
+  width: 100%;
+  min-width: 400px;
+  flex: 1;
+  margin: 0 auto;
+  padding: 0 15px;
   overflow-y: auto;
   overflow-x: auto;
 
@@ -23,21 +33,15 @@
   }
 
   &::-webkit-scrollbar-track {
-    background: var(--main-background-color);
     border-radius: 1px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: rgba(235, 235, 235, 1);
+    background: var(--1st--element-bg);
     border-radius: 1px;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: rgba(150, 150, 150, 1);
+    background: var(--3rd--element-bg);
   }
-}
-
-.separate {
-  width: 100%;
-  height: 12px;
 }

@@ -33,6 +33,8 @@
 
 .content {
   flex: 10;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 1280px) {

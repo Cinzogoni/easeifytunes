@@ -111,82 +111,67 @@ function NewReleases() {
   };
 
   return (
-    <div className={cx("wrapper")}>
-      <div className={cx("container")}>
-        <div className={cx("actions")}>
-          <h2 className={cx("title")}>{t("newReleases")}</h2>
+    <div className={cx("container")}>
+      <div className={cx("actions")}>
+        <h2 className={cx("title")}>{t("newReleases")}</h2>
 
-          <div className={cx("actions-btn")}>
-            <FontAwesomeIcon
-              className={cx("move")}
-              icon={faCircleChevronLeft}
-              onClick={() => {
-                handleScroll("prev"),
-                  setShowNewReleasesPlaylist(false),
-                  setActiveNewReleasesPlaylist(false);
-              }}
-              style={{
-                transition: "transition: transform 0.1s ease-in-out",
-                transform: activeMove === "prev" ? "scale(1.1)" : "scale(1)",
-              }}
-            />
-            <FontAwesomeIcon
-              className={cx("move")}
-              icon={faCircleChevronRight}
-              onClick={() => {
-                handleScroll("next"),
-                  setShowNewReleasesPlaylist(false),
-                  setActiveNewReleasesPlaylist(false);
-              }}
-              style={{
-                transition: "transition: transform 0.1s ease-in-out",
-                transform: activeMove === "next" ? "scale(1.1)" : "scale(1)",
-              }}
-            />
-            <Navigation id={cx("new-releases-viewAll")}>
-              <h3 className={cx("link-route")}>{t("viewAll")}</h3>
-            </Navigation>
-          </div>
-        </div>
-
-        <GridSystem rowClass={cx("row")}>
-          <div
-            className={cx("frame")}
-            style={{
-              transition: "transform 0.3s ease-in-out",
-              transform: transformValue(),
+        <div className={cx("actions-btn")}>
+          <FontAwesomeIcon
+            className={cx("move")}
+            icon={faCircleChevronLeft}
+            onClick={() => {
+              handleScroll("prev"),
+                setShowNewReleasesPlaylist(false),
+                setActiveNewReleasesPlaylist(false);
             }}
-          >
-            {filteredTracks.map((track) => (
-              <GridSystem
-                key={track.id}
-                colClass={cx("col")}
-                colL={cx("l-3")}
-                colML={cx("ml-4")}
-                colM={cx("m-6")}
-                colSM={cx("sm-12")}
-                colS={cx("s-12")}
-                colMo={cx("mo-12")}
-              >
-                <div className={cx("boxes")}>
-                  <div className={cx("song-box")}>
-                    <NewReleasesBox
-                      trackId={track.id}
-                      trackLink={track.link}
-                      trackAvatar={track.avatar || track.albumAvatar}
-                      trackTitle={track.title}
-                      trackPerformer={track.stageName}
-                      trackType={track.type}
-                      trackGenre={track.genre}
-                      releaseDay={track.releaseDay}
-                      streamed={track.streamed}
-                    />
-                  </div>
-                </div>
-              </GridSystem>
-            ))}
+            style={{
+              transition: "transition: transform 0.1s ease-in-out",
+              transform: activeMove === "prev" ? "scale(1.1)" : "scale(1)",
+            }}
+          />
+          <FontAwesomeIcon
+            className={cx("move")}
+            icon={faCircleChevronRight}
+            onClick={() => {
+              handleScroll("next"),
+                setShowNewReleasesPlaylist(false),
+                setActiveNewReleasesPlaylist(false);
+            }}
+            style={{
+              transition: "transition: transform 0.1s ease-in-out",
+              transform: activeMove === "next" ? "scale(1.1)" : "scale(1)",
+            }}
+          />
+          <Navigation id={cx("new-releases-viewAll")}>
+            <h3 className={cx("link-route")}>{t("viewAll")}</h3>
+          </Navigation>
+        </div>
+      </div>
+
+      <div
+        className={cx("frame")}
+        style={{
+          transition: "transform 0.3s ease-in-out",
+          transform: transformValue(),
+        }}
+      >
+        {/* {filteredTracks.map((track) => (
+          <div className={cx("boxes")}>
+            <div className={cx("song-box")}>
+              <NewReleasesBox
+                trackId={track.id}
+                trackLink={track.link}
+                trackAvatar={track.avatar || track.albumAvatar}
+                trackTitle={track.title}
+                trackPerformer={track.stageName}
+                trackType={track.type}
+                trackGenre={track.genre}
+                releaseDay={track.releaseDay}
+                streamed={track.streamed}
+              />
+            </div>
           </div>
-        </GridSystem>
+        ))} */}
       </div>
     </div>
   );
