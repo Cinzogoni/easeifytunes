@@ -139,7 +139,6 @@ const Player = ({
     setActiveNewReleasesPlaylist,
     setShowNewReleasesPlaylist,
     setShowNewReleasesNotify,
-    playlistItem,
   } = useYourPlaylist();
 
   const [show, setShow] = useState(false);

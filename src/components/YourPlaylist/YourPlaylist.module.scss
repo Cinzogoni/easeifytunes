@@ -7,7 +7,7 @@
 .your-playlist {
   width: 38px;
   height: 23px;
-  border: var(--1st--border-element);
+  border: var(--2nd--border-element);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,14 +29,15 @@
 
 .show-yourPlaylist {
   position: absolute;
-  bottom: 29px;
+  bottom: 101px;
+  right: 0;
 }
 
 .yourPlaylist-note {
   width: 250px;
   color: var(--2nd--text-color);
   background-color: var(--1st--element-bg);
-  border: var(--2nd--border-element);
+  border: var(--3rd--border-element);
   border-radius: 10px;
   font-size: 2rem;
   display: flex;

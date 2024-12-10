@@ -119,7 +119,7 @@ audio {
   width: 48px;
   height: 48px;
   background-color: var(--1st--element-bg);
-  border: var(--1st--border-element);
+  border: var(--2nd--border-element);
   border-radius: 999px;
   margin: 0 auto;
   opacity: 0;
@@ -146,7 +146,7 @@ audio {
   width: 48px;
   height: 48px;
   background-color: var(--1st--element-bg);
-  border: var(--1st--border-element);
+  border: var(--2nd--border-element);
   border-radius: 999px;
   position: absolute;
   left: 50px;
@@ -176,19 +176,19 @@ audio {
 .list-note {
   width: 220px;
   background-color: var(--1st--element-bg);
-  border: var(--2nd--border-element);
+  border: var(--3rd--border-element);
   border-radius: 10px;
   font-size: 1.8rem;
   display: flex;
   align-items: center;
   text-align: center;
-  transform: translateX(20px);
+  transform: translateX(80px);
 }
 
 .list-mode {
   width: 38px;
   height: 23px;
-  border: var(--1st--border-element);
+  border: var(--2nd--border-element);
   border-radius: 5px;
   display: flex;
   align-items: center;
@@ -266,7 +266,7 @@ audio {
   width: 36px;
   height: 36px;
   background-color: var(--1st--element-bg);
-  border: var(--1st--border-element);
+  border: var(--2nd--border-element);
   border-radius: 999px;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
@@ -283,7 +283,7 @@ audio {
   height: 36px;
   left: -11px;
   background-color: var(--1st--element-bg);
-  border: var(--1st--border-element);
+  border: var(--2nd--border-element);
   border-radius: 999px;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
@@ -317,19 +317,15 @@ audio {
 .frameFooterResize {
   width: 100%;
   height: 100%;
-  top: 50%;
-}
-
-.playerFooterResize {
-  width: 100%;
-  height: 52px;
-  bottom: 0;
+  position: static;
+  transform: none;
 }
 
 .playerFooterBtn {
   width: 38px;
   height: 38px;
   opacity: 1;
+  margin: 0;
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -360,12 +356,17 @@ audio {
   display: block;
   width: 100%;
   height: 23px;
-  margin-top: 6px;
+  margin: 6px 0 6px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: absolute;
-  top: 0;
+  position: static;
+}
+
+.playerFooterResize {
+  position: static;
+  height: 100%;
+  justify-content: center;
 }
 
 .sign {
@@ -399,7 +400,7 @@ audio {
 
 .playTimeFooter {
   width: 100%;
-  height: 82px;
+  padding: 0 1px 0 1px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -407,17 +408,16 @@ audio {
 
 .time-start {
   width: 40px;
-  height: 100%;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--1st--text-color);
   display: flex;
   align-items: center;
 }
 
 .time-bar {
-  width: 528px;
+  width: 86.52631%;
   height: 10px;
-  border: var(--1st--border-element-1);
+  border: var(--1st--border-element);
   border-radius: var(--1st--border-radius);
   background-color: var(--1st--element-bg);
   display: flex;
@@ -433,7 +433,7 @@ audio {
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateX(-30%);
+  transform: translateX(-15%);
 }
 
 .breakpoint {
@@ -451,8 +451,7 @@ audio {
 
 .time-end {
   width: 40px;
-  height: 100%;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--1st--text-color);
   display: flex;
   justify-content: end;
@@ -547,7 +546,7 @@ audio {
 .volume-bar {
   width: 62px;
   height: 5px;
-  border: var(--1st--border-element);
+  border: var(--2nd--border-element);
   border-radius: var(--1st--border-radius);
   background-color: rgba(12, 12, 20, 0.8);
   display: flex;
@@ -566,7 +565,7 @@ audio {
 .volume-dot {
   width: 10px;
   height: 10px;
-  border: var(--2nd--border-element);
+  border: var(--3rd--border-element);
   border-radius: var(--1st--border-radius);
   display: flex;
   align-items: center;
@@ -578,7 +577,7 @@ audio {
   width: 12px;
   height: 12px;
   color: var(--main--button-color);
-  border: var(--2nd--border-element);
+  border: var(--3rd--border-element);
   border-radius: 999px;
 }
 
@@ -831,6 +830,44 @@ audio {
 .show-list {
   width: 768px;
   position: absolute;
-  bottom: 30px;
-  left: -100px;
+  bottom: 101px;
+  left: -80px;
+}
+
+//Footer Responsive
+@media (min-width: 639px) and (max-width: 888px) {
+  .show-list {
+    width: 600px;
+    left: 5px;
+  }
+
+  .list-note {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 638px) {
+  .time-bar {
+    width: 82.52631%;
+  }
+
+  .actionsFooterLeft,
+  .actionsFooterRight {
+    width: unset;
+    transform: translateX(-7px);
+  }
+
+  .playerFooterBtn,
+  .stopperFooterBtn {
+    transform: translateX(-7px);
+  }
+
+  .show-list {
+    width: 400px;
+    left: -8px;
+  }
+
+  .list-note {
+    transform: translateX(5px);
+  }
 }
