@@ -1,39 +1,41 @@
 .container {
   width: 100%;
   height: 100%;
+  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  background-image: var(--child-background-color);
-  border: var(--main-border);
-  border-radius: var(--main-border-radius);
+  background: var(--4th--element-bg);
+  border: var(--1st--border-element);
+  border-radius: var(--2nd--border-radius);
 
   position: relative;
 }
 
 .link {
-  width: 280px;
-  height: 249px;
+  width: 100%;
+  height: 78.35811%;
   position: absolute;
   cursor: pointer;
 }
 
 .player {
-  margin-top: 18px;
+  margin-top: 7px;
 }
 
 .avatar {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   object-fit: cover;
-  border-radius: var(--main-border-radius);
-  border: var(--main-border);
+  border-radius: var(--2nd--border-radius);
+  border: var(--2nd--border-element);
   image-rendering: -webkit-optimize-contrast;
 }
 
 .menu {
-  width: 200px;
+  width: 170px;
   margin-top: 10px;
   display: flex;
   align-items: center;
@@ -41,33 +43,34 @@
 }
 
 .streams {
-  width: 102px;
+  width: 80px;
   height: 40px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 7px;
+  border: var(--5th--border-element);
+  border-radius: var(--2nd--border-radius);
   display: flex;
   align-items: center;
-  justify-content: space-around;
 }
 
 .headphone {
   width: 20px;
   height: 20px;
   padding-left: 6px;
-  color: var(--main-move-color);
+  color: var(--main--button-color);
 }
 
 .listens {
   width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding-top: 2px;
+  text-align: center;
 }
 
 .listener {
-  height: 16px;
-  font-size: 0.6rem;
+  font-size: 1.2rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
 }
 
 .info {
@@ -76,14 +79,14 @@
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 7px;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
-  color: var(--main-move-color);
+  width: 15px;
+  height: 15px;
+  color: var(--main--button-color);
 }
 
 .your-playlist {

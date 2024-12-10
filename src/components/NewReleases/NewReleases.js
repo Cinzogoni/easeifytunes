@@ -155,9 +155,9 @@ function NewReleases() {
           transform: transformValue(),
         }}
       >
-        {/* {filteredTracks.map((track) => (
-          <div className={cx("boxes")}>
-            <div className={cx("song-box")}>
+        <GridSystem rowClass={cx("row")}>
+          {filteredTracks.map((track) => (
+            <GridSystem key={track.id} colClass={cx("col")} colL={cx("l-2")}>
               <NewReleasesBox
                 trackId={track.id}
                 trackLink={track.link}
@@ -169,9 +169,9 @@ function NewReleases() {
                 releaseDay={track.releaseDay}
                 streamed={track.streamed}
               />
-            </div>
-          </div>
-        ))} */}
+            </GridSystem>
+          ))}
+        </GridSystem>
       </div>
     </div>
   );

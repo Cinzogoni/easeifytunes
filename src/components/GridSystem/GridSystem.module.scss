@@ -10,16 +10,22 @@
 
 .row {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-wrap: nowrap;
   overflow: hidden;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .col {
+  height: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 //Large
-@media (min-width: 1920) {
+@media (min-width: 1920px) {
   .l-0 {
     display: none;
   }
