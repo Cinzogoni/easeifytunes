@@ -19,8 +19,9 @@ function MainLayout({ children }) {
 
       {/* ----- MAIN ----- */}
       <main className={cx("main")}>
-        {/* <div className={cx("sidebar")}>{<Sidebar />}</div> */}
-        {/* <section className={cx("content")}>{children}</section>  */}
+        <div className={cx("sidebar")}>{<Sidebar />}</div>
+
+        <section className={cx("content")}>{children}</section>
       </main>
 
       {/* ----- FOOTER ----- */}

@@ -18,7 +18,7 @@ function MusicTrackItem({ trackAvatar, trackTitle, trackPerformer }) {
       >
         <div className={cx("info-box")}>
           <img className={cx("avatar")} src={trackAvatar} alt={trackTitle} />
-          <div>
+          <div className={cx("info")}>
             <h6 className={cx("track-name")}>{trackTitle}</h6>
             <p className={cx("track-performer")}>{trackPerformer}</p>
           </div>

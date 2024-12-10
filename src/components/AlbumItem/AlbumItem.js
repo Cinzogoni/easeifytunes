@@ -16,7 +16,8 @@ function AlbumItem({ albumAvatar, albumName, albumPerformer }) {
       >
         <div className={cx("info-box")}>
           <img className={cx("avatar")} src={albumAvatar} alt={albumName} />
-          <div>
+
+          <div className={cx("info")}>
             <h6 className={cx("name")}>{albumName}</h6>
             <p className={cx("performer")}>{albumPerformer}</p>
           </div>

@@ -1,17 +1,15 @@
 .playlists {
-  width: 302px;
-  height: 100%;
+  flex: 1;
+  width: 100%;
   padding: 0 24px;
 
-  background-image: var(--parent-background-color);
-  border: var(--main-border);
-  border-radius: var(--main-border-radius);
+  display: flex;
+  flex-direction: column;
 }
 
 .heading {
-  margin: 18px 0;
-  font-size: 1.1rem;
-
+  margin-top: 24px;
+  font-size: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,7 +22,7 @@
 }
 
 .icon {
-  color: var(--main-move-color);
+  color: var(--main--button-color);
   transition: transform 0.05s ease-in-out;
 
   &:hover {
@@ -37,15 +35,15 @@
 }
 
 .frame {
-  height: 100%;
-  max-height: calc(100% - 92.766px);
-  border: var(--main-border);
-  border-radius: var(--main-border-radius);
-  background-color: rgba(12, 12, 20, 0.8);
+  flex: 1;
+  margin: 24px 0 24px 0;
+  padding: 12px 0;
+  border: var(--3rd--border-element);
+  border-radius: var(--2nd--border-radius);
+  background: var(--2nd-background-color);
 }
 
 .services {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,25 +51,25 @@
 }
 
 .exp {
-  width: 200px;
+  width: 212px;
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgb(255, 255, 255, 1);
-  border: var(--main-border);
+  border: var(--2nd--border-element);
   border-radius: 10px;
-  margin-top: 24px;
+  margin: 12px 0 12px 0;
 }
 
 .desc {
-  color: rgba(12, 12, 20, 0.8);
+  color: var(--2nd--text-color);
   text-align: center;
-  font-size: 0.7rem;
+  font-size: 1.8rem;
 }
 
 .bold {
-  font-size: 0.8rem;
+  font-size: 1.6rem;
   &:hover {
     cursor: pointer;
     text-decoration: underline;

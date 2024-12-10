@@ -34,7 +34,7 @@ function MusicMakerItems({
             src={musicMakerAvatar}
             alt={musicMakerStageName}
           />
-          <div>
+          <div className={cx("info")}>
             <h6 className={cx("name")}>{musicMakerStageName}</h6>
             <p className={cx("role")}>{rolesSplit.join("/")}</p>
           </div>

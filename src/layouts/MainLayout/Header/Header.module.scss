@@ -4,7 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--main--background-linear);
+  background: var(--1st--background-linear);
+  border-bottom: var(--separation--border-layout);
 }
 
 .logo {

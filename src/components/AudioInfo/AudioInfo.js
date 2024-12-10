@@ -1,6 +1,5 @@
 import classNames from "classnames/bind";
 import styles from "./AudioInfo.module.scss";
-import { Fragment } from "react";
 
 import Searchbar from "../Searchbar";
 import NewReleases from "../NewReleases";
@@ -17,23 +16,19 @@ function AudioInfo() {
       <div className={cx("search")}>
         <Searchbar />
       </div>
+
       <div className={cx("container")}>
         <NewReleases />
         <div className={cx("separate")} />
-        <TrendingSongs />
+        {/* <TrendingSongs /> */}
         <div className={cx("separate")} />
-        <MusicMaker />
+        {/* <MusicMaker /> */}
         <div className={cx("separate")} />
-        <Album />
+        {/* <Album /> */}
         <div className={cx("separate")} />
-        <Podcast />
-
-        {process.env.NODE_ENV === "development" ? (
-          <Fragment>
-            <div className={cx("separate")} />
-            <Moment />
-          </Fragment>
-        ) : null}
+        {/* <Podcast /> */}
+        <div className={cx("separate")} />
+        {/* <Moment /> */}
       </div>
     </div>
   );

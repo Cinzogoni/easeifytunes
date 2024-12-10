@@ -12,28 +12,28 @@
 
 .footer {
   height: 100px;
-  background: var(--main--background-linear);
+  background: var(--1st--background-linear);
+  border-top: var(--separation--border-layout);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .main {
+  width: 100%;
   flex: 1;
   display: flex;
+  background: #0a0f1b;
 }
 
-// .sidebar {
-//   width: 308px;
-//   height: 100%;
-//   margin-right: 6px;
-// }
+.sidebar {
+  flex: 2;
+  border-right: var(--separation--border-layout);
+}
 
-// .content {
-//   width: 100%;
-//   height: 100%;
-//   border-radius: var(--main-border-radius);
-// }
+.content {
+  flex: 10;
+}
 
 @media (max-width: 1280px) {
   .sidebar {

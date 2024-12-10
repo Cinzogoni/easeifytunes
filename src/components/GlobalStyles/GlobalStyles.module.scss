@@ -2,30 +2,40 @@
 
 :root {
   //Fonts
-  --main-title-font: "ProximaNova", sans-serif;
+  --main--text-font: "ProximaNova", sans-serif;
 
-  //Text
+  //Size
+  --1st--font-size: 2.2rem;
+  --2nd--font-size: 1.8rem;
+
+  //Text Color
   --1st--text-color: rgba(255, 255, 255, 0.8);
   --2nd--text-color: rgba(12, 12, 20, 0.8);
 
   //Color
-  --main--background-linear: linear-gradient(
+  --1st--background-linear: linear-gradient(
     to right,
     #0a0f1b,
     #16283d 50%,
     #0a0f1b
   );
+  --1st-background-color: #101d2f;
+  --2nd-background-color: rgba(10, 15, 27, 0.5);
   --main--button-color: #ffffff;
   --waveform--animate-color: #ffffff;
   --1st--element-bg: #ffffff;
+  --2nd--element-bg: rgba(12, 12, 20, 0.8);
 
   //Border
+  --separation--border-layout: 1.5px solid #746c6b75;
   --1st--border-element: 1px solid #746c6b75;
   --2nd--border-element: 0.2px solid #746c6b75;
   --3rd--border-element: 2px solid #746c6b75;
+  --4th--border-element: 2px solid transparent;
 
   //Border-Radius
   --1st--border-radius: 15px;
+  --2nd--border-radius: 7.5px;
 }
 
 * {
@@ -37,7 +47,7 @@
 html,
 body {
   user-select: none;
-  font-family: var(--main-title-font);
+  font-family: var(--main--text-font);
   font-size: 62.5%;
   text-rendering: optimizeSpeed;
 }
@@ -49,7 +59,7 @@ h4,
 h5,
 h6,
 p {
-  color: var(--main--text-color);
+  color: var(--1st--text-color);
 }
 
 button,
@@ -62,7 +72,7 @@ input {
 a {
   font-style: normal;
   text-decoration: none;
-  color: var(--main--text-color);
+  color: var(--1st--text-color);
 }
 
 @font-face {

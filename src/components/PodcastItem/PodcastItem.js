@@ -21,7 +21,7 @@ function PodcastItem({ podcastAvatar, podcastTopic, podcastDescription }) {
             src={podcastAvatar}
             alt={t(`topics.${podcastTopic}`)}
           />
-          <div>
+          <div className={cx("info")}>
             <h6 className={cx("topic")}>{t(`topics.${podcastTopic}`)}</h6>
             <p className={cx("description")}>
               {t(`description.${podcastDescription}`)}

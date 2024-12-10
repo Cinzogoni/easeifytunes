@@ -23,12 +23,16 @@
   margin: 3px 0 3px 3px;
 }
 
+.info {
+  width: 100%;
+}
+
 .topic {
-  font-size: 0.6rem;
+  font-size: var(--1st--font-size);
   margin: 3px 6px;
 }
 
 .description {
-  font-size: 0.5rem;
+  font-size: var(--2nd--font-size);
   margin: 3px 6px;
 }

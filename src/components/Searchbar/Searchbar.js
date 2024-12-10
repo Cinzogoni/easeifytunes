@@ -227,11 +227,13 @@ function Searchbar() {
               onBlur={handleBlur}
             />
             {!!searchValue && (
-              <FontAwesomeIcon
-                className={cx("icon")}
-                icon={faXmark}
-                onClick={handleClear}
-              />
+              <div className={cx("icon-bg")}>
+                <FontAwesomeIcon
+                  className={cx("icon")}
+                  icon={faXmark}
+                  onClick={handleClear}
+                />
+              </div>
             )}
           </div>
         </Tippy>

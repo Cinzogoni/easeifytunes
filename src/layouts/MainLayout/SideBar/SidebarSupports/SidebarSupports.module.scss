@@ -1,16 +1,13 @@
 .supports {
   width: 302px;
   padding: 4.43px 24px;
-  background-image: var(--child-background-color);
-  border: var(--main-border);
-  border-radius: var(--main-border-radius);
-
+  border-top: var(--separation--border-layout);
   display: flex;
   align-items: center;
 }
 
 .helps {
-  font-size: 1rem;
+  font-size: 2.4rem;
 }
 
 .title {
@@ -22,7 +19,7 @@
   height: 40px;
   margin-left: auto;
   border: 1px solid rgba(255, 255, 255, 0.8);
-  border-radius: var(--main-border-radius);
+  border-radius: var(--2nd--border-radius);
 
   display: flex;
   align-items: center;
@@ -32,12 +29,12 @@
 .icon {
   width: 22px;
   height: 22px;
-  color: var(--main-move-color);
+  color: var(--main--button-color);
 }
 
 .choose {
   width: 90px;
-  font-size: 0.6rem;
+  font-size: 1.2rem;
 }
 
 .change-lang {
