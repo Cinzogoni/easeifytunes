@@ -14,9 +14,7 @@ import GridSystem from "../GridSystem";
 import NewReleasesBox from "../NewReleasesBox";
 
 import { useTrackInfo } from "../TrackInfoProvider";
-
 import { useYourPlaylist } from "../YourPlaylistProvider";
-
 import { useTranslation } from "react-i18next";
 
 const cx = classNames.bind(styles);
@@ -30,8 +28,6 @@ function NewReleases() {
     ...maker.singles,
     ...maker.albums,
   ]);
-
-  // console.log(allTrack);
 
   const minimumReleaseDate = new Date("2024-10-01");
 
@@ -55,32 +51,50 @@ function NewReleases() {
   const [activeMove, setActiveMove] = useState(null);
 
   const calculateBoxesPerSlide = () => {
-    if (width >= 1600) {
-      return 4;
+    if (width >= 1920) {
+      return 6;
     }
-    if (width >= 1221 && width < 1599) {
-      return 3;
-    }
-    if (width >= 900 && width < 1220) {
-      return 2;
-    }
-    return 1;
+    // if (width >= 1440 && width < 1920) {
+    //   return 3;
+    // }
+    // if (width >= 1024 && width < 1440) {
+    //   return 2;
+    // }
+    // if (width >= 768 && width < 1024) {
+    //   return 4;
+    // }
+    // if (width >= 480 && width < 768) {
+    //   return 3;
+    // }
+    // if (width < 480) {
+    //   return 2;
+    // }
+    // return 1;
   };
 
   const handleScroll = (move) => {
     const totalBoxes = filteredTracks.length;
 
     const maxScrollIndex = () => {
-      if (width >= 1600) {
-        return totalBoxes - 4;
+      if (width >= 1920) {
+        return totalBoxes - 6;
       }
-      if (width >= 1221 && width < 1599) {
-        return totalBoxes - 3;
-      }
-      if (width >= 900 && width < 1220) {
-        return totalBoxes - 2;
-      }
-      return totalBoxes - 1;
+      // if (width >= 1440 && width < 1920) {
+      //   return totalBoxes - 3;
+      // }
+      // if (width >= 1024 && width < 1440) {
+      //   return totalBoxes - 2;
+      // }
+      // if (width >= 768 && width < 1024) {
+      //   return totalBoxes - 2;
+      // }
+      // if (width >= 480 && width < 768) {
+      //   return totalBoxes - 2;
+      // }
+      // if (width < 480) {
+      //   return totalBoxes - 2;
+      // }
+      // return totalBoxes - 1;
     };
 
     setScrollIndex((prevIndex) => {
@@ -148,16 +162,25 @@ function NewReleases() {
         </div>
       </div>
 
-      <div
-        className={cx("frame")}
-        style={{
-          transition: "transform 0.3s ease-in-out",
-          transform: transformValue(),
-        }}
-      >
-        <GridSystem rowClass={cx("row")}>
+      <GridSystem rowClass={cx("row")}>
+        <div
+          className={cx("frame")}
+          style={{
+            transition: "transform 0.3s ease-in-out",
+            transform: transformValue(),
+          }}
+        >
           {filteredTracks.map((track) => (
-            <GridSystem key={track.id} colClass={cx("col")} colL={cx("l-2")}>
+            <GridSystem
+              key={track.id}
+              colClass={cx("col")}
+              colL={cx("l-2")}
+              // colML={cx("ml-2-5")}
+              // colM={cx("m-2-5")}
+              // colSM={cx("sm-3")}
+              // colS={cx("s-4")}
+              // colMo={cx("mo-12")}
+            >
               <NewReleasesBox
                 trackId={track.id}
                 trackLink={track.link}
@@ -171,8 +194,8 @@ function NewReleases() {
               />
             </GridSystem>
           ))}
-        </GridSystem>
-      </div>
+        </div>
+      </GridSystem>
     </div>
   );
 }

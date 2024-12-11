@@ -6,6 +6,7 @@ import AudioPlayer from "./AudioPlayer";
 
 // import PropTypes from "prop-types";
 import Sidebar from "./SideBar/Sidebar";
+import GridSystem from "~/components/GridSystem";
 
 const cx = classNames.bind(styles);
 
@@ -21,7 +22,11 @@ function MainLayout({ children }) {
       <main className={cx("main")}>
         <div className={cx("sidebar")}>{<Sidebar />}</div>
 
-        <section className={cx("content")}>{children}</section>
+        <section className={cx("content")}>
+          <GridSystem gridClass={cx("grid")} wideClass={cx("wide")}>
+            {children}
+          </GridSystem>
+        </section>
       </main>
 
       {/* ----- FOOTER ----- */}
