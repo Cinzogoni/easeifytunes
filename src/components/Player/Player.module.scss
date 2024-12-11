@@ -4,13 +4,13 @@ audio {
 }
 
 .frame {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 118px;
+  top: 92px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -28,8 +28,14 @@ audio {
   bottom: 12px;
 }
 
+.playerBtn-frame {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .waveform-box {
-  width: 75px;
+  width: 65px;
   height: 48px;
   display: flex;
   align-items: center;
@@ -47,10 +53,10 @@ audio {
 }
 
 .stroke-left {
-  width: 7px;
+  width: 6px;
   height: 48px;
-  margin: 0 3px;
-  border: 1px solid rgba(0, 0, 0, 1);
+  margin: 0 1.5px;
+  border: 0.5px solid rgba(0, 0, 0, 1);
   border-radius: 30%;
   background-color: var(--waveform--animate-color);
   animation: animate 1.2s linear infinite;
@@ -86,10 +92,10 @@ audio {
 }
 
 .stroke-right {
-  width: 7px;
+  width: 6px;
   height: 48px;
-  margin: 0 3px;
-  border: 1px solid rgba(0, 0, 0, 1);
+  margin: 0 1.5px;
+  border: 0.5px solid rgba(0, 0, 0, 1);
   border-radius: 30%;
   background-color: var(--waveform--animate-color);
   animation: animate 1.2s linear infinite;
@@ -142,15 +148,11 @@ audio {
 }
 
 .stopper-btn {
-  margin: 0 auto;
   width: 48px;
   height: 48px;
   background-color: var(--1st--element-bg);
   border: var(--2nd--border-element);
   border-radius: 999px;
-  position: absolute;
-  left: 50px;
-  transform: translate(50%);
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
 }
@@ -321,6 +323,10 @@ audio {
   transform: none;
 }
 
+.playerBtnFrameFooter {
+  width: 38px;
+}
+
 .playerFooterBtn {
   width: 38px;
   height: 38px;
@@ -337,8 +343,6 @@ audio {
 .stopperFooterBtn {
   width: 38px;
   height: 38px;
-  left: 50%;
-  transform: translateX(-50%);
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
 }

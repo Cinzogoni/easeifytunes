@@ -69,6 +69,7 @@ function AudioPlayer() {
         actionsFooter
         actionsFooterLeft
         actionsFooterRight
+        playerBtnFrameFooter
         //
       />
     </div>

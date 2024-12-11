@@ -68,6 +68,7 @@ const Player = ({
   playTimeFooter,
   actionsFooterLeft,
   actionsFooterRight,
+  playerBtnFrameFooter,
   //TrackInfo
   frameTrackInfoResize,
   playerTrackInfoResize,
@@ -662,61 +663,63 @@ const Player = ({
             />
           </button>
         </div>
-        {/* ---------------- */}
-        {(!isStatus || isTrackEnded) && (
-          <div
-            className={cx(
-              "player-btn",
-              { playBtn },
-              { playerFooterBtn },
-              { playerTrackInfo },
-              { playerAlbumList },
-              { playerAlbumInfo }
-            )}
-            onClick={() => handlePlayClick(trackId)}
-          >
-            <div className={cx("play-box")}>
-              <FontAwesomeIcon
-                className={cx(
-                  "play",
-                  { playIcon },
-                  { playFooterIcon },
-                  { playIconTrackInfo }
-                )}
-                icon={faPlay}
-              />
-            </div>
-          </div>
-        )}
 
-        {isStatus && !isTrackEnded && (
-          <div
-            className={cx(
-              "stopper-btn",
-              { stopBtn },
-              { stopperFooterBtn },
-              { stopperTrackInfo },
-              {
-                stopperSingleTracks,
-              },
-              { stopperAlbumList },
-              { stopperPodcastList }
-            )}
-            onClick={handlePauseClick}
-          >
-            <div className={cx("stop-box")}>
-              <FontAwesomeIcon
-                className={cx(
-                  "stop",
-                  { stopIcon },
-                  { stopFooterIcon },
-                  { stopIconTrackInfo }
-                )}
-                icon={faStop}
-              />
+        <div className={cx("playerBtn-frame", { playerBtnFrameFooter })}>
+          {(!isStatus || isTrackEnded) && (
+            <div
+              className={cx(
+                "player-btn",
+                { playBtn },
+                { playerFooterBtn },
+                { playerTrackInfo },
+                { playerAlbumList },
+                { playerAlbumInfo }
+              )}
+              onClick={() => handlePlayClick(trackId)}
+            >
+              <div className={cx("play-box")}>
+                <FontAwesomeIcon
+                  className={cx(
+                    "play",
+                    { playIcon },
+                    { playFooterIcon },
+                    { playIconTrackInfo }
+                  )}
+                  icon={faPlay}
+                />
+              </div>
             </div>
-          </div>
-        )}
+          )}
+
+          {isStatus && !isTrackEnded && (
+            <div
+              className={cx(
+                "stopper-btn",
+                { stopBtn },
+                { stopperFooterBtn },
+                { stopperTrackInfo },
+                {
+                  stopperSingleTracks,
+                },
+                { stopperAlbumList },
+                { stopperPodcastList }
+              )}
+              onClick={handlePauseClick}
+            >
+              <div className={cx("stop-box")}>
+                <FontAwesomeIcon
+                  className={cx(
+                    "stop",
+                    { stopIcon },
+                    { stopFooterIcon },
+                    { stopIconTrackInfo }
+                  )}
+                  icon={faStop}
+                />
+              </div>
+            </div>
+          )}
+        </div>
 
         {/* AudioPlayer Footer */}
         <div

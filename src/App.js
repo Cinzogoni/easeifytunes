@@ -51,6 +51,10 @@ function App() {
   return (
     <Router basename={baseName}>
       <AppProviders>
+        <div className={cx("app-message")}>
+          App under development for mobile!
+        </div>
+
         <div className={cx("app")}>
           <Routes>
             {publicRouter.map((route, index) => {

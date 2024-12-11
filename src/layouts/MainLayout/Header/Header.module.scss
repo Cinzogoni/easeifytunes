@@ -65,11 +65,11 @@
   }
 }
 
-@media (min-width: 400px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
   .log-in {
-    width: 120px;
-    height: 60px;
-    font-size: 1.8rem;
+    width: 100px;
+    height: 40px;
+    font-size: 1.6rem;
     font-weight: 700;
     margin-left: 10px;
     background-color: var(--main--button-color);
@@ -88,9 +88,9 @@
   }
 
   .sign-up {
-    width: 120px;
-    height: 60px;
-    font-size: 1.8rem;
+    width: 100px;
+    height: 40px;
+    font-size: 1.6rem;
     font-weight: 700;
     margin-left: 10px;
     background-color: var(--main-background-color);

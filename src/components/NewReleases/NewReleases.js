@@ -54,22 +54,22 @@ function NewReleases() {
     if (width >= 1920) {
       return 6;
     }
-    // if (width >= 1440 && width < 1920) {
-    //   return 3;
-    // }
-    // if (width >= 1024 && width < 1440) {
-    //   return 2;
-    // }
-    // if (width >= 768 && width < 1024) {
-    //   return 4;
-    // }
-    // if (width >= 480 && width < 768) {
-    //   return 3;
-    // }
-    // if (width < 480) {
-    //   return 2;
-    // }
-    // return 1;
+    if (width >= 1440 && width < 1920) {
+      return 5;
+    }
+    if (width >= 1280 && width < 1440) {
+      return 4;
+    }
+    if (width >= 854 && width < 1280) {
+      return 4;
+    }
+    if (width >= 630 && width < 854) {
+      return 3;
+    }
+    if (width >= 420 && width < 630) {
+      return 2;
+    }
+    return 1;
   };
 
   const handleScroll = (move) => {
@@ -79,22 +79,22 @@ function NewReleases() {
       if (width >= 1920) {
         return totalBoxes - 6;
       }
-      // if (width >= 1440 && width < 1920) {
-      //   return totalBoxes - 3;
-      // }
-      // if (width >= 1024 && width < 1440) {
-      //   return totalBoxes - 2;
-      // }
-      // if (width >= 768 && width < 1024) {
-      //   return totalBoxes - 2;
-      // }
-      // if (width >= 480 && width < 768) {
-      //   return totalBoxes - 2;
-      // }
-      // if (width < 480) {
-      //   return totalBoxes - 2;
-      // }
-      // return totalBoxes - 1;
+      if (width >= 1440 && width < 1920) {
+        return totalBoxes - 5;
+      }
+      if (width >= 1280 && width < 1440) {
+        return totalBoxes - 4;
+      }
+      if (width >= 854 && width < 1280) {
+        return totalBoxes - 4;
+      }
+      if (width >= 630 && width < 854) {
+        return totalBoxes - 3;
+      }
+      if (width >= 420 && width < 630) {
+        return totalBoxes - 2;
+      }
+      return totalBoxes - 1;
     };
 
     setScrollIndex((prevIndex) => {
@@ -175,11 +175,11 @@ function NewReleases() {
               key={track.id}
               colClass={cx("col")}
               colL={cx("l-2")}
-              // colML={cx("ml-2-5")}
-              // colM={cx("m-2-5")}
-              // colSM={cx("sm-3")}
-              // colS={cx("s-4")}
-              // colMo={cx("mo-12")}
+              colML={cx("ml-2-5")}
+              colM={cx("m-3")}
+              colSM={cx("sm-3")}
+              colS={cx("s-4")}
+              colMo={cx("mo-6")}
             >
               <NewReleasesBox
                 trackId={track.id}
