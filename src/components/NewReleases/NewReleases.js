@@ -12,6 +12,7 @@ import {
 import Navigation from "../Navigation";
 import GridSystem from "../GridSystem";
 import NewReleasesBox from "../NewReleasesBox";
+import RowColHomePage from "../GridSystem/RowColHomePage";
 
 import { useTrackInfo } from "../TrackInfoProvider";
 import { useYourPlaylist } from "../YourPlaylistProvider";
@@ -167,40 +168,19 @@ function NewReleases() {
         </div>
       </div>
 
-      <GridSystem rowClass={cx("row")}>
-        <div
-          className={cx("frame")}
-          style={{
-            transition: "transform 0.3s ease-in-out",
-            transform: transformValue(),
-          }}
-        >
-          {filteredTracks.map((track) => (
-            <GridSystem
-              key={track.id}
-              colClass={cx("col")}
-              colL={cx("l-2")}
-              colML={cx("ml-2-5")}
-              colM={cx("m-3")}
-              colSM={cx("sm-3")}
-              colS={cx("s-4")}
-              colMo={cx("mo-6")}
-            >
-              <NewReleasesBox
-                trackId={track.id}
-                trackLink={track.link}
-                trackAvatar={track.avatar || track.albumAvatar}
-                trackTitle={track.title}
-                trackPerformer={track.stageName}
-                trackType={track.type}
-                trackGenre={track.genre}
-                releaseDay={track.releaseDay}
-                streamed={track.streamed}
-              />
-            </GridSystem>
-          ))}
-        </div>
-      </GridSystem>
+      <RowColHomePage
+        element1={
+          <div
+            className={cx("frame")}
+            style={{
+              transition: "transform 0.3s ease-in-out",
+              transform: transformValue(),
+            }}
+          />
+        }
+        element2={<NewReleasesBox />}
+        filteredTracks={filteredTracks}
+      />
     </div>
   );
 }
