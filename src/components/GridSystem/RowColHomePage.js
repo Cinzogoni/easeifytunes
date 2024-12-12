@@ -8,15 +8,15 @@ import { memo } from "react";
 import { Fragment } from "react";
 import GridSystem from "./GridSystem";
 
-function RowColHomePage({ element1, element2, filteredTracks }) {
+function RowColHomePage({ element1, element2, items }) {
   return (
     <GridSystem rowClass={cx("row")}>
       {React.cloneElement(element1, {
         children: (
           <Fragment>
-            {filteredTracks.map((track) => (
+            {items.map((item) => (
               <GridSystem
-                key={track.id}
+                key={item.id}
                 colClass={cx("col")}
                 colL={cx("l-2")}
                 colML={cx("ml-2-5")}
@@ -26,15 +26,15 @@ function RowColHomePage({ element1, element2, filteredTracks }) {
                 colMo={cx("mo-6")}
               >
                 {React.cloneElement(element2, {
-                  trackId: track.id,
-                  trackLink: track.link,
-                  trackAvatar: track.avatar || track.albumAvatar,
-                  trackTitle: track.title,
-                  trackPerformer: track.stageName,
-                  trackType: track.type,
-                  trackGenre: track.genre,
-                  releaseDay: track.releaseDay,
-                  streamed: track.streamed,
+                  trackId: item.id,
+                  trackLink: item.link,
+                  trackAvatar: item.avatar || item.albumAvatar,
+                  trackTitle: item.title,
+                  trackPerformer: item.stageName,
+                  trackType: item.type,
+                  trackGenre: item.genre,
+                  releaseDay: item.releaseDay,
+                  streamed: item.streamed,
                 })}
               </GridSystem>
             ))}

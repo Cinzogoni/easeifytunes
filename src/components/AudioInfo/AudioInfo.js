@@ -20,7 +20,7 @@ function AudioInfo() {
 
       <div className={cx("catalogue")}>
         <NewReleases />
-        {/* <TrendingSongs /> */}
+        <TrendingSongs />
         {/* <MusicMaker /> */}
         {/* <Album /> */}
         {/* <Podcast /> */}

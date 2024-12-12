@@ -1,5 +1,6 @@
 import classNames from "classnames/bind";
 import styles from "./NewReleases.module.scss";
+const cx = classNames.bind(styles);
 
 import { useState, useEffect, memo, useMemo } from "react";
 
@@ -10,15 +11,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import Navigation from "../Navigation";
-import GridSystem from "../GridSystem";
 import NewReleasesBox from "../NewReleasesBox";
 import RowColHomePage from "../GridSystem/RowColHomePage";
 
 import { useTrackInfo } from "../TrackInfoProvider";
 import { useYourPlaylist } from "../YourPlaylistProvider";
 import { useTranslation } from "react-i18next";
+import { useScroll } from "~/hooks";
 
-const cx = classNames.bind(styles);
 function NewReleases() {
   const { t } = useTranslation();
   const { musicMaker } = useTrackInfo();
@@ -50,83 +50,10 @@ function NewReleases() {
     );
   }, [allTrack]);
 
-  const [width, setWidth] = useState(window.innerWidth);
-  const [scrollIndex, setScrollIndex] = useState(0);
-  const [activeMove, setActiveMove] = useState(null);
-
-  const calculateBoxesPerSlide = () => {
-    if (width >= 1920) {
-      return 6;
-    }
-    if (width >= 1440 && width < 1920) {
-      return 5;
-    }
-    if (width >= 1280 && width < 1440) {
-      return 4;
-    }
-    if (width >= 854 && width < 1280) {
-      return 4;
-    }
-    if (width >= 630 && width < 854) {
-      return 3;
-    }
-    if (width >= 420 && width < 630) {
-      return 2;
-    }
-    return 1;
-  };
-
-  const handleScroll = (move) => {
-    const totalBoxes = filteredTracks.length;
-
-    const maxScrollIndex = () => {
-      if (width >= 1920) {
-        return totalBoxes - 6;
-      }
-      if (width >= 1440 && width < 1920) {
-        return totalBoxes - 5;
-      }
-      if (width >= 1280 && width < 1440) {
-        return totalBoxes - 4;
-      }
-      if (width >= 854 && width < 1280) {
-        return totalBoxes - 4;
-      }
-      if (width >= 630 && width < 854) {
-        return totalBoxes - 3;
-      }
-      if (width >= 420 && width < 630) {
-        return totalBoxes - 2;
-      }
-      return totalBoxes - 1;
-    };
-
-    setScrollIndex((prevIndex) => {
-      if (move === "prev") {
-        return Math.max(prevIndex - 1, 0);
-      } else if (move === "next") {
-        return Math.min(prevIndex + 1, maxScrollIndex());
-      }
-      return prevIndex;
-    });
-
-    setActiveMove(move);
-    setTimeout(() => {
-      setActiveMove(null);
-    }, 100);
-  };
-
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const transformValue = () => {
-    const boxesPerSlide = calculateBoxesPerSlide();
-    const slideWidth = 100 / boxesPerSlide;
-    return `translateX(-${scrollIndex * slideWidth}%)`;
-  };
+  const { handleScroll, transformValue, activeMove } = useScroll(
+    filteredTracks,
+    window.innerWidth
+  );
 
   return (
     <div className={cx("container")}>
@@ -179,7 +106,7 @@ function NewReleases() {
           />
         }
         element2={<NewReleasesBox />}
-        filteredTracks={filteredTracks}
+        items={filteredTracks}
       />
     </div>
   );
