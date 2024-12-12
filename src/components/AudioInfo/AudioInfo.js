@@ -18,7 +18,7 @@ function AudioInfo() {
         <Searchbar />
       </div>
 
-      <div className={cx("audios")}>
+      <div className={cx("catalogue")}>
         <NewReleases />
         {/* <TrendingSongs /> */}
         {/* <MusicMaker /> */}

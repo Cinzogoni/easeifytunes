@@ -23,9 +23,11 @@ function MainLayout({ children }) {
         <div className={cx("sidebar")}>{<Sidebar />}</div>
 
         <section className={cx("content")}>
-          <GridSystem gridClass={cx("grid")} wideClass={cx("wide")}>
-            {children}
-          </GridSystem>
+          <div className={cx("catalogues")}>
+            <GridSystem gridClass={cx("grid")} wideClass={cx("wide")}>
+              {children}
+            </GridSystem>
+          </div>
         </section>
       </main>
 

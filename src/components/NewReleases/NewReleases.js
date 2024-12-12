@@ -21,8 +21,11 @@ const cx = classNames.bind(styles);
 function NewReleases() {
   const { t } = useTranslation();
   const { musicMaker } = useTrackInfo();
-  const { setShowNewReleasesPlaylist, setActiveNewReleasesPlaylist } =
-    useYourPlaylist();
+  const {
+    setShowNewReleasesPlaylist,
+    setActiveNewReleasesPlaylist,
+    setShowNewReleasesNotify,
+  } = useYourPlaylist();
 
   const allTrack = musicMaker.flatMap((maker) => [
     ...maker.singles,
@@ -136,7 +139,8 @@ function NewReleases() {
             onClick={() => {
               handleScroll("prev"),
                 setShowNewReleasesPlaylist(false),
-                setActiveNewReleasesPlaylist(false);
+                setActiveNewReleasesPlaylist(false),
+                setShowNewReleasesNotify(false);
             }}
             style={{
               transition: "transition: transform 0.1s ease-in-out",
@@ -149,7 +153,8 @@ function NewReleases() {
             onClick={() => {
               handleScroll("next"),
                 setShowNewReleasesPlaylist(false),
-                setActiveNewReleasesPlaylist(false);
+                setActiveNewReleasesPlaylist(false),
+                setShowNewReleasesNotify(false);
             }}
             style={{
               transition: "transition: transform 0.1s ease-in-out",

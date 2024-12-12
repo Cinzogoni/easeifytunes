@@ -8,16 +8,17 @@
 
 .search {
   width: 100%;
+  height: 120px;
   min-width: 400px;
   margin: 0 auto;
 }
 
-.audios {
+.catalogue {
   width: 100%;
   min-width: 400px;
   flex: 1;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 30px;
   overflow-y: auto;
   overflow-x: auto;
 
