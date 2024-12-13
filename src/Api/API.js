@@ -1549,7 +1549,7 @@ const apiMusicMaker = {
       makerAvatar:
         "https://kilala.vn/data/uploads/2024/111020240958-1728615533-yoasobi.jfif",
       makerName: "YOASOBI",
-      role: "singer",
+      role: "band",
       priority: false,
       singles: [
         {

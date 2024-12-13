@@ -67,7 +67,9 @@ input {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  box-shadow: rgba(255, 255, 255, 0.15) 0px 2px 12px;
+  background: var(--5th--element-bg);
+  border: var(--1st--border-element);
+  box-shadow: var(--1st--box-shadow);
 }
 
 .title-1,

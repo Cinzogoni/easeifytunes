@@ -41,7 +41,6 @@ function Searchbar() {
         (item.title && item.title.toLowerCase().includes(searchLowerCase)) ||
         (item.makerName &&
           item.makerName.toLowerCase().includes(searchLowerCase)) ||
-        (item.role && item.role.toLowerCase().includes(searchLowerCase)) ||
         (item.audios &&
           item.audios.some(
             (audio) =>
@@ -54,9 +53,7 @@ function Searchbar() {
               album.albumName.toLowerCase().includes(searchLowerCase) ||
               album.albumPerformer.toLowerCase().includes(searchLowerCase)
           )) ||
-        (item.topic && item.topic.toLowerCase().includes(searchLowerCase)) ||
-        (item.description &&
-          item.description.toLowerCase().includes(searchLowerCase))
+        (item.topic && item.topic.toLowerCase().includes(searchLowerCase))
       );
     });
   };
@@ -168,7 +165,7 @@ function Searchbar() {
                 {activeTitle === `Music Makers` && (
                   <div className={cx("music-maker")}>
                     {searchResult
-                      .filter((item) => item.makerName && item.role)
+                      .filter((item) => item.makerName)
                       .map((item) => (
                         <MusicMakerItems
                           key={`music-maker_${item.id}`}
@@ -200,7 +197,7 @@ function Searchbar() {
                 {activeTitle === `Podcast` && (
                   <div className={cx("podcast")}>
                     {searchResult
-                      .filter((item) => item.topic && item.description)
+                      .filter((item) => item.topic)
                       .map((item) => (
                         <PodcastItem
                           key={`podcast_${item.id}`}

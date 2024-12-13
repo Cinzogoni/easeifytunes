@@ -2,10 +2,9 @@
   width: 100%;
   max-height: min((100vh - 96px) - 60px, 345px);
   min-height: 60px;
-  background-color: var(--popper-background-color);
-  border: var(--main-border);
-  border-radius: var(--main-border-radius);
-  box-shadow: rgb(255 255 255 /15%) 0px 2px 12px;
+  background: var(--5th--element-bg);
+  border: var(--1st--border-element);
+  box-shadow: var(--1st--box-shadow);
 
   overflow-y: auto;
   overflow-x: hidden;
