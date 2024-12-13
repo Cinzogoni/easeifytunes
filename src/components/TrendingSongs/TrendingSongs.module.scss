@@ -1,52 +1,34 @@
-.wrapper {
-  border: var(--main-border);
-  border-radius: var(--main-border-radius);
-  background-image: var(--parent-background-color);
-}
-
 .container {
-  margin-bottom: 16px;
+  width: 100%;
+  height: 348px;
+  // background-color: rgba(122, 221, 143, 0.2);
 }
 
 .actions {
-  margin: 12px 0;
+  height: 97px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .title {
-  font-size: 1.8rem;
-  margin-left: 36px;
+  font-size: var(--1st--font-size);
 }
 
 .action-btn {
-  margin-right: 24px;
   display: flex;
   align-items: center;
 }
 
 .move {
+  width: 36px;
+  height: 36px;
   margin-right: 12px;
-  color: var(--main-move-color);
+  color: var(--main--button-color);
 }
 
 .frame {
   width: 100%;
-  height: 100%;
+  height: 250.5px;
   display: flex;
-}
-
-.boxes {
-  width: 100%;
-  height: 155px;
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-
-.track-box {
-  width: 100%;
-  height: 155px;
-  position: absolute;
 }

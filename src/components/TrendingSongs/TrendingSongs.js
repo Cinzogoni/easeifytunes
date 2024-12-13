@@ -1,7 +1,7 @@
 import classNames from "classnames/bind";
 import styles from "./TrendingSongs.module.scss";
 
-import { useState, useEffect, memo, useMemo } from "react";
+import { useState, useEffect, memo, useMemo, useCallback } from "react";
 
 import GridSystem from "../GridSystem";
 import TrendingSongsBox from "../TrendingSongsBox";
@@ -48,52 +48,32 @@ function TrendingSongs() {
       });
   }, [allTrack, minimumReleaseDate]);
 
-  // console.log(filteredTracks);
-
   const songGroups = [];
-  for (let i = 0; i < filteredTracks.length; i += 2) {
-    songGroups.push(filteredTracks.slice(i, i + 2));
+  for (let i = 0; i < filteredTracks.length; i += 3) {
+    songGroups.push(filteredTracks.slice(i, i + 3));
   }
 
-  // console.log(filteredTracks);
-
-  const calculateBoxesPerSlide = () => {
-    if (width >= 1600) {
-      return 3;
-    }
-    if (width >= 1220 && width < 1599) {
-      return 2;
-    }
-    if (width >= 600 && width < 1220) {
-      return 1;
-    }
-    return 1;
-  };
+  const calculateBoxesPerSlide = useCallback(() => {
+    if (width >= 1920) return 4;
+    if (width >= 1440 && width < 1920) return 3;
+    // if (width >= 1280 && width < 1440) return 4;
+    // if (width >= 854 && width < 1280) return 4;
+    // if (width >= 630 && width < 854) return 3;
+    // if (width >= 420 && width < 630) return 2;
+    // return 1;
+  }, [width]);
 
   const handleScroll = (move) => {
     const totalBoxes = songGroups.length;
 
     const maxScrollIndex = () => {
-      if (width >= 1600) {
-        return totalBoxes - 3;
-      }
-      if (width >= 1220 && width < 1599) {
-        return totalBoxes - 2;
-      }
-      if (width >= 600 && width < 1220) {
-        return totalBoxes - 1;
-      }
-      if (width < 600) {
-        return totalBoxes - 1;
-      }
+      const boxesPerSlide = calculateBoxesPerSlide();
+      return totalBoxes - boxesPerSlide;
     };
 
     setScrollIndex((prevIndex) => {
-      if (move === "prev") {
-        return Math.max(prevIndex - 1, 0);
-      } else if (move === "next") {
-        return Math.min(prevIndex + 1, maxScrollIndex());
-      }
+      if (move === "prev") return Math.max(prevIndex - 1, 0);
+      if (move === "next") return Math.min(prevIndex + 1, maxScrollIndex());
       return prevIndex;
     });
 
@@ -103,82 +83,76 @@ function TrendingSongs() {
     }, 100);
   };
 
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   const transformValue = () => {
     const boxesPerSlide = calculateBoxesPerSlide();
     const slideWidth = 100 / boxesPerSlide;
     return `translateX(-${scrollIndex * slideWidth}%)`;
   };
 
-  return (
-    <div className={cx("wrapper")}>
-      <div className={cx("container")}>
-        <div className={cx("actions")}>
-          <h6 className={cx("title")}>{t("trendingSongs")}</h6>
-          <div className={cx("action-btn")}>
-            <FontAwesomeIcon
-              className={cx("move")}
-              icon={faCircleChevronLeft}
-              onClick={() => {
-                handleScroll("prev"),
-                  setShowNewReleasesPlaylist(false),
-                  setActiveNewReleasesPlaylist(false);
-              }}
-              style={{
-                transition: "transition: transform 0.1s ease-in-out",
-                transform: activeMove === "prev" ? "scale(1.1)" : "scale(1)",
-              }}
-            />
-            <FontAwesomeIcon
-              className={cx("move")}
-              icon={faCircleChevronRight}
-              onClick={() => {
-                handleScroll("next"),
-                  setShowNewReleasesPlaylist(false),
-                  setActiveNewReleasesPlaylist(false);
-              }}
-              style={{
-                transition: "transition: transform 0.1s ease-in-out",
-                transform: activeMove === "next" ? "scale(1.1)" : "scale(1)",
-              }}
-            />
-          </div>
-        </div>
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-        <GridSystem rowClass={cx("row")}>
-          <div
-            className={cx("frame")}
-            style={{
-              transition: "transform 0.3s ease-in-out",
-              transform: transformValue(),
+  return (
+    <div className={cx("container")}>
+      <div className={cx("actions")}>
+        <h6 className={cx("title")}>{t("trendingSongs")}</h6>
+        <div className={cx("action-btn")}>
+          <FontAwesomeIcon
+            className={cx("move")}
+            icon={faCircleChevronLeft}
+            onClick={() => {
+              handleScroll("prev"),
+                setShowNewReleasesPlaylist(false),
+                setActiveNewReleasesPlaylist(false);
             }}
-          >
-            {songGroups.map((group, index) => (
-              <GridSystem
-                key={index}
-                colClass={cx("col")}
-                colL={cx("l-4")}
-                colML={cx("ml-6")}
-                colM={cx("m-12")}
-                colSM={cx("sm-12")}
-                colS={cx("s-12")}
-                colMo={cx("mo-12")}
-              >
-                <div className={cx("boxes")}>
-                  <div className={cx("track-box")}>
-                    <TrendingSongsBox tracks={group} />
-                  </div>
-                </div>
-              </GridSystem>
-            ))}
-          </div>
-        </GridSystem>
+            style={{
+              transition: "transition: transform 0.1s ease-in-out",
+              transform: activeMove === "prev" ? "scale(1.1)" : "scale(1)",
+            }}
+          />
+          <FontAwesomeIcon
+            className={cx("move")}
+            icon={faCircleChevronRight}
+            onClick={() => {
+              handleScroll("next"),
+                setShowNewReleasesPlaylist(false),
+                setActiveNewReleasesPlaylist(false);
+            }}
+            style={{
+              transition: "transition: transform 0.1s ease-in-out",
+              transform: activeMove === "next" ? "scale(1.1)" : "scale(1)",
+            }}
+          />
+        </div>
       </div>
+
+      <GridSystem rowClass={cx("row")}>
+        <div
+          className={cx("frame")}
+          style={{
+            transition: "transform 0.3s ease-in-out",
+            transform: transformValue(),
+          }}
+        >
+          {songGroups.map((group, index) => (
+            <GridSystem
+              key={index}
+              colClass={cx("col")}
+              colL={cx("l-3")}
+              colML={cx("ml-4")}
+              colM={cx("m-6")}
+              colSM={cx("sm-6")}
+              colS={cx("s-6")}
+              colMo={cx("mo-12")}
+            >
+              <TrendingSongsBox tracks={group} />
+            </GridSystem>
+          ))}
+        </div>
+      </GridSystem>
     </div>
   );
 }

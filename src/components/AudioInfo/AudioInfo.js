@@ -21,9 +21,9 @@ function AudioInfo() {
       <div className={cx("catalogue")}>
         <NewReleases />
         <TrendingSongs />
-        {/* <MusicMaker /> */}
-        {/* <Album /> */}
-        {/* <Podcast /> */}
+        <MusicMaker />
+        <Album />
+        <Podcast />
         {/* <Moment /> */}
       </div>
     </div>

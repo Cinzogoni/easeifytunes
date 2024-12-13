@@ -52,13 +52,12 @@ const vi = {
   newName: "Tên Mới",
   newDescription: "Mô Tả Mới",
   playlistNameNull: "Không Tồn Tại",
-  playlistNull:
-    "Không tồn tại vì trong bộ danh sách, bạn đã xoá danh sách phát",
+  playlistNull: "Không tồn tại vì trong thư viện, bạn đã xoá danh sách phát",
 
   aboutUs: "Về Chúng Tôi",
   helpCenter: "Hổ Trợ",
   policy: "Chính Sách",
-  yourPlaylists: "Bộ Danh Sách",
+  yourPlaylists: "Thư Viện",
   searchPlaceholder:
     "Tiêu Đề Bài Hát, Người Dệt Nhạc, Bộ Sưu Tập, Không Gian Tiếng Nói...",
   podcastPlaceholder: "Nhà Xuất Bản, Tác Giả, Tên Âm Thanh",

@@ -2,7 +2,7 @@ import classNames from "classnames/bind";
 import styles from "./NewReleases.module.scss";
 const cx = classNames.bind(styles);
 
-import { useState, useEffect, memo, useMemo } from "react";
+import { memo, useMemo } from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

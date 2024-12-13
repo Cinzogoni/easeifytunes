@@ -35,6 +35,21 @@ function RowColHomePage({ element1, element2, items }) {
                   trackGenre: item.genre,
                   releaseDay: item.releaseDay,
                   streamed: item.streamed,
+                  //Music Maker
+                  Id: item.id,
+                  makerAvatar: item.makerAvatar,
+                  makerName: item.makerName,
+                  role: item.role,
+                  //Album
+                  albumId: item.id,
+                  albumAvatar: item.albumAvatar,
+                  albumName: item.albumName,
+                  albumPerformer: item.albumPerformer,
+                  //Podcast
+                  podcastId: item.id,
+                  podcastAvatar: item.avatar,
+                  podcastTopic: item.topic,
+                  podcastDescription: item.description,
                 })}
               </GridSystem>
             ))}

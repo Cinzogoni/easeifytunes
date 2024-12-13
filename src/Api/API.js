@@ -1493,6 +1493,111 @@ const apiMusicMaker = {
       ],
       albums: [],
     },
+    {
+      id: "J.Cole",
+      makerAvatar:
+        "https://hips.hearstapps.com/hmg-prod/images/j_cole_photo_by_isaac_brekken_wireimage_getty_503069628.jpg?crop=1xw:1.0xh;center,top&resize=640:*",
+      makerName: "J.Cole",
+      role: "rapper" + "/" + "musicProducer",
+      priority: true,
+      singles: [
+        {
+          id: "jc_sn",
+          avatar: "https://i.ytimg.com/vi/-RhwxYTKDWU/maxresdefault.jpg",
+          title: "She Knows",
+          mainMusicMaker: "J.Cole",
+          stageName: "J.Cole",
+          type: "Single",
+          genre: "HipHop/Rap",
+          releaseDay: "2022-10-02",
+          streamed: 22423724,
+          trend: true,
+          link: mp3Type[`MusicMaker/J.Cole/singletracks/JColeSheKnows`],
+          lyric: "",
+        },
+      ],
+      albums: [],
+    },
+    {
+      id: "ROSÉ",
+      makerAvatar:
+        "https://nqs.1cdn.vn/thumbs/540x360/2024/10/27/image.tienphong.vn-uploaded-2024-athlraungenat-2024_10_27-_463989725-1260720248449971-1746876593578460535-n-5179.jpg",
+      makerName: "ROSÉ",
+      role: "singer",
+      priority: true,
+      singles: [
+        {
+          id: "roBru_APT",
+          avatar:
+            "https://avatar-ex-swe.nixcdn.com/song/2024/10/18/1/8/a/e/1729211353297_640.jpg",
+          title: "APT",
+          mainMusicMaker: "ROSÉ",
+          stageName: "ROSÉ & Bruno Mars",
+          type: "Single",
+          genre: "Pop",
+          releaseDay: "2024-10-18",
+          streamed: 568445734,
+          trend: true,
+          link: mp3Type[`MusicMaker/ROSÉ/singletracks/ROSEBrunoMarsAPT`],
+          lyric: "",
+        },
+      ],
+      albums: [],
+    },
+    {
+      id: "YOASOBI",
+      makerAvatar:
+        "https://kilala.vn/data/uploads/2024/111020240958-1728615533-yoasobi.jfif",
+      makerName: "YOASOBI",
+      role: "singer",
+      priority: false,
+      singles: [
+        {
+          id: "Yo_Ta",
+          avatar:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp_QtMn9NkfZk3gYn4sOxZF9uzk7ljyCu7qw&s",
+          title: "Tabun",
+          mainMusicMaker: "YOASOBI",
+          stageName: "YOASOBI",
+          type: "Single",
+          genre: "Pop",
+          releaseDay: "2022-10-01",
+          streamed: 135151500,
+          trend: true,
+          link: mp3Type[`MusicMaker/YOASOBI/singletracks/YOASOBIたふん`],
+          lyric: "",
+        },
+      ],
+      albums: [],
+    },
+    {
+      id: "Hanumankind",
+      makerAvatar:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMgQIZ3Nnsq2JdX8WgHjuZ3X9BacgqfcoCHQ&s",
+      makerName: "Hanumankind",
+      role: "rapper",
+      priority: false,
+      singles: [
+        {
+          id: "huKal_BD",
+          avatar:
+            "https://i1.sndcdn.com/artworks-pXXG0Ja29z1c0RXB-PVcoqQ-t500x500.jpg",
+          title: "Big Dawgs",
+          mainMusicMaker: "Hanumankind",
+          stageName: "Hanumankind Ft. Kalmi",
+          type: "Single",
+          genre: "Pop",
+          releaseDay: "2023-10-01",
+          streamed: 177885500,
+          trend: true,
+          link: mp3Type[
+            `MusicMaker/Hanumankind/singletracks/HanumankindBigDawgsKalmi`
+          ],
+          lyric: "",
+        },
+      ],
+      albums: [],
+    },
   ],
   getMusicMaker: function () {
     return this.musicMakerList;
