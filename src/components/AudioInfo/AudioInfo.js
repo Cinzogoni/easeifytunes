@@ -24,7 +24,7 @@ function AudioInfo() {
         <MusicMaker />
         <Album />
         <Podcast />
-        {/* <Moment /> */}
+        <Moment />
       </div>
     </div>
   );
