@@ -56,11 +56,11 @@ function TrendingSongs() {
   const calculateBoxesPerSlide = useCallback(() => {
     if (width >= 1920) return 4;
     if (width >= 1440 && width < 1920) return 3;
-    // if (width >= 1280 && width < 1440) return 4;
-    // if (width >= 854 && width < 1280) return 4;
-    // if (width >= 630 && width < 854) return 3;
-    // if (width >= 420 && width < 630) return 2;
-    // return 1;
+    if (width >= 1280 && width < 1440) return 3;
+    if (width >= 854 && width < 1280) return 2;
+    if (width >= 630 && width < 854) return 2;
+    if (width >= 500 && width < 630) return 1;
+    return 1;
   }, [width]);
 
   const handleScroll = (move) => {
