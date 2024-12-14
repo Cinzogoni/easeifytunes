@@ -2,6 +2,8 @@ import classNames from "classnames/bind";
 import styles from "./Header.module.scss";
 const cx = classNames.bind(styles);
 
+import logo from "~/assets/images/logo/logo.png";
+
 import { useState } from "react";
 
 import LoginService from "~/services/LoginService";
@@ -67,7 +69,7 @@ function Header() {
 
   return (
     <div className={cx("wrapper")}>
-      <img className={cx("logo")} src="" alt="Logo" />
+      <img className={cx("logo")} src={logo} alt="Logo" />
       {currentUser ? (
         <HeaderActions />
       ) : (
