@@ -5,11 +5,14 @@
 
 .container {
   width: 100%;
+  height: 100%;
   position: relative;
 }
 
 .video-player {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   border: var(--1st--border-element);
   border-radius: var(--2nd--border-radius);
 }
