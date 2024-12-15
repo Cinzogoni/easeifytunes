@@ -1445,7 +1445,7 @@ const apiMusicMaker = {
         "https://www.coca-cola.com/content/dam/onexp/global/central/offerings/coke-studio/artists/2_Imagine_Dragons_by_Eric_Ray_Davidson_GREEN_04_1-1.jpg",
       makerName: "Imagine Dragons",
       role: "band",
-      priority: false,
+      priority: true,
       singles: [
         {
           id: "IMGDG_Bones",
@@ -1499,7 +1499,7 @@ const apiMusicMaker = {
         "https://hips.hearstapps.com/hmg-prod/images/j_cole_photo_by_isaac_brekken_wireimage_getty_503069628.jpg?crop=1xw:1.0xh;center,top&resize=640:*",
       makerName: "J.Cole",
       role: "rapper" + "/" + "musicProducer",
-      priority: true,
+      priority: false,
       singles: [
         {
           id: "jc_sn",
@@ -1593,6 +1593,133 @@ const apiMusicMaker = {
           link: mp3Type[
             `MusicMaker/Hanumankind/singletracks/HanumankindBigDawgsKalmi`
           ],
+          lyric: "",
+        },
+      ],
+      albums: [],
+    },
+    {
+      id: "AMEE",
+      makerAvatar:
+        "https://duyendangvietnam.net.vn/public/uploads/file1s/pv_Thanh_Toan/ava(236).jpg",
+      makerName: "AMEE",
+      role: "singer",
+      priority: false,
+      singles: [],
+      albums: [
+        {
+          id: "dre_AMEE",
+          albumAvatar:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDO4wFtKDQjloQB1TvhnpAJY838VyIwzKT7g&s",
+          albumPerformer: "AMEE",
+          albumName: "Album - dreAMEE",
+          mode: "AlbumList",
+          albumType: "Album",
+          releaseDay: "2019-04-03",
+          tracks: [
+            {
+              id: "dre_A01",
+              type: "Album",
+              title: "Anh Nhả Ở Đâu Thế?",
+              avatar:
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDO4wFtKDQjloQB1TvhnpAJY838VyIwzKT7g&s",
+              mainMusicMaker: "AMEE",
+              stageName: "AMEE x BRAY",
+              name: "Album - dreAMEE",
+              genre: "Pop",
+              releaseDay: "2019-04-03",
+              streamed: 139143651,
+              trend: false,
+              link: mp3Type[`MusicMaker/AMEE/albums/dreAMEE/AMEExB RAY-ANODT`],
+              lyric: "",
+            },
+            {
+              id: "dre_A02",
+              type: "Album",
+              title: "Ex's Hate Me (Part 2)",
+              mainMusicMaker: "AMEE",
+              stageName: "AMEE x BRAY",
+              name: "Album - dreAMEE",
+              genre: "Acoustic",
+              releaseDay: "2020-07-22",
+              streamed: 42120600,
+              trend: false,
+              link: mp3Type[
+                `MusicMaker/AMEE/albums/dreAMEE/AMEExBRAYExsHateMeP2`
+              ],
+              lyric: "",
+            },
+            {
+              id: "dre_A03",
+              type: "Album",
+              title: "SAO ANH CHƯA VỀ NHÀ",
+              mainMusicMaker: "AMEE",
+              stageName: "AMEE ft. RICKY STAR",
+              name: "Album - dreAMEE",
+              genre: "Pop",
+              releaseDay: "2023-08-25",
+              streamed: 66401200,
+              trend: false,
+              link: mp3Type[
+                `MusicMaker/AMEE/albums/dreAMEE/AMEESACVNftRICKYSTAR`
+              ],
+              lyric: "",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      id: "BichPhuong",
+      makerAvatar:
+        "https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2022/1/25/bich-phuong-1-1643113353899263889600.jpg",
+      makerName: "BÍCH PHƯƠNG",
+      role: "singer",
+      priority: false,
+      singles: [
+        {
+          id: "bphuong_byeu",
+          avatar:
+            "https://photo-resize-zmp3.zadn.vn/w600_r1x1_jpeg/cover/3/c/d/5/3cd5abfdd0224a98757fef8707344077.jpg",
+          title: "Bùa Yêu",
+          mainMusicMaker: "BÍCH PHƯƠNG",
+          stageName: "BÍCH PHƯƠNG",
+          type: "Single",
+          genre: "Pop",
+          releaseDay: "2019-10-01",
+          streamed: 132650721,
+          trend: false,
+          link: mp3Type[`MusicMaker/Bich Phuong/singletracks/BÍCHPHƯƠNGBùaYêu`],
+          lyric: "",
+        },
+        {
+          id: "bphuong_bglc",
+          avatar: "https://kenh14cdn.com/2017/4-1513186582381.jpg",
+          title: "Bao Giờ Lấy Chồng?",
+          mainMusicMaker: "BÍCH PHƯƠNG",
+          stageName: "BÍCH PHƯƠNG",
+          type: "Single",
+          genre: "Pop",
+          releaseDay: "2017-01-16",
+          streamed: 100170075,
+          trend: false,
+          link: mp3Type[
+            `MusicMaker/Bich Phuong/singletracks/BPBao Giờ Lấy Chồng`
+          ],
+          lyric: "",
+        },
+        {
+          id: "bphuong_ncts",
+          avatar: "https://i.ytimg.com/vi/sU8G7Q4rUA4/maxresdefault.jpg",
+          title: "Nâng Chén Tiêu Sầu",
+          mainMusicMaker: "BÍCH PHƯƠNG",
+          stageName: "BÍCH PHƯƠNG",
+          type: "Single",
+          genre: "House",
+          releaseDay: "2017-01-16",
+          streamed: 20231593,
+          trend: false,
+          link: mp3Type[`MusicMaker/Bich Phuong/singletracks/BPhuongNCTS`],
           lyric: "",
         },
       ],
