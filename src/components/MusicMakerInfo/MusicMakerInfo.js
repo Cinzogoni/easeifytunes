@@ -25,32 +25,30 @@ function MusicMakerInfo({ musicMakerInfo }) {
     .split("/")
     .map((r) => t(`roles.${r.trim()}`));
 
-  // console.log(info);
-
   return (
     <div className={cx("wrapper")}>
-      <div
-        className={cx("back")}
-        onClick={() => {
-          setShowNewReleasesPlaylist(false);
-          setActiveNewReleasesPlaylist(false);
-        }}
-      >
-        <Navigation id="music-maker-viewAll">
-          <FontAwesomeIcon className={cx("arrow-left")} icon={faArrowLeft} />
-        </Navigation>
-      </div>
+      <div className={cx("frame")}>
+        <div
+          className={cx("back")}
+          onClick={() => {
+            setShowNewReleasesPlaylist(false);
+            setActiveNewReleasesPlaylist(false);
+          }}
+        >
+          <Navigation id="music-maker-viewAll">
+            <FontAwesomeIcon className={cx("arrow-left")} icon={faArrowLeft} />
+          </Navigation>
+        </div>
 
-      <div className={cx("container")}>
         <img
           className={cx("avatar")}
           src={info[0].makerAvatar}
           alt={info[0].makerName}
         />
-        <div className={cx("info")}>
-          <h3 className={cx("stage-name")}>{info[0].makerName}</h3>
-          <h4 className={cx("role")}>{rolesSplit.join("/")}</h4>
-        </div>
+      </div>
+      <div className={cx("info")}>
+        <h3 className={cx("stage-name")}>{info[0].makerName}</h3>
+        <h4 className={cx("role")}>{rolesSplit.join("/")}</h4>
       </div>
     </div>
   );

@@ -25,6 +25,8 @@
 
   --1st-background-color: #101d2f;
   --2nd-background-color: rgba(10, 15, 27, 0.5);
+  --3rd-background-color: rgba(10, 15, 27, 0.8);
+  --4th-background-color: #16243e;
   --main--button-color: #ffffff;
   --waveform--animate-color: #ffffff;
   --1st--element-bg: #ffffff;
@@ -40,6 +42,7 @@
   --3rd--border-element: 2px solid #746c6b75;
   --4th--border-element: 2px solid transparent;
   --5th--border-element: 2px solid rgba(255, 255, 255, 0.5);
+  --6th--border-element: 2px solid rgba(255, 255, 255, 0.8);
 
   //Border-Radius
   --1st--border-radius: 15px;
@@ -49,6 +52,7 @@
   //Shadow
   --1st--box-shadow: 0px 2px 12px rgba(255, 255, 255, 0.15);
   --2nd--box-shadow: 4px 4px 3px rgba(200, 200, 200, 0.8);
+  --3rd--box-shadow: 4px 4px 1.5px rgba(19, 18, 18, 0.8);
 }
 
 * {

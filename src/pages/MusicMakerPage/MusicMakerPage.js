@@ -1,9 +1,11 @@
 import { useParams } from "react-router-dom";
+import classNames from "classnames/bind";
+import styles from "./MusicMakerPage.module.scss";
+const cx = classNames.bind(styles);
 
-import Track from "~/components/Track";
 import MusicMakerInfo from "~/components/MusicMakerInfo";
-import MusicMakerList from "~/components/MusicMakerList";
-
+import MusicMakerSingles from "~/components/MusicMakerSingles";
+import MusicMakerAlbums from "~/components/MusicMakerAlbums";
 import { useTrackInfo } from "~/components/TrackInfoProvider";
 
 function MusicMakerPage() {
@@ -38,12 +40,13 @@ function MusicMakerPage() {
   // console.log("musicMakerInfo:", musicMakerInfo);
 
   return (
-    <Track
-      info={<MusicMakerInfo musicMakerInfo={makerFilter} />}
-      list={
-        <MusicMakerList musicSingles={musicSingles} musicAlbums={musicAlbums} />
-      }
-    />
+    <div className={cx("wrapper")}>
+      <MusicMakerInfo musicMakerInfo={makerFilter} />
+      <div className={cx("container")}>
+        <MusicMakerAlbums musicAlbums={musicAlbums} />
+        <MusicMakerSingles musicSingles={musicSingles} />
+      </div>
+    </div>
   );
 }
 

@@ -1,0 +1,30 @@
+.container {
+  flex: 1;
+  padding: 0 30px;
+  background: var(--3rd--background-linear);
+  border-right: var(--1st--border-element);
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--1st--element-bg);
+    border-radius: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--3rd--element-bg);
+  }
+}
+
+.avatar {
+  height: 50px;
+}
