@@ -32,46 +32,44 @@ function MomentViewAll() {
   };
 
   return (
-    <div className={cx("wrapper")}>
-      <div className={cx("container")}>
-        <div className={cx("back-home")}>
-          <Navigation>
-            <FontAwesomeIcon className={cx("arrow-left")} icon={faArrowLeft} />
-          </Navigation>
-        </div>
+    <div className={cx("container")}>
+      <div className={cx("back")}>
+        <Navigation>
+          <FontAwesomeIcon className={cx("arrow-left")} icon={faArrowLeft} />
+        </Navigation>
+      </div>
 
-        <div className={cx("video-box")}>
-          <GridSystem rowClass={cx("row-1")}>
-            {sortedMoment.map((video, index) => (
-              <GridSystem
-                key={index}
-                colClass={cx("col")}
-                colL={cx("l-4")}
-                colML={cx("ml-6")}
-                colM={cx("m-12")}
-                colSM={cx("sm-12")}
-                colS={cx("s-12")}
-                colMo={cx("mo-12")}
-              >
-                <div className={cx("frame")}>
-                  <div className={cx("boxes")}>
-                    <MomentBox
-                      id={video.id}
-                      link={video.link}
-                      date={video.date}
-                      name={video.name}
-                      isVideoPlaying={
-                        activeVideoId === video.id && isVideoPlaying
-                      }
-                      onPlay={() => handleTheVideoPlay(video.id)}
-                      onPause={handleTheAudioPause}
-                    />
-                  </div>
+      <div className={cx("frame")}>
+        <GridSystem rowClass={cx("row-1")}>
+          {sortedMoment.map((video, index) => (
+            <GridSystem
+              key={video.id}
+              colClass={cx("col")}
+              colL={cx("l-3")}
+              colML={cx("ml-4")}
+              colM={cx("m-6")}
+              colSM={cx("sm-6")}
+              colS={cx("s-6")}
+              colMo={cx("mo-12")}
+            >
+              <div className={cx("boxes")}>
+                <div className={cx("box")}>
+                  <MomentBox
+                    id={video.id}
+                    link={video.link}
+                    date={video.date}
+                    name={video.name}
+                    isVideoPlaying={
+                      activeVideoId === video.id && isVideoPlaying
+                    }
+                    onPlay={() => handleTheVideoPlay(video.id)}
+                    onPause={handleTheAudioPause}
+                  />
                 </div>
-              </GridSystem>
-            ))}
-          </GridSystem>
-        </div>
+              </div>
+            </GridSystem>
+          ))}
+        </GridSystem>
       </div>
     </div>
   );

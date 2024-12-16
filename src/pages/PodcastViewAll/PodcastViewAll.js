@@ -73,55 +73,53 @@ function PodcastViewAll() {
   return (
     <div className={cx("wrapper")}>
       <div className={cx("search-bar")}>
-        <div className={cx("search-frame")}>
-          <Tippy
-            placement="bottom"
-            interactive
-            appendTo={document.body}
-            visible={showResult && searchResult.length > 0}
-            onClickOutside={handleHideResult}
-            render={(attrs) => (
-              <div className={cx("search-result")} tabIndex={-1} {...attrs}>
-                <WrapperPopper>
-                  {searchResult
-                    .filter((item) => item.topic && item.description)
-                    .map((item) => (
-                      <PodcastItem
-                        key={`podcast_${item.id}`}
-                        podcastAvatar={item.avatar}
-                        podcastTopic={item.topic}
-                        podcastDescription={item.description}
-                      />
-                    ))}
-                </WrapperPopper>
-              </div>
-            )}
-          >
-            <div className={cx("input")}>
-              <input
-                ref={inputRef}
-                className={cx("search-input")}
-                placeholder={t("podcastTopicSearch")}
-                spellCheck={false}
-                value={searchValue}
-                onChange={(e) => setSearchValue(e.target.value)}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-              />
-              {!!searchValue && (
-                <FontAwesomeIcon
-                  className={cx("icon")}
-                  icon={faXmark}
-                  onClick={handleClear}
-                />
-              )}
+        <Tippy
+          placement="bottom"
+          interactive
+          appendTo={document.body}
+          visible={showResult && searchResult.length > 0}
+          onClickOutside={handleHideResult}
+          render={(attrs) => (
+            <div className={cx("search-result")} tabIndex={-1} {...attrs}>
+              <WrapperPopper>
+                {searchResult
+                  .filter((item) => item.topic && item.description)
+                  .map((item) => (
+                    <PodcastItem
+                      key={`podcast_${item.id}`}
+                      podcastAvatar={item.avatar}
+                      podcastTopic={item.topic}
+                      podcastDescription={item.description}
+                    />
+                  ))}
+              </WrapperPopper>
             </div>
-          </Tippy>
-        </div>
+          )}
+        >
+          <div className={cx("input")}>
+            <input
+              ref={inputRef}
+              className={cx("search-input")}
+              placeholder={t("podcastTopicSearch")}
+              spellCheck={false}
+              value={searchValue}
+              onChange={(e) => setSearchValue(e.target.value)}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+            />
+            {!!searchValue && (
+              <FontAwesomeIcon
+                className={cx("icon")}
+                icon={faXmark}
+                onClick={handleClear}
+              />
+            )}
+          </div>
+        </Tippy>
       </div>
 
       <div className={cx("container")}>
-        <div className={cx("back-home")}>
+        <div className={cx("back")}>
           <Navigation>
             <FontAwesomeIcon className={cx("arrow-left")} icon={faArrowLeft} />
           </Navigation>
@@ -131,24 +129,22 @@ function PodcastViewAll() {
           <GridSystem rowClass={cx("row-1")}>
             {podcast.map((podcast, index) => (
               <GridSystem
-                key={index}
+                key={podcast.id}
                 colClass={cx("col")}
-                colL={cx("l-3")}
-                colML={cx("ml-4")}
-                colM={cx("m-6")}
-                colSM={cx("sm-12")}
-                colS={cx("s-12")}
-                colMo={cx("mo-12")}
+                colL={cx("l-2")}
+                colML={cx("ml-2-5")}
+                colM={cx("m-3")}
+                colSM={cx("sm-3")}
+                colS={cx("s-4")}
+                colMo={cx("mo-6")}
               >
-                <div className={cx("frame")}>
-                  <div className={cx("boxes")}>
-                    <PodcastBox
-                      podcastId={`podcast_${podcast.id}`}
-                      podcastAvatar={podcast.avatar}
-                      podcastTopic={podcast.topic}
-                      podcastDescription={podcast.description}
-                    />
-                  </div>
+                <div className={cx("boxes")}>
+                  <PodcastBox
+                    podcastId={podcast.id}
+                    podcastAvatar={podcast.avatar}
+                    podcastTopic={podcast.topic}
+                    podcastDescription={podcast.description}
+                  />
                 </div>
               </GridSystem>
             ))}

@@ -57,11 +57,7 @@ function NewReleasesViewAll() {
 
     const filteredResults = filteredTracks.filter((item) => {
       const searchLowerCase = debounced.toLowerCase();
-      return (
-        (item.title && item.title.toLowerCase().includes(searchLowerCase)) ||
-        (item.stageName &&
-          item.stageName.toLowerCase().includes(searchLowerCase))
-      );
+      return item.title && item.title.toLowerCase().includes(searchLowerCase);
     });
 
     setSearchResult(filteredResults);
@@ -89,78 +85,77 @@ function NewReleasesViewAll() {
   return (
     <div className={cx("wrapper")}>
       <div className={cx("search-bar")}>
-        <div className={cx("search-frame")}>
-          <Tippy
-            placement="bottom"
-            interactive
-            appendTo={document.body}
-            visible={showResult && searchResult.length > 0}
-            onClickOutside={handleHideResult}
-            render={(attrs) => (
-              <div className={cx("search-result")} tabIndex={-1} {...attrs}>
-                <WrapperPopper>
-                  {searchResult
-                    .filter((item) => item.title && item.stageName)
-                    .map((item) => (
-                      <MusicTrackItem
-                        key={item.id}
-                        trackAvatar={item.avatar}
-                        trackPerformer={item.stageName}
-                        trackTitle={item.title}
-                      />
-                    ))}
-                </WrapperPopper>
-              </div>
-            )}
-          >
-            <div className={cx("input")}>
-              <input
-                ref={inputRef}
-                className={cx("search-input")}
-                placeholder={t("trackTitle")}
-                spellCheck={false}
-                value={searchValue}
-                onChange={(e) => setSearchValue(e.target.value)}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-              />
-              {!!searchValue && (
-                <FontAwesomeIcon
-                  className={cx("icon")}
-                  icon={faXmark}
-                  onClick={handleClear}
-                />
-              )}
+        <Tippy
+          placement="bottom"
+          interactive
+          appendTo={document.body}
+          visible={showResult && searchResult.length > 0}
+          onClickOutside={handleHideResult}
+          render={(attrs) => (
+            <div className={cx("search-result")} tabIndex={-1} {...attrs}>
+              <WrapperPopper>
+                {searchResult
+                  .filter((item) => item.title)
+                  .map((item) => (
+                    <MusicTrackItem
+                      key={item.id}
+                      trackAvatar={item.avatar}
+                      trackPerformer={item.stageName}
+                      trackTitle={item.title}
+                    />
+                  ))}
+              </WrapperPopper>
             </div>
-          </Tippy>
-        </div>
+          )}
+        >
+          <div className={cx("input")}>
+            <input
+              ref={inputRef}
+              className={cx("search-input")}
+              placeholder={t("trackTitle")}
+              spellCheck={false}
+              value={searchValue}
+              onChange={(e) => setSearchValue(e.target.value)}
+              onFocus={handleFocus}
+              onBlur={handleBlur}
+            />
+            {!!searchValue && (
+              <FontAwesomeIcon
+                className={cx("icon")}
+                icon={faXmark}
+                onClick={handleClear}
+              />
+            )}
+          </div>
+        </Tippy>
       </div>
+
       <div className={cx("container")}>
-        <div className={cx("back-home")}>
+        <div className={cx("back")}>
           <Navigation>
             <FontAwesomeIcon className={cx("arrow-left")} icon={faArrowLeft} />
           </Navigation>
         </div>
 
-        <div className={cx("music-box")}>
+        <div className={cx("frame")}>
           <GridSystem rowClass={cx("row-1")}>
-            {filteredTracks.map((track, index) => (
-              <GridSystem
-                key={index}
-                colClass={cx("col")}
-                colL={cx("l-3")}
-                colML={cx("ml-4")}
-                colM={cx("m-6")}
-                colSM={cx("sm-12")}
-                colS={cx("s-12")}
-                colMo={cx("mo-12")}
-              >
-                <div className={cx("frame")}>
+            {filteredTracks.map((track) => {
+              return (
+                <GridSystem
+                  colClass={cx("col")}
+                  key={track.id}
+                  colL={cx("l-2")}
+                  colML={cx("ml-2-5")}
+                  colM={cx("m-3")}
+                  colSM={cx("sm-3")}
+                  colS={cx("s-4")}
+                  colMo={cx("mo-6")}
+                >
                   <div className={cx("boxes")}>
                     <NewReleasesBox
                       trackId={track.id}
-                      trackLink={track.link}
                       trackAvatar={track.avatar}
+                      trackLink={track.link}
                       trackTitle={track.title}
                       trackPerformer={track.stageName}
                       trackType={track.type}
@@ -169,9 +164,9 @@ function NewReleasesViewAll() {
                       streamed={track.streamed}
                     />
                   </div>
-                </div>
-              </GridSystem>
-            ))}
+                </GridSystem>
+              );
+            })}
           </GridSystem>
         </div>
       </div>
