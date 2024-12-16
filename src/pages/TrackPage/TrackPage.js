@@ -41,8 +41,6 @@ function TrackPage() {
     (t) => t.stageName === stageName && t.title === trackTitle
   );
 
-  // console.log(allTrack);
-
   const trackId = track && track.id ? track.id : "";
   const link = track && track.link ? track.link : "";
   const avatar = track.avatar || track.albumAvatar || "";
@@ -57,8 +55,6 @@ function TrackPage() {
   const streamed = track && track.streamed ? track.streamed : "";
 
   const lyrics = track && track.lyric ? track.lyric.split("\n") : "";
-
-  // console.log(track);
 
   const handleLink = () => {
     if (!track) return;
@@ -96,7 +92,6 @@ function TrackPage() {
           avatar={avatar}
           title={title}
           stageName={musicMakerName}
-          name={name}
           trackType={trackType}
           genre={genre}
           releaseDay={releaseDay}

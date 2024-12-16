@@ -89,6 +89,7 @@ const Player = ({
   volumeBarTrackInfo,
   volumeBGTrackInfo,
   volumeIconTrackInfo,
+  playerBtnFrameTrackInfo,
   //Single Tracks
   frameSingleTracks,
   playerSingleTracks,
@@ -664,7 +665,13 @@ const Player = ({
           </button>
         </div>
 
-        <div className={cx("playerBtn-frame", { playerBtnFrameFooter })}>
+        <div
+          className={cx(
+            "playerBtn-frame",
+            { playerBtnFrameFooter },
+            { playerBtnFrameTrackInfo }
+          )}
+        >
           {(!isStatus || isTrackEnded) && (
             <div
               className={cx(

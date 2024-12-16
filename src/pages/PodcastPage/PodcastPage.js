@@ -141,7 +141,6 @@ function PodcastPage() {
       <Track
         info={<PodcastInfo podcastInfo={findAllTopic} />}
         list={<PodcastAudioList audioList={audioList} />}
-        containerPodcast
       />
     </div>
   );

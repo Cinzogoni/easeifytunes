@@ -498,8 +498,8 @@ audio {
 }
 
 .loopTrack-bg {
-  width: 38px;
-  height: 38px;
+  width: 33px;
+  height: 33px;
   margin: 0 2px;
   border-radius: 999px;
   display: flex;
@@ -607,19 +607,20 @@ audio {
 
 //TrackInfo
 .frameTrackInfoResize {
-  position: static;
-  width: 240px;
+  position: absolute;
+  top: 25px;
+  width: 250px;
   height: 50px;
-  transform: translate(0px, 6px);
-  background-image: var(--child-background-color);
-  border: var(--main-border);
-  border-radius: var(--main-border-radius);
+}
+
+.playerBtnFrameTrackInfo {
+  width: unset;
 }
 
 .playerTrackInfoResize {
   width: 100%;
   height: 100%;
-  bottom: 0;
+
   position: relative;
 }
 
@@ -677,7 +678,8 @@ audio {
   height: 32px;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .volumeBarTrackInfo {
@@ -694,28 +696,6 @@ audio {
 .frame:not(.show) .stopperTrackInfo {
   opacity: 1;
   transition: opacity 0.2s ease-in-out;
-}
-
-@media (min-width: 893px) and (max-width: 1037px) {
-  .frameTrackInfoResize {
-    height: 50px;
-    transform: translate(0px, 2px);
-  }
-}
-
-@media (min-width: 887px) and (max-width: 979px) {
-  .frameTrackInfoResize {
-    height: 60px;
-    transform: translate(0px, 1px);
-  }
-}
-
-@media (max-width: 886px) {
-  .frameTrackInfoResize {
-    width: 250px;
-    height: 50px;
-    transform: translate(0px, 2px);
-  }
 }
 
 //Single Tracks

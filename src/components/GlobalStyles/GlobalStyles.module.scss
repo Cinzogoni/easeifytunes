@@ -20,6 +20,9 @@
     #16283d 50%,
     #0a0f1b
   );
+  --2nd--background-linear: linear-gradient(to left, #16243e, #1f3c57 50%);
+  --3rd--background-linear: linear-gradient(to right, #16243e 50%, #1f3c57);
+
   --1st-background-color: #101d2f;
   --2nd-background-color: rgba(10, 15, 27, 0.5);
   --main--button-color: #ffffff;
@@ -41,9 +44,11 @@
   //Border-Radius
   --1st--border-radius: 15px;
   --2nd--border-radius: 7.5px;
+  --border--radius-rounded-corners: 20px;
 
   //Shadow
-  --1st--box-shadow: rgba(255, 255, 255, 0.15) 0px 2px 12px;
+  --1st--box-shadow: 0px 2px 12px rgba(255, 255, 255, 0.15);
+  --2nd--box-shadow: 4px 4px 3px rgba(200, 200, 200, 0.8);
 }
 
 * {

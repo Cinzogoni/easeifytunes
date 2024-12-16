@@ -48,7 +48,7 @@ function TrackInfo({
         <div className={cx("info")}>
           <h3 className={cx("title")}>{title}</h3>
           <h4 className={cx("performer")}>{stageName}</h4>
-          <h5 className={cx("type")}>{name}</h5>
+          <h5 className={cx("type")}>{trackType}</h5>
           <h5 className={cx("genre")}>{genre}</h5>
           <h5 className={cx("release-day")}>
             {t("releaseDay")}: {releaseDay}
@@ -79,58 +79,59 @@ function TrackInfo({
                 trackTitle={title}
                 trackPerformer={stageName}
                 trackGenre={genre}
-                // trackType={type}
                 streamed={streamed}
               />
             </div>
           </div>
-
-          <Player
-            trackId={id}
-            trackLink={link}
-            trackTitle={title}
-            trackPerformer={stageName}
-            trackType={trackType}
-            //
-            isStatus={id === currentTrackId}
-            onPlay={() =>
-              handlePlay(
-                id,
-                {
-                  trackTitle: title,
-                  trackPerformer: stageName,
-                },
-                link
-              )
-            }
-            onPause={() => handlePause(id)}
-            onLoop={() => handleLoop()}
-            activeLoopClick={activeLoopClick}
-            setActiveLoopClick={setActiveLoopClick}
-            //
-            waveformBoxFooter
-            frameTrackInfoResize
-            playerTrackInfoResize
-            loopTrackInfo
-            loopBGTrackInfo
-            pauseTrackInfo
-            pauseBGTrackInfo
-            playerTrackInfo
-            playIconTrackInfo
-            playFooterIcon
-            stopperTrackInfo
-            stopIconTrackInfo
-            stopFooterIcon
-            playtimeTrackInfo
-            actionTrackInfoLeft
-            actionTrackInfoRight
-            randomTrackInfo
-            prevTrackInfo
-            nextTrackInfo
-            volumeBarTrackInfo
-            volumeBGTrackInfo
-            volumeIconTrackInfo
-          />
+          <div className={cx("player")}>
+            <Player
+              trackId={id}
+              trackLink={link}
+              trackTitle={title}
+              trackPerformer={stageName}
+              trackType={trackType}
+              //
+              isStatus={id === currentTrackId}
+              onPlay={() =>
+                handlePlay(
+                  id,
+                  {
+                    trackTitle: title,
+                    trackPerformer: stageName,
+                  },
+                  link
+                )
+              }
+              onPause={() => handlePause(id)}
+              onLoop={() => handleLoop()}
+              activeLoopClick={activeLoopClick}
+              setActiveLoopClick={setActiveLoopClick}
+              //
+              waveformBoxFooter
+              frameTrackInfoResize
+              playerTrackInfoResize
+              loopTrackInfo
+              loopBGTrackInfo
+              pauseTrackInfo
+              pauseBGTrackInfo
+              playerTrackInfo
+              playIconTrackInfo
+              playFooterIcon
+              stopperTrackInfo
+              stopIconTrackInfo
+              stopFooterIcon
+              playtimeTrackInfo
+              actionTrackInfoLeft
+              actionTrackInfoRight
+              randomTrackInfo
+              prevTrackInfo
+              nextTrackInfo
+              volumeBarTrackInfo
+              volumeBGTrackInfo
+              volumeIconTrackInfo
+              playerBtnFrameTrackInfo
+            />
+          </div>
         </div>
       </div>
     </div>

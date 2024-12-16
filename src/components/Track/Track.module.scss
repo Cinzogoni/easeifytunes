@@ -1,5 +1,7 @@
 .wrapper {
   width: 100%;
+  height: 100%;
+  background: #16243e;
 }
 
 .wrapperPlaylistMode {
@@ -7,23 +9,31 @@
 }
 
 .container {
-  max-width: 1630px;
-  height: 100vh;
-  max-height: calc(100vh - 224px);
-  margin: 0 auto;
+  width: 100%;
+  height: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
-}
 
-.containerPodcast {
-  max-width: 1630px;
-  height: 100vh;
-  max-height: calc(100vh - 356px);
-  margin: 0 auto;
-  position: relative;
-  display: flex;
-  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--1st--element-bg);
+    border-radius: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--3rd--element-bg);
+  }
 }
 
 .PlaylistMode {
@@ -38,9 +48,6 @@
 
 .frame {
   width: 100%;
-  border: var(--main-border);
-  border-radius: var(--main-border-radius);
-  background-image: var(--parent-background-color);
 }
 
 .framePlaylistMode {
@@ -54,12 +61,7 @@
 }
 
 .box {
-  width: 100%;
-  height: 8000px;
-  margin-top: 12px;
-  border: var(--main-border);
-  border-radius: var(--main-border-radius);
-  background-image: var(--parent-background-color);
+  flex: 1;
 
   overflow-y: auto;
   overflow-x: hidden;
@@ -69,29 +71,20 @@
   }
 
   &::-webkit-scrollbar-track {
-    background: var(--main-background-color);
     border-radius: 1px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background: rgba(235, 235, 235, 1);
+    background: var(--1st--element-bg);
     border-radius: 1px;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background: rgba(150, 150, 150, 1);
+    background: var(--3rd--element-bg);
   }
 }
 
 .boxPlaylistMode {
   background-image: none;
   background-color: rgba(12, 12, 20, 1);
-}
-
-//Social
-
-@media (min-width: 893px) and (max-width: 1037px) {
-  .frame {
-    height: 243px;
-  }
 }

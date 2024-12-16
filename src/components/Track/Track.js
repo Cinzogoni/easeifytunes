@@ -7,7 +7,7 @@ function Track({
   info,
   social,
   list,
-  containerPodcast,
+
   PlaylistMode,
   wrapperPlaylistMode,
   framePlaylistMode,
@@ -15,7 +15,7 @@ function Track({
 }) {
   return (
     <div className={cx("wrapper", { wrapperPlaylistMode })}>
-      <div className={cx("container", { containerPodcast }, { PlaylistMode })}>
+      <div className={cx("container", { PlaylistMode })}>
         <div className={cx("frame", { framePlaylistMode })}>{info}</div>
         <div className={cx("social")}>{social}</div>
         <div className={cx("box", { boxPlaylistMode })}>{list}</div>
