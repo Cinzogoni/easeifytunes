@@ -1,6 +1,6 @@
 {
-  "homepage": "https://Cinzogoni.github.io/easeifytunes",
-  "name": "easeifytunes-fe",
+  "homepage": "https://Cinzogoni.github.io/snapifytunes",
+  "name": "snapifytunes-web",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
