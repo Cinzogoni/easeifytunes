@@ -35,7 +35,7 @@
     margin-left: 20px;
     background-color: var(--main--button-color);
     border-radius: 50px;
-    border: var(--border--child-element);
+    border: var(--1st--border-element);
     transition: transform 0.1s ease;
 
     &:hover {
@@ -75,7 +75,7 @@
     margin-left: 10px;
     background-color: var(--main--button-color);
     border-radius: 50px;
-    border: var(--border--child-element);
+    border: var(--1st--border-element);
     transition: transform 0.1s ease;
 
     &:hover {

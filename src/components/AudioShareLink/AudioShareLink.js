@@ -61,8 +61,8 @@ function AudioShareLink({ stageName, trackTitle, LinkFixSize }) {
                 onClick={handleCopyLink}
                 style={{
                   backgroundColor: activeCopyLink
-                    ? "rgba(12, 12, 20, 1)"
-                    : "rgba(255, 255, 255, 0.9)",
+                    ? "rgba(12, 12, 20, 0.6)"
+                    : "rgba(12, 12, 20, 0.9)",
                 }}
               >
                 <div className={cx("copy-frame")}>
