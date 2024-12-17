@@ -44,9 +44,7 @@ function PodcastInfo({ podcastInfo }) {
           alt={t(`topics.${info[0].topic}`)}
         />
         <div className={cx("info")}>
-          <h3 className={cx("podcast-topic")}>
-            {t(`topics.${info[0].topic}`)}
-          </h3>
+          <h3 className={cx("topic")}>{t(`topics.${info[0].topic}`)}</h3>
           <h4 className={cx("performer")}>
             {t(`description.${info[0].description}`)}
           </h4>

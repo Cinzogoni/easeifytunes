@@ -137,88 +137,86 @@ function PodcastAudioList({ audioList }) {
   };
 
   return (
-    <div className={cx("wrapper")}>
-      <div className={cx("container")}>
-        <div className={cx("audios")}>
-          {sortedPodcast.map((audio, index) => (
-            <div
-              ref={(el) => (audioRefs.current[index] = el)}
-              className={cx("audio-box", {
-                playing: audio.id === currentTrackId,
-                transparent: isTrackEnded && isLastTrack(audio),
-              })}
-              key={audio.id}
-            >
-              <div className={cx("player")}>
-                <img
-                  className={cx("audio-avatar")}
-                  src={audio.audioAvatar}
-                  alt={audio.title}
+    <div className={cx("container")}>
+      <div className={cx("audios")}>
+        {sortedPodcast.map((audio, index) => (
+          <div
+            ref={(el) => (audioRefs.current[index] = el)}
+            className={cx("audio-box", {
+              playing: audio.id === currentTrackId,
+              transparent: isTrackEnded && isLastTrack(audio),
+            })}
+            key={audio.id}
+          >
+            <div className={cx("player")}>
+              <img
+                className={cx("avatar")}
+                src={audio.audioAvatar}
+                alt={audio.title}
+              />
+              <Player
+                podcastAudioList={audioList}
+                trackId={audio.id}
+                trackLink={audio.link}
+                trackAvatar={audio.avatarAudio}
+                trackTitle={audio.title}
+                trackPerformer={audio.publisher}
+                trackType={audio.type}
+                //
+                isStatus={audio.id === currentTrackId}
+                onPlay={() => handleTrackPlay(audio)}
+                onPause={() => handleTrackPause(audio)}
+                //
+                frameSingleTracks
+                playerSingleTracks
+                stopperSingleTracks
+                waveformBoxSingleTracks
+              />
+            </div>
+
+            <div className={cx("info")}>
+              <Link
+                className={cx("link")}
+                to={routesConfig.podcastAudioPage
+                  .replace(`:publisher`, audio.publisher.replace(/\//g, "-"))
+                  .replace(`:title`, audio.title.replace(/\//g, "-"))}
+              />
+              <h4 className={cx("title")}>{audio.title}</h4>
+              <h5 className={cx("publisher")}>
+                {t("publisher")}: {audio.publisher}
+              </h5>
+              <h5 className={cx("author")}>
+                {t("author")}: {audio.author}
+              </h5>
+            </div>
+
+            <div className={cx("more")}>
+              <div className={cx("streams")}>
+                <FontAwesomeIcon
+                  className={cx("listeners")}
+                  icon={faHeadphones}
                 />
-                <Player
-                  podcastAudioList={audioList}
+                <h5 className={cx("streamed")}>
+                  {new Intl.NumberFormat().format(audio.streamed || 0)}
+                </h5>
+              </div>
+              <div className={cx("share")}>
+                <FontAwesomeIcon className={cx("share-link")} icon={faLink} />
+              </div>
+              <div className={cx("add")}>
+                <YourPlaylistCheck
                   trackId={audio.id}
                   trackLink={audio.link}
-                  trackAvatar={audio.avatarAudio}
+                  trackAvatar={audio.audioAvatar}
                   trackTitle={audio.title}
                   trackPerformer={audio.publisher}
                   trackType={audio.type}
-                  //
-                  isStatus={audio.id === currentTrackId}
-                  onPlay={() => handleTrackPlay(audio)}
-                  onPause={() => handleTrackPause(audio)}
-                  //
-                  framePodcastResize
-                  playerPodcastList
-                  waveformBoxSingleTracks
-                  stopperPodcastList
+                  streamed={audio.streamed}
                 />
-              </div>
-
-              <div className={cx("audio-info")}>
-                <Link
-                  className={cx("audio-link")}
-                  to={routesConfig.podcastAudioPage
-                    .replace(`:publisher`, audio.publisher.replace(/\//g, "-"))
-                    .replace(`:title`, audio.title.replace(/\//g, "-"))}
-                />
-                <h4 className={cx("audio-title")}>{audio.title}</h4>
-                <h5 className={cx("audio-publisher")}>
-                  {t("publisher")}: {audio.publisher}
-                </h5>
-                <h5 className={cx("audio-author")}>
-                  {t("author")}: {audio.author}
-                </h5>
-              </div>
-
-              <div className={cx("more-func")}>
-                <div className={cx("streams")}>
-                  <FontAwesomeIcon
-                    className={cx("listeners")}
-                    icon={faHeadphones}
-                  />
-                  <h5 className={cx("streamed")}>
-                    {new Intl.NumberFormat().format(audio.streamed || 0)}
-                  </h5>
-                </div>
-                <div className={cx("share")}>
-                  <FontAwesomeIcon className={cx("share-link")} icon={faLink} />
-                </div>
-                <div className={cx("add")}>
-                  <YourPlaylistCheck
-                    trackId={audio.id}
-                    trackLink={audio.link}
-                    trackAvatar={audio.audioAvatar}
-                    trackTitle={audio.title}
-                    trackPerformer={audio.publisher}
-                    trackType={audio.type}
-                    streamed={audio.streamed}
-                  />
-                </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );

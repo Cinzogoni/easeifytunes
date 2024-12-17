@@ -1,23 +1,27 @@
-.wrapper {
-  padding: 0 36px;
-}
-
 .container {
   width: 100%;
-  margin: 12px 0;
+  height: 100%;
+  padding: 15px 30px 30px 30px;
+  background: var(--3rd--background-linear);
+  border-top-right-radius: var(--border--radius-rounded-corners);
+  border-bottom-right-radius: var(--border--radius-rounded-corners);
 }
 .audios {
-  margin: 12px 36px 0 36px;
+  width: 100%;
 }
 
 .audio-box {
-  margin-top: 16px;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
-  border-radius: var(--main-border-radius);
+  background-color: transparent;
+  border: var(--5th--border-element);
+  border-radius: var(--2nd--border-radius);
 
   &.playing {
-    background-color: rgba(128, 128, 128, 0.2);
+    background-color: var(--6th--element-bg);
     transition: background-color 0.3s ease;
   }
 
@@ -27,66 +31,64 @@
   }
 }
 
-.audio-avatar {
-  width: 85px;
-  height: 85px;
-  margin: 6px 0 6px 6px;
-  object-fit: cover;
-  border: var(--main-border);
-  border-radius: var(--main-border-radius);
+.audio-box:hover {
+  background-color: var(--6th--element-bg);
+  border: var(--5th--border-element);
 }
 
 .player {
   display: flex;
   align-items: center;
   justify-content: center;
+
   position: relative;
 }
 
-.audio-box:hover {
-  background-color: rgba(128, 128, 128, 0.2);
+.avatar {
+  width: 56px;
+  height: 56px;
+  margin: 6px 0 6px 6px;
+  object-fit: cover;
+  border: var(--1st--border-element);
+  border-radius: var(--2nd--border-radius);
 }
 
-.audio-info {
+.info {
   width: 100%;
-  max-width: 100%;
-  // height: 60px;
-  height: auto;
+  height: 100%;
   margin: 6px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
+
+  overflow: hidden;
 }
 
-.audio-link {
+.link {
   width: 100%;
-  height: 60px;
+  height: 100%;
   position: absolute;
+  z-index: 20;
 }
 
-.audio-title {
-  font-size: 1rem;
+.title {
+  font-size: 1.6rem;
   line-height: 1.5;
-}
-
-.audio-publisher,
-.audio-author {
-  font-size: 0.85rem;
-  opacity: 0.6;
-  line-height: 1.2;
-}
-
-.audio-title,
-.audio-publisher,
-.audio-author {
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: width 0.3s ease;
 }
 
-.more-func {
-  height: 60px;
+.publisher,
+.author {
+  font-size: 1.4rem;
+  opacity: 0.6;
+  line-height: 1.3;
+}
+
+.more {
+  height: 100%;
   margin: 6px;
   display: flex;
   align-items: center;
@@ -94,8 +96,8 @@
 
 .share,
 .add {
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   margin: 0 6px;
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 7px;
@@ -105,8 +107,8 @@
 }
 
 .streams {
-  width: 180px;
-  height: 52px;
+  width: 150px;
+  height: 56px;
   margin: 0 6px;
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 7px;
@@ -119,7 +121,7 @@
 .plus {
   width: 30px;
   height: 30px;
-  color: var(--main-move-color);
+  color: var(--main--button-color);
 }
 
 .listeners {
@@ -129,47 +131,8 @@
 .streamed {
   width: 100%;
   height: 100%;
-  font-size: 0.8rem;
+  font-size: 1.8rem;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@media (min-width: 1050px) and (max-width: 1120px) {
-  .audio-title {
-    font-size: 0.9rem;
-  }
-}
-
-@media (min-width: 1007px) and (max-width: 1049px) {
-  .audio-title {
-    font-size: 0.9rem;
-  }
-
-  .audio-publisher,
-  .audio-author {
-    font-size: 0.7rem;
-  }
-}
-
-@media (min-width: 987px) and (max-width: 1006px) {
-  .audio-title {
-    font-size: 0.8rem;
-  }
-
-  .audio-publisher,
-  .audio-author {
-    font-size: 0.65rem;
-  }
-}
-
-@media (max-width: 986px) {
-  .audio-title {
-    font-size: 0.7rem;
-  }
-
-  .audio-publisher,
-  .audio-author {
-    font-size: 0.6rem;
-  }
 }

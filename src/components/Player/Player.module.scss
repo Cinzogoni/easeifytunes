@@ -791,33 +791,6 @@ audio {
   margin: 0 6px;
 }
 
-//PodcastPage
-.framePodcastResize {
-  position: absolute;
-  top: 49px;
-  left: 48px;
-  width: 85px;
-  height: 85px;
-}
-
-.playerPodcastList {
-  width: 85px;
-  height: 85px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-.stopperPodcastList {
-  top: 25%;
-  left: -6%;
-  transform: translate(50%, 0%);
-}
-
-.frame:not(.show) .stopperPodcastList {
-  opacity: 1;
-}
-
 //Playlist Mode
 .show-list {
   width: 768px;
