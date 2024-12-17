@@ -50,7 +50,6 @@ function MomentViewAll() {
               colM={cx("m-6")}
               colSM={cx("sm-6")}
               colS={cx("s-6")}
-              colMo={cx("mo-12")}
             >
               <div className={cx("boxes")}>
                 <div className={cx("box")}>

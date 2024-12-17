@@ -1,8 +1,19 @@
-.container {
+.wrapper {
   flex: 1;
-  padding: 0 30px;
   background: var(--3rd--background-linear);
   border-right: var(--1st--border-element);
+}
+
+.title {
+  font-size: 2.4rem;
+  margin: 15px 30px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  max-height: calc(100% - 58px);
+  margin: 0 -15px;
 
   overflow-y: auto;
   overflow-x: hidden;
@@ -25,6 +36,20 @@
   }
 }
 
+.scroll {
+  margin: 0 15px 0 45px;
+}
+
+.frame {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 15px;
+  background: var(--4th--element-bg);
+  border: var(--1st--border-element);
+  border-radius: var(--2nd--border-radius);
+}
+
 .avatar {
+  width: 50px;
   height: 50px;
 }

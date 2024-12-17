@@ -1,16 +1,20 @@
 .wrapper {
-  flex: 1;
-  padding: 0 30px;
+  flex: 2;
   background: var(--2nd--background-linear);
   border-left: var(--1st--border-element);
 }
 
 .title {
   font-size: 2.4rem;
-  margin: 15px 0;
+  margin: 15px 30px;
 }
 
 .container {
+  width: 100%;
+  height: 100%;
+  max-height: calc(100% - 58px);
+  margin: 0 -15px;
+
   overflow-y: auto;
   overflow-x: hidden;
 
@@ -32,9 +36,13 @@
   }
 }
 
+.scroll {
+  margin: 0 15px 0 45px;
+}
+
 .single-item {
   width: 100%;
-  height: 58px;
+  height: 67px;
   margin-bottom: 15px;
   border: var(--5th--border-element);
   border-radius: var(--2nd--border-radius);
@@ -65,7 +73,6 @@
   height: 50px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   position: relative;
 }
 
@@ -76,28 +83,25 @@
 }
 
 .single-title {
-  font-size: 1.4rem;
-  margin: 1.5px;
+  font-size: 2.4rem;
 }
 
 .performer {
-  font-size: 1.3rem;
-  margin: 1.5px;
+  font-size: 2rem;
   opacity: 0.6;
 }
 
 .menu {
-  width: 100%px;
+  width: 228px;
   height: 100%;
   margin-right: 6px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .streams {
-  width: 94px;
-  height: 40px;
+  width: 110px;
+  height: 50px;
   margin: 0 6px;
   border: var(--5th--border-element);
   border-radius: var(--2nd--border-radius);
@@ -107,8 +111,8 @@
 }
 
 .headphone {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   padding-left: 6px;
   color: var(--main--button-color);
 }
@@ -121,12 +125,12 @@
 }
 
 .listeners {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 .share {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   margin-right: 6px;
 
   border: 2px solid rgba(255, 255, 255, 0.5);
@@ -137,8 +141,8 @@
 }
 
 .your-playlist {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 7px;
   display: flex;

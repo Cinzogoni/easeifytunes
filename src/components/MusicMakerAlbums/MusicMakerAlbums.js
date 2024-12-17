@@ -17,57 +17,60 @@ function MusicMakerAlbums({ musicAlbums }) {
     .slice(0, musicAlbums.length);
 
   return (
-    <div className={cx("container")}>
+    <div className={cx("wrapper")}>
       <h2 className={cx("title")}>{t("albums")}</h2>
 
-      <GridSystem rowClass={cx("row-1")}>
-        {sortedMusicAlbums.map((album, index) => (
-          <GridSystem
-            key={index}
-            colClass={cx("col")}
-            colL={cx("l-2-5")}
-            colML={cx("ml-4")}
-            colM={cx("m-4")}
-            colSM={cx("sm-6")}
-            colS={cx("s-6")}
-            colMo={cx("mo-12")}
-          >
-            <div className={cx("boxes")}>
-              <div className={cx("album-box")}>
-                <div className={cx("album-frame")}>
-                  <Link
-                    className={cx("album-link")}
-                    to={routesConfig.albumPage
-                      .replace(
-                        `:albumPerformer`,
-                        album.albumPerformer.replace(/\//g, "-")
-                      )
-                      .replace(
-                        `:albumName`,
-                        album.albumName.replace(/\//g, "-")
-                      )}
-                  />
+      <div className={cx("container")}>
+        <div className={cx("scroll")}>
+          <GridSystem rowClass={cx("row-1")}>
+            {sortedMusicAlbums.map((album, index) => (
+              <GridSystem
+                key={index}
+                colClass={cx("col")}
+                colL={cx("l-4")}
+                colML={cx("ml-6")}
+                colM={cx("m-12")}
+                colSM={cx("sm-12")}
+                colS={cx("s-12")}
+              >
+                <div className={cx("frame")}>
+                  <div className={cx("boxes")}>
+                    <div className={cx("box")}>
+                      <Link
+                        className={cx("link")}
+                        to={routesConfig.albumPage
+                          .replace(
+                            `:albumPerformer`,
+                            album.albumPerformer.replace(/\//g, "-")
+                          )
+                          .replace(
+                            `:albumName`,
+                            album.albumName.replace(/\//g, "-")
+                          )}
+                      />
 
-                  <div className={cx("avatar-frame")}>
-                    <img
-                      className={cx("avatar")}
-                      src={album.albumAvatar}
-                      alt={album.albumName}
-                    />
-                  </div>
+                      <div className={cx("avatar-frame")}>
+                        <img
+                          className={cx("avatar")}
+                          src={album.albumAvatar}
+                          alt={album.albumName}
+                        />
+                      </div>
 
-                  <div className={cx("desc")}>
-                    <h5 className={cx("album-name")}>{album.albumName}</h5>
-                    <h6 className={cx("album-performer")}>
-                      {album.albumPerformer}
-                    </h6>
+                      <div className={cx("desc")}>
+                        <h5 className={cx("name")}>{album.albumName}</h5>
+                        <h6 className={cx("performer")}>
+                          {album.albumPerformer}
+                        </h6>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </GridSystem>
+            ))}
           </GridSystem>
-        ))}
-      </GridSystem>
+        </div>
+      </div>
     </div>
   );
 }

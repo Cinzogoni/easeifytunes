@@ -16,7 +16,6 @@ function GridSystem({
   colM,
   colSM,
   colS,
-  colMo,
 }) {
   const classes = cx(
     gridClass,
@@ -27,8 +26,7 @@ function GridSystem({
     colML,
     colM,
     colSM,
-    colS,
-    colMo
+    colS
   );
 
   return <div className={classes}>{children}</div>;

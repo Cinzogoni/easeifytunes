@@ -4,10 +4,30 @@
   background: var(--4th-background-color);
   display: flex;
   flex-direction: column;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--1st--element-bg);
+    border-radius: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--3rd--element-bg);
+  }
 }
 
 .container {
-  width: 100%;
-  height: 100%;
+  flex: 1;
+  height: 100vh;
   display: flex;
 }

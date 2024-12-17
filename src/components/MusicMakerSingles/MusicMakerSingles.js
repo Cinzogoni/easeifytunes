@@ -84,102 +84,105 @@ function MusicMakerSingles({ musicSingles }) {
   return (
     <div className={cx("wrapper")}>
       <h2 className={cx("title")}>{t("singleTracks")}</h2>
-      <div className={cx("container")}>
-        {sortedMusicSingles.map((single, index) => (
-          <div
-            className={cx("single-item", {
-              playing: single.id === currentTrackId,
-              transparent: isTrackEnded,
-            })}
-            ref={(el) => (trackRefs.current[index] = el)}
-            key={single.id}
-          >
-            <div className={cx("image")}>
-              <img
-                className={cx("avatar")}
-                src={single.avatar}
-                alt={single.title}
-              />
-              <Player
-                trackId={single.id}
-                trackLink={single.link}
-                trackAvatar={single.avatar}
-                trackTitle={single.title}
-                trackPerformer={single.stageName}
-                trackType={single.type}
-                //
-                isStatus={single.id === currentTrackId}
-                onPlay={() =>
-                  handlePlay(
-                    single.id,
-                    {
-                      trackTitle: single.title,
-                      trackPerformer: single.stageName,
-                    },
-                    single.link
-                  )
-                }
-                onPause={() => handlePause(single.id)}
-                //
-                frameResize
-                playerResize
-                playBtn
-                playIcon
-                stopBtn
-                stopIcon
-                waveformBox
-              />
-            </div>
 
-            <div className={cx("info")}>
-              <h4 className={cx("single-title")}>{single.title}</h4>
-              <h5 className={cx("performer")}>{single.stageName}</h5>
-
-              <Link
-                className={cx("link")}
-                to={routesConfig.track
-                  .replace(":stageName", single.stageName)
-                  .replace(":trackTitle", single.title)}
-              />
-            </div>
-
-            <div className={cx("menu")}>
-              <div className={cx("streams")}>
-                <FontAwesomeIcon
-                  className={cx("headphone")}
-                  icon={faHeadphones}
+      <div className={cx("scroll")}>
+        <div className={cx("container")}>
+          {sortedMusicSingles.map((single, index) => (
+            <div
+              className={cx("single-item", {
+                playing: single.id === currentTrackId,
+                transparent: isTrackEnded,
+              })}
+              ref={(el) => (trackRefs.current[index] = el)}
+              key={single.id}
+            >
+              <div className={cx("image")}>
+                <img
+                  className={cx("avatar")}
+                  src={single.avatar}
+                  alt={single.title}
                 />
-
-                <div className={cx("listens")}>
-                  <h6 className={cx("listeners")}>
-                    {formatStreamed(single.streamed || 0)}
-                  </h6>
-                </div>
-              </div>
-
-              <div className={cx("share")}>
-                <AudioShareLink
-                  stageName={single.stageName}
-                  trackTitle={single.title}
-                />
-              </div>
-
-              <div className={cx("your-playlist")}>
-                <YourPlaylistCheck
+                <Player
                   trackId={single.id}
-                  trackAvatar={single.avatar || single.albumAvatar}
+                  trackLink={single.link}
+                  trackAvatar={single.avatar}
                   trackTitle={single.title}
                   trackPerformer={single.stageName}
-                  trackLink={single.link}
-                  trackGenre={single.genre}
                   trackType={single.type}
-                  streamed={single.streamed}
-                  releaseDay={single.releaseDay}
+                  //
+                  isStatus={single.id === currentTrackId}
+                  onPlay={() =>
+                    handlePlay(
+                      single.id,
+                      {
+                        trackTitle: single.title,
+                        trackPerformer: single.stageName,
+                      },
+                      single.link
+                    )
+                  }
+                  onPause={() => handlePause(single.id)}
+                  //
+                  frameResize
+                  playerResize
+                  playBtn
+                  playIcon
+                  stopBtn
+                  stopIcon
+                  waveformBox
                 />
               </div>
+
+              <div className={cx("info")}>
+                <h4 className={cx("single-title")}>{single.title}</h4>
+                <h5 className={cx("performer")}>{single.stageName}</h5>
+
+                <Link
+                  className={cx("link")}
+                  to={routesConfig.track
+                    .replace(":stageName", single.stageName)
+                    .replace(":trackTitle", single.title)}
+                />
+              </div>
+
+              <div className={cx("menu")}>
+                <div className={cx("streams")}>
+                  <FontAwesomeIcon
+                    className={cx("headphone")}
+                    icon={faHeadphones}
+                  />
+
+                  <div className={cx("listens")}>
+                    <h6 className={cx("listeners")}>
+                      {formatStreamed(single.streamed || 0)}
+                    </h6>
+                  </div>
+                </div>
+
+                <div className={cx("share")}>
+                  <AudioShareLink
+                    stageName={single.stageName}
+                    trackTitle={single.title}
+                  />
+                </div>
+
+                <div className={cx("your-playlist")}>
+                  <YourPlaylistCheck
+                    trackId={single.id}
+                    trackAvatar={single.avatar || single.albumAvatar}
+                    trackTitle={single.title}
+                    trackPerformer={single.stageName}
+                    trackLink={single.link}
+                    trackGenre={single.genre}
+                    trackType={single.type}
+                    streamed={single.streamed}
+                    releaseDay={single.releaseDay}
+                  />
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
