@@ -45,6 +45,7 @@ function TrackInfo({
 
       <div className={cx("container")}>
         <img className={cx("avatar")} src={avatar} alt={title} />
+
         <div className={cx("info")}>
           <h3 className={cx("title")}>{title}</h3>
           <h4 className={cx("performer")}>{stageName}</h4>

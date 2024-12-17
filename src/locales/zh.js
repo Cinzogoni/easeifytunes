@@ -62,6 +62,7 @@ const zh = {
   unknownTitle: "未知标题",
   unknownPerformer: "未知表演者",
   viewAll: "查看所有",
+  rating: "评分",
   releaseDay: "发行日",
   newReleases: "新发布",
   trendingSongs: "流行歌曲",

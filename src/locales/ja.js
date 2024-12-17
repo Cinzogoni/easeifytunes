@@ -63,6 +63,7 @@ const ja = {
   unknownPerformer: "不明なアーティスト",
   viewAll: "すべて表示",
   releaseDay: "リリース日",
+  rating: "評価",
   newReleases: "新リリース",
   trendingSongs: "トレンド曲",
   musicMaker: "音楽制作者",

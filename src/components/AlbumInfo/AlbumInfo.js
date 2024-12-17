@@ -3,7 +3,7 @@ import styles from "./AlbumInfo.module.scss";
 const cx = classNames.bind(styles);
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faStar } from "@fortawesome/free-solid-svg-icons";
 
 import { useAudioPlayer } from "../AudioPlayerProvider";
 import { useTranslation } from "react-i18next";
@@ -31,6 +31,7 @@ function AlbumInfo({ albumInfo }) {
   const albumName = albumInfo && albumInfo.albumName ? albumInfo.albumName : "";
   const releaseDay =
     albumInfo && albumInfo.releaseDay ? albumInfo.releaseDay : "";
+  const rate = albumInfo && albumInfo.rate ? albumInfo.rate : Number;
 
   return (
     <div className={cx("wrapper")}>
@@ -54,6 +55,15 @@ function AlbumInfo({ albumInfo }) {
           <h4 className={cx("release-day")}>
             {t("releaseDay")}: {releaseDay}
           </h4>
+
+          <div className={cx("rating")}>
+            <h4 className={cx("rate")}>
+              {t("rating")}:{" "}
+              <strong className={cx("rate-value")}>{rate}</strong>
+            </h4>
+
+            <FontAwesomeIcon className={cx("star")} icon={faStar} />
+          </div>
 
           <div className={cx("player-func")}>
             <Player

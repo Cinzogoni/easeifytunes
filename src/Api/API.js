@@ -66,6 +66,8 @@ const apiMusicMaker = {
           albumPerformer: "Suboi",
           albumName: "Album - No Nê",
           mode: "AlbumList",
+          rating: "rating",
+          rate: 4,
           releaseDay: "2023-10-25",
           tracks: [
             {
@@ -283,6 +285,8 @@ const apiMusicMaker = {
           albumPerformer: "Rhymastic",
           albumName: "Album - LOV6 (EP)",
           mode: "AlbumList",
+          rating: "rating",
+          rate: 4,
           albumType: "Album",
           releaseDay: "2022-09-15",
           tracks: [
@@ -474,6 +478,8 @@ const apiMusicMaker = {
           albumPerformer: "Perfume",
           albumName: "Album - Level 3",
           mode: "AlbumList",
+          rating: "rating",
+          rate: 3,
           albumType: "Album",
           releaseDay: "2013-10-01",
           tracks: [
@@ -583,6 +589,8 @@ const apiMusicMaker = {
           albumPerformer: "BIBI",
           albumName: "Album - Life is a Bi…",
           mode: "AlbumList",
+          rating: "rating",
+          rate: 4,
           albumType: "Album",
           releaseDay: "2021-05-21",
           tracks: [
@@ -729,6 +737,8 @@ const apiMusicMaker = {
           albumPerformer: "Eminem",
           albumName: "Album - Infinite",
           mode: "AlbumList",
+          rating: "rating",
+          rate: 4.5,
           albumType: "Album",
           releaseDay: "1996-11-12",
           tracks: [
@@ -775,6 +785,8 @@ const apiMusicMaker = {
           albumPerformer: "Eminem",
           albumName: "Album - Encore",
           mode: "AlbumList",
+          rating: "rating",
+          rate: 4.5,
           albumType: "Album",
           releaseDay: "2004-12-24",
           tracks: [
@@ -853,6 +865,8 @@ const apiMusicMaker = {
           albumPerformer: "Eminem",
           albumName: "Album - The Eminem Show",
           mode: "AlbumList",
+          rating: "rating",
+          rate: 4.5,
           albumType: "Album",
           releaseDay: "2002-05-21",
           tracks: [
@@ -963,6 +977,8 @@ const apiMusicMaker = {
           albumPerformer: "Eminem",
           albumName: "Album - Relapse",
           mode: "AlbumList",
+          rating: "rating",
+          rate: 4,
           albumType: "Album",
           releaseDay: "2009-09-15",
           tracks: [
@@ -1055,6 +1071,8 @@ const apiMusicMaker = {
           albumPerformer: "Eminem",
           albumName: "Album - Recovery",
           mode: "AlbumList",
+          rating: "rating",
+          rate: 4.5,
           albumType: "Album",
           releaseDay: "2010-06-18",
           tracks: [
@@ -1133,6 +1151,8 @@ const apiMusicMaker = {
           albumPerformer: "Eminem",
           albumName: "Album - Revival",
           mode: "AlbumList",
+          rating: "rating",
+          rate: 4,
           albumType: "Album",
           releaseDay: "2017-12-15",
           tracks: [
@@ -1322,6 +1342,8 @@ const apiMusicMaker = {
           albumPerformer: "MIN",
           albumName: "Album - 50|50",
           mode: "AlbumList",
+          rating: "rating",
+          rate: 4,
           albumType: "Album",
           releaseDay: "2022-05-20",
           tracks: [
@@ -1614,6 +1636,8 @@ const apiMusicMaker = {
           albumPerformer: "AMEE",
           albumName: "Album - dreAMEE",
           mode: "AlbumList",
+          rating: "rating",
+          rate: 4,
           albumType: "Album",
           releaseDay: "2019-04-03",
           tracks: [

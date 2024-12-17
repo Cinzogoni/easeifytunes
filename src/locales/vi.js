@@ -68,6 +68,7 @@ const vi = {
   title: "Tiêu Đề",
   type: "Kiểu Loại",
   genre: "Thể Loại",
+  rating: "Đánh giá",
   releaseDay: "Ngày Phát Hành",
   newReleases: "Phát Hành Mới",
   trendingSongs: "Xu Hướng",

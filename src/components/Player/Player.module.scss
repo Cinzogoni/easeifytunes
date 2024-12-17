@@ -776,14 +776,16 @@ audio {
 
 //AlbumInfo
 .frameAlbumInfo {
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 31px;
+  position: absolute;
+  width: 86px;
+  height: 50px;
+  left: 37px;
+  top: 182px;
 }
 
 .playerAlbumInfoResize {
   width: unset;
+  height: 50px;
 }
 
 .playerAlbumInfo {
@@ -792,6 +794,7 @@ audio {
 
 .actionsAlbumInfo {
   display: flex;
+  align-items: center;
 }
 
 .hideAlbumInfo {

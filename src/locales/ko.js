@@ -64,6 +64,7 @@ const ko = {
   unknownTitle: "알 수 없는 제목",
   unknownPerformer: "알 수 없는 아티스트",
   viewAll: "모두 보기",
+  rating: "평점",
   releaseDay: "발매일",
   newReleases: "신작",
   trendingSongs: "트렌딩 송",

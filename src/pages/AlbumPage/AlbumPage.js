@@ -17,11 +17,13 @@ function AlbumPage() {
         albumName: album.albumName,
         albumAvatar: album.albumAvatar,
         makerName: maker.makerName,
+        releaseDay: album.releaseDay,
+        rate: album.rate,
         tracks: album.tracks.map((track) => ({ ...track })),
       })) || []
   );
 
-  // console.log(Albums);
+  console.log(Albums);
 
   const findAlbum = Albums.find(
     (t) => t.albumName === albumName && t.albumPerformer === albumPerformer

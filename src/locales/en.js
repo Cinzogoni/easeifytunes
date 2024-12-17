@@ -64,6 +64,7 @@ const en = {
   unknownTitle: "Unknown Title",
   unknownPerformer: "Unknown Performer",
   viewAll: "View All",
+  rating: "Rating",
   releaseDay: "Release Day",
   newReleases: "New Releases",
   trendingSongs: "Trending Songs",
