@@ -163,6 +163,7 @@ function MusicMakerSingles({ musicSingles }) {
                   <AudioShareLink
                     stageName={single.stageName}
                     trackTitle={single.title}
+                    typeURL="track"
                   />
                 </div>
 

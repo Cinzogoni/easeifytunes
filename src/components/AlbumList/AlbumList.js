@@ -210,6 +210,7 @@ function AlbumList({ trackList, avatar }) {
                   LinkFixSize
                   stageName={track.stageName}
                   trackTitle={track.title}
+                  typeURL="track"
                 />
               </div>
               <div className={cx("add")}>

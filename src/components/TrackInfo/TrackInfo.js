@@ -67,7 +67,11 @@ function TrackInfo({
             </div>
 
             <div className={cx("share")}>
-              <AudioShareLink stageName={stageName} trackTitle={title} />
+              <AudioShareLink
+                stageName={stageName}
+                trackTitle={title}
+                typeURL="track"
+              />
             </div>
 
             <div className={cx("add")}>

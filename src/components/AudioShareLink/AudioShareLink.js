@@ -9,13 +9,20 @@ import { faCopy, faLink } from "@fortawesome/free-solid-svg-icons";
 
 import Tippy from "@tippyjs/react";
 
-function AudioShareLink({ stageName, trackTitle, LinkFixSize }) {
+function AudioShareLink({
+  stageName,
+  trackTitle,
+  LinkFixSize,
+  typeURL = "track",
+}) {
   const [activeShare, setActiveShare] = useState(false);
   const [activeCopyLink, setActiveCopyLink] = useState(false);
   const [showShareLink, setShowShareLink] = useState(false);
 
+  const basePath = typeURL === "podcast" ? "podcastAudioPage" : "track";
+
   const host = window.location.origin;
-  const audioTrack_URL = `${host}/track/${stageName.replace(
+  const audioTrack_URL = `${host}/${basePath}/${stageName.replace(
     /\//g,
     "-"
   )}/${trackTitle.replace(/\//g, "-")}`;

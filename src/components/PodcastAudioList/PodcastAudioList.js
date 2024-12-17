@@ -14,6 +14,7 @@ import routesConfig from "~/config/routes";
 
 import Player from "../Player";
 import YourPlaylistCheck from "../YourPlaylistCheck";
+import AudioShareLink from "../AudioShareLink";
 
 const cx = classNames.bind(styles);
 function PodcastAudioList({ audioList }) {
@@ -201,7 +202,11 @@ function PodcastAudioList({ audioList }) {
                 </h5>
               </div>
               <div className={cx("share")}>
-                <FontAwesomeIcon className={cx("share-link")} icon={faLink} />
+                <AudioShareLink
+                  stageName={audio.publisher}
+                  trackTitle={audio.title}
+                  typeURL="podcast"
+                />
               </div>
               <div className={cx("add")}>
                 <YourPlaylistCheck
