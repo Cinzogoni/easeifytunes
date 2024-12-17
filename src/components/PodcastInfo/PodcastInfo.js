@@ -48,6 +48,9 @@ function PodcastInfo({ podcastInfo }) {
           <h4 className={cx("performer")}>
             {t(`description.${info[0].description}`)}
           </h4>
+
+          <div className={cx("more")}></div>
+
           <div className={cx("player-func")}>
             <Player
               onLoop={handleLoop}
