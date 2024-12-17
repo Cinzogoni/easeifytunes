@@ -23,7 +23,7 @@ function AlbumPage() {
       })) || []
   );
 
-  console.log(Albums);
+  // console.log(Albums);
 
   const findAlbum = Albums.find(
     (t) => t.albumName === albumName && t.albumPerformer === albumPerformer

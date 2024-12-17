@@ -141,100 +141,92 @@ function AlbumList({ trackList, avatar }) {
   };
 
   return (
-    <div className={cx("wrapper")}>
-      <div className={cx("container")}>
-        <div className={cx("tracks")}>
-          {displayTrackList.map((track, index) => (
-            <div
-              ref={(el) => (trackRefs.current[index] = el)}
-              className={cx("track-box", {
-                playing: track.id === currentTrackId,
-                transparent: isTrackEnded && isLastTrack(track),
-              })}
-              key={track.id}
-            >
-              <div className={cx("player")}>
-                <img
-                  className={cx("track-avatar")}
-                  src={avatar}
-                  alt={track.title}
+    <div className={cx("container")}>
+      <div className={cx("tracks")}>
+        {displayTrackList.map((track, index) => (
+          <div
+            ref={(el) => (trackRefs.current[index] = el)}
+            className={cx("track-box", {
+              playing: track.id === currentTrackId,
+              transparent: isTrackEnded && isLastTrack(track),
+            })}
+            key={track.id}
+          >
+            <div className={cx("player")}>
+              <img className={cx("avatar")} src={avatar} alt={track.title} />
+              <Player
+                trackId={track.id}
+                trackLink={track.link}
+                trackAvatar={track.avatar}
+                trackTitle={track.title}
+                trackPerformer={track.stageName}
+                trackType={track.type}
+                //
+                isStatus={track.id === currentTrackId}
+                onPlay={() => handleTrackPlay(track)}
+                onPause={() => handleTrackPause(track)}
+                onNext={handleNextTrack}
+                onPrev={handlePrevTrack}
+                onLoop={handleLoop}
+                onRandom={handleRandomTrack}
+                isRandom={isRandom}
+                activeLoopClick={activeLoopClick}
+                setActiveLoopClick={setActiveLoopClick}
+                activeRandomClick={activeRandomClick}
+                setActiveRandomClick={setActiveRandomClick}
+                //
+                frameSingleTracks
+                playerSingleTracks
+                waveformBoxSingleTracks
+                actionsAlbumList
+                hideAlbumList
+              />
+            </div>
+
+            <div className={cx("info")}>
+              <Link
+                className={cx("link")}
+                to={routesConfig.track
+                  .replace(`:stageName`, track.stageName.replace(/\//g, "-"))
+                  .replace(`:trackTitle`, track.title.replace(/\//g, "-"))}
+              />
+
+              <h4 className={cx("title")}>{track.title}</h4>
+              <h5 className={cx("performer")}>{track.stageName}</h5>
+            </div>
+
+            <div className={cx("more")}>
+              <div className={cx("streams")}>
+                <FontAwesomeIcon
+                  className={cx("listeners")}
+                  icon={faHeadphones}
                 />
-                <Player
+                <h5 className={cx("streamed")}>
+                  {new Intl.NumberFormat().format(track.streamed || 0)}
+                </h5>
+              </div>
+              <div className={cx("share")}>
+                <AudioShareLink
+                  LinkFixSize
+                  stageName={track.stageName}
+                  trackTitle={track.title}
+                />
+              </div>
+              <div className={cx("add")}>
+                <YourPlaylistCheck
                   trackId={track.id}
                   trackLink={track.link}
                   trackAvatar={track.avatar}
                   trackTitle={track.title}
                   trackPerformer={track.stageName}
+                  trackGenre={track.genre}
                   trackType={track.type}
-                  //
-                  isStatus={track.id === currentTrackId}
-                  onPlay={() => handleTrackPlay(track)}
-                  onPause={() => handleTrackPause(track)}
-                  onNext={handleNextTrack}
-                  onPrev={handlePrevTrack}
-                  onLoop={handleLoop}
-                  onRandom={handleRandomTrack}
-                  isRandom={isRandom}
-                  activeLoopClick={activeLoopClick}
-                  setActiveLoopClick={setActiveLoopClick}
-                  activeRandomClick={activeRandomClick}
-                  setActiveRandomClick={setActiveRandomClick}
-                  //
-                  frameSingleTracks
-                  playerSingleTracks
-                  playerAlbumList
-                  waveformBoxSingleTracks
-                  stopperAlbumList
-                  actionsAlbumList
-                  hideAlbumList
+                  streamed={track.streamed}
                 />
-              </div>
-
-              <div className={cx("track-info")}>
-                <Link
-                  className={cx("track-link")}
-                  to={routesConfig.track
-                    .replace(`:stageName`, track.stageName.replace(/\//g, "-"))
-                    .replace(`:trackTitle`, track.title.replace(/\//g, "-"))}
-                />
-
-                <h4 className={cx("track-title")}>{track.title}</h4>
-                <h5 className={cx("track-performer")}>{track.stageName}</h5>
-              </div>
-
-              <div className={cx("more-func")}>
-                <div className={cx("streams")}>
-                  <FontAwesomeIcon
-                    className={cx("listeners")}
-                    icon={faHeadphones}
-                  />
-                  <h5 className={cx("streamed")}>
-                    {new Intl.NumberFormat().format(track.streamed || 0)}
-                  </h5>
-                </div>
-                <div className={cx("share")}>
-                  <AudioShareLink
-                    LinkFixSize
-                    stageName={track.stageName}
-                    trackTitle={track.title}
-                  />
-                </div>
-                <div className={cx("add")}>
-                  <YourPlaylistCheck
-                    trackId={track.id}
-                    trackLink={track.link}
-                    trackAvatar={track.avatar}
-                    trackTitle={track.title}
-                    trackPerformer={track.stageName}
-                    trackGenre={track.genre}
-                    trackType={track.type}
-                    streamed={track.streamed}
-                  />
-                </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -62,6 +62,11 @@
   }
 }
 
+.single-item:hover {
+  background-color: var(--6th--element-bg);
+  border: var(--5th--border-element);
+}
+
 .image {
   margin: 6px;
   display: flex;

@@ -239,9 +239,7 @@ function PlaylistModeList({ trackList, findPlaylistItem, yourPlaylistName }) {
                     //
                     frameSingleTracks
                     playerSingleTracks
-                    playerAlbumList
                     waveformBoxSingleTracks
-                    stopperAlbumList
                     actionsAlbumList
                     hideAlbumList
                   />

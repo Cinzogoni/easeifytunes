@@ -98,8 +98,6 @@ const Player = ({
   waveformBoxSingleTracks,
   stopperSingleTracks,
   //AlbumList
-  playerAlbumList,
-  stopperAlbumList,
   actionsAlbumList,
   hideAlbumList,
   //AlbumInfo
@@ -683,7 +681,7 @@ const Player = ({
                 { playBtn },
                 { playerFooterBtn },
                 { playerTrackInfo },
-                { playerAlbumList },
+
                 { playerAlbumInfo }
               )}
               onClick={() => handlePlayClick(trackId)}
@@ -712,7 +710,7 @@ const Player = ({
                 {
                   stopperSingleTracks,
                 },
-                { stopperAlbumList },
+
                 { stopperPodcastList }
               )}
               onClick={handlePauseClick}

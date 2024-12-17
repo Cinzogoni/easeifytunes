@@ -721,7 +721,7 @@ audio {
 .frameSingleTracks {
   position: absolute;
   top: 34px;
-  left: 36px;
+  left: 34px;
   width: 60px;
   height: 60px;
 }
@@ -743,20 +743,6 @@ audio {
 }
 
 .frame:not(.show) .stopperSingleTracks {
-  opacity: 1;
-}
-
-//AlbumList
-.playerAlbumList {
-  transform: translateY(2.01px);
-}
-
-.stopperAlbumList {
-  left: -18px;
-  top: 8px;
-}
-
-.frame:not(.show) .stopperAlbumList {
   opacity: 1;
 }
 

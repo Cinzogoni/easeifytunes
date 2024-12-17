@@ -170,7 +170,6 @@ function PodcastAudioList({ audioList }) {
                   //
                   framePodcastResize
                   playerPodcastList
-                  playerAlbumList
                   waveformBoxSingleTracks
                   stopperPodcastList
                 />

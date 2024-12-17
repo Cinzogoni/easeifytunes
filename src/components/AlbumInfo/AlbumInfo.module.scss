@@ -75,14 +75,14 @@
 }
 
 .rate-value {
-  color: rgba(240, 219, 127, 1);
+  color: var(--rating--text-color);
 }
 
 .star {
   width: 20.5px;
   height: 20.5px;
   margin-left: 3px;
-  color: rgba(240, 219, 127, 1);
+  color: var(--rating--text-color);
 }
 
 .player-func {

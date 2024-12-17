@@ -186,9 +186,7 @@ function YourPlaylistAudiosList({ audioList, playlistIndex }) {
                     //
                     frameSingleTracks
                     playerSingleTracks
-                    playerAlbumList
                     waveformBoxSingleTracks
-                    stopperAlbumList
                     actionsAlbumList
                     hideAlbumList
                   />

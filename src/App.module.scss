@@ -27,3 +27,15 @@
     display: none;
   }
 }
+
+@media (max-width: 1024px) and (max-height: 600px) {
+  .app-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app {
+    display: none;
+  }
+}
