@@ -37,7 +37,7 @@ function Moment() {
     if (width >= 1440 && width < 1920) return 3;
     if (width >= 1280 && width < 1440) return 3;
     if (width >= 854 && width < 1280) return 2;
-    if (width >= 768 && width < 854) return 2;
+    if (width >= 700 && width < 854) return 2;
     return 1;
   }, [width]);
 

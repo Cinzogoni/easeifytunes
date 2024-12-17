@@ -10,8 +10,7 @@ const useScroll = (initialArray, initialWidth) => {
     if (width >= 1440 && width < 1920) return 5;
     if (width >= 1280 && width < 1440) return 4;
     if (width >= 854 && width < 1280) return 4;
-    if (width >= 630 && width < 854) return 3;
-    if (width >= 540 && width < 630) return 2;
+    if (width >= 700 && width < 854) return 3;
     return 1;
   }, [width]);
 

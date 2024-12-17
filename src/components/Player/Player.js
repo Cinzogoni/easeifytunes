@@ -56,6 +56,8 @@ const Player = ({
   stopBtn,
   stopIcon,
   waveformBox,
+  frameFix,
+  playerFix,
   // Footer
   frameFooterResize,
   playerFooterResize,
@@ -414,7 +416,8 @@ const Player = ({
         { frameTrackInfoResize },
         { frameSingleTracks },
         { frameAlbumInfo },
-        { framePodcastResize }
+        { framePodcastResize },
+        { frameFix }
       )}
     >
       {/* AudioPlayer Footer */}
@@ -529,7 +532,8 @@ const Player = ({
           { playerTrackInfoResize },
           { playerSingleTracks },
           { playerAlbumInfoResize },
-          { playerPodcastList }
+          { playerPodcastList },
+          { playerFix }
         )}
       >
         {isStatus && !isTrackEnded && (

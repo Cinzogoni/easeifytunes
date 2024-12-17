@@ -85,8 +85,8 @@ function MusicMakerSingles({ musicSingles }) {
     <div className={cx("wrapper")}>
       <h2 className={cx("title")}>{t("singleTracks")}</h2>
 
-      <div className={cx("scroll")}>
-        <div className={cx("container")}>
+      <div className={cx("container")}>
+        <div className={cx("scroll")}>
           {sortedMusicSingles.map((single, index) => (
             <div
               className={cx("single-item", {
@@ -123,8 +123,8 @@ function MusicMakerSingles({ musicSingles }) {
                   }
                   onPause={() => handlePause(single.id)}
                   //
-                  frameResize
-                  playerResize
+                  frameFix
+                  playerFix
                   playBtn
                   playIcon
                   stopBtn

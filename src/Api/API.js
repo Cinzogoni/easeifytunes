@@ -62,7 +62,7 @@ const apiMusicMaker = {
         {
           id: "NO_NE",
           albumAvatar:
-            "https://www.elle.vn/wp-content/uploads/2021/07/23/443917/suboi-va-album-no-ne-2.jpg",
+            "https://i1.sndcdn.com/artworks-aQq93a78hKXYoQ6L-5ijgkA-t500x500.jpg",
           albumPerformer: "Suboi",
           albumName: "Album - No Nê",
           mode: "AlbumList",
@@ -71,7 +71,7 @@ const apiMusicMaker = {
             {
               id: "su_NoNe01",
               avatar:
-                "https://www.elle.vn/wp-content/uploads/2021/07/23/443917/suboi-va-album-no-ne-2.jpg",
+                "https://i1.sndcdn.com/artworks-aQq93a78hKXYoQ6L-5ijgkA-t500x500.jpg",
               type: "Album",
               title: "Công",
               mainMusicMaker: "Suboi",

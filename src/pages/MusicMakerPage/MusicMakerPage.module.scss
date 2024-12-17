@@ -4,30 +4,17 @@
   background: var(--4th-background-color);
   display: flex;
   flex-direction: column;
-
-  overflow-y: auto;
-  overflow-x: hidden;
-
-  &::-webkit-scrollbar {
-    width: 3px;
-  }
-
-  &::-webkit-scrollbar-track {
-    border-radius: 1px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: var(--1st--element-bg);
-    border-radius: 1px;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: var(--3rd--element-bg);
-  }
 }
 
 .container {
   flex: 1;
-  height: 100vh;
+  height: 100%;
+  max-height: calc(100% - 335px);
   display: flex;
+}
+
+@media (max-height: 600px) {
+  .container {
+    max-height: calc(100% - 200px);
+  }
 }
