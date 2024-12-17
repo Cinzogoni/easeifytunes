@@ -9,6 +9,7 @@ const apiPodcast = {
       topic: "socialIssues",
       description: "podcastDescription",
       mode: "PodcastAudioList",
+      care: 20.5,
       audios: [
         {
           id: "dtn_MTCMXHTDNT",
@@ -34,6 +35,7 @@ const apiPodcast = {
       topic: "popCulture",
       description: "podcastDescription",
       mode: "PodcastAudioList",
+      care: 12.5,
       audios: [
         {
           id: "st_VHDCGTHN",
@@ -57,6 +59,7 @@ const apiPodcast = {
       topic: "business",
       description: "podcastDescription",
       mode: "PodcastAudioList",
+      care: 10.5,
       audios: [
         {
           id: "cnr_GSPVT_MKDGHDHN",
@@ -82,6 +85,7 @@ const apiPodcast = {
       topic: "religion",
       description: "podcastDescription",
       mode: "PodcastAudioList",
+      care: 30.5,
       audios: [
         {
           id: "vv_TCCTGTVG8P",
@@ -105,6 +109,7 @@ const apiPodcast = {
       topic: "psychology",
       description: "podcastDescription",
       mode: "PodcastAudioList",
+      care: 8.5,
       audios: [
         {
           id: "gtlh_GDRLCN_BL",
@@ -128,6 +133,7 @@ const apiPodcast = {
       topic: "audioBook",
       description: "podcastDescription",
       mode: "PodcastAudioList",
+      care: 5.83,
       audios: [
         {
           id: "mn1ts_1CCYNVCSBNNMLTD",
@@ -152,6 +158,7 @@ const apiPodcast = {
       topic: "audioDrama",
       description: "podcastDescription",
       mode: "PodcastAudioList",
+      care: 5.83,
       audios: [
         {
           id: "BrettLamb_IYD",
@@ -175,6 +182,7 @@ const apiPodcast = {
       topic: "narrativeStorytelling",
       description: "podcastDescription",
       mode: "PodcastAudioList",
+      care: 5.83,
       audios: [
         {
           id: "tnlq_CDT",

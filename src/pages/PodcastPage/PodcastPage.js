@@ -42,6 +42,7 @@ function PodcastPage() {
       topic: audio.topic,
       description: audio.description,
       mode: audio.mode,
+      care: audio.care,
     }))
   );
 

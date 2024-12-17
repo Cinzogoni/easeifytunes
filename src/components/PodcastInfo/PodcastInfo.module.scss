@@ -62,10 +62,41 @@
 }
 
 .more {
-  width: 100%;
+  width: 250px;
   height: 60px;
   margin-bottom: 9px;
-  background-color: rgba(128, 128, 128, 0.247);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.care {
+  font-size: 2.4rem;
+}
+
+.percent-bar {
+  width: 100%;
+  height: 30px;
+  background-color: var(--3rd--element-bg);
+  border: var(--1st--border-element);
+  border-radius: var(--2nd--border-radius);
+  position: relative;
+}
+
+.ratio {
+  width: 100%;
+  height: 100%;
+  border: var(--1st--border-element);
+  border-radius: var(--2nd--border-radius);
+  background-color: var(--1st--element-bg);
+}
+
+.desc {
+  position: absolute;
+  top: 5px;
+  left: 95px;
+  font-size: 1.6rem;
+  color: var(--2nd--text-color);
 }
 
 .player-func {
