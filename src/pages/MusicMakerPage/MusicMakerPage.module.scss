@@ -12,9 +12,3 @@
   max-height: calc(100% - 335px);
   display: flex;
 }
-
-@media (max-height: 600px) {
-  .container {
-    max-height: calc(100% - 200px);
-  }
-}
