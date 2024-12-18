@@ -33,6 +33,8 @@ function AlbumInfo({ albumInfo }) {
     albumInfo && albumInfo.releaseDay ? albumInfo.releaseDay : "";
   const rate = albumInfo && albumInfo.rate ? albumInfo.rate : Number;
 
+  console.log(albumInfo);
+
   return (
     <div className={cx("wrapper")}>
       <div className={cx("back")}>

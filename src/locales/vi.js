@@ -91,6 +91,7 @@ const vi = {
   playlistModeCurrent: "Danh Sách Phát Hiện Tại",
   playlistModePinned: "Danh Sách Phát Được Ghim",
   podcastTopicSearch: "Chủ Đề",
+  podcastInterestLevel: "Mức độ quan tâm",
   topics: {
     socialIssues: "Xã Hội",
     popCulture: "Văn Hóa Đại Chúng",

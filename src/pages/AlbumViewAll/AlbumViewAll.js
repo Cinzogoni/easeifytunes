@@ -141,6 +141,7 @@ function AlbumViewAll() {
                 colM={cx("m-3")}
                 colSM={cx("sm-3")}
                 colS={cx("s-4")}
+                colMo={cx("mo-6")}
               >
                 <div className={cx("boxes")}>
                   <AlbumBox

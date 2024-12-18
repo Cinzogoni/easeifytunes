@@ -31,7 +31,8 @@ function MusicMakerAlbums({ musicAlbums }) {
                 colML={cx("ml-6")}
                 colM={cx("m-6")}
                 colSM={cx("sm-6")}
-                colS={cx("s-12")}
+                colS={cx("s-3")}
+                colMo={cx("mo-4")}
               >
                 <div className={cx("frame")}>
                   <div className={cx("boxes")}>

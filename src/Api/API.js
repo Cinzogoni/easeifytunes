@@ -1541,32 +1541,6 @@ const apiMusicMaker = {
       albums: [],
     },
     {
-      id: "ROSÉ",
-      makerAvatar:
-        "https://nqs.1cdn.vn/thumbs/540x360/2024/10/27/image.tienphong.vn-uploaded-2024-athlraungenat-2024_10_27-_463989725-1260720248449971-1746876593578460535-n-5179.jpg",
-      makerName: "ROSÉ",
-      role: "singer",
-      priority: true,
-      singles: [
-        {
-          id: "roBru_APT",
-          avatar:
-            "https://avatar-ex-swe.nixcdn.com/song/2024/10/18/1/8/a/e/1729211353297_640.jpg",
-          title: "APT",
-          mainMusicMaker: "ROSÉ",
-          stageName: "ROSÉ & Bruno Mars",
-          type: "Single",
-          genre: "Pop",
-          releaseDay: "2024-10-18",
-          streamed: 568445734,
-          trend: true,
-          link: mp3Type[`MusicMaker/ROSE/singletracks/APT`],
-          lyric: "",
-        },
-      ],
-      albums: [],
-    },
-    {
       id: "YOASOBI",
       makerAvatar:
         "https://kilala.vn/data/uploads/2024/111020240958-1728615533-yoasobi.jfif",
@@ -1644,7 +1618,7 @@ const apiMusicMaker = {
             {
               id: "dre_A01",
               type: "Album",
-              title: "Anh Nhả Ở Đâu Thế?",
+              title: "Anh Nhả Ở Đâu Thế",
               avatar:
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDO4wFtKDQjloQB1TvhnpAJY838VyIwzKT7g&s",
               mainMusicMaker: "AMEE",
@@ -1744,6 +1718,32 @@ const apiMusicMaker = {
           streamed: 20231593,
           trend: false,
           link: mp3Type[`MusicMaker/Bich Phuong/singletracks/BPhuongNCTS`],
+          lyric: "",
+        },
+      ],
+      albums: [],
+    },
+    {
+      id: "roSE",
+      makerAvatar:
+        "https://nqs.1cdn.vn/thumbs/540x360/2024/10/27/image.tienphong.vn-uploaded-2024-athlraungenat-2024_10_27-_463989725-1260720248449971-1746876593578460535-n-5179.jpg",
+      makerName: "ROSÉ",
+      role: `singer`,
+      priority: false,
+      singles: [
+        {
+          id: "roBruAPT",
+          avatar:
+            "https://avatar-ex-swe.nixcdn.com/song/2024/10/18/1/8/a/e/1729211353297_640.jpg",
+          title: "APT",
+          mainMusicMaker: "ROSÉ",
+          stageName: "ROSÉ ft. Bruno Mars",
+          type: "Single",
+          genre: "Pop",
+          releaseDay: "2024-10-18",
+          streamed: 568445734,
+          trend: true,
+          link: mp3Type[`MusicMaker/ROSE/singletracks/APT`],
           lyric: "",
         },
       ],

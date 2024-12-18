@@ -22,13 +22,13 @@ function Podcast({ podcastAvatar, podcastTopic, podcastDescription }) {
           src={podcastAvatar}
           alt={t(`topics.${podcastTopic}`)}
         />
-      </div>
 
-      <div className={cx("desc")}>
-        <h5 className={cx("podcast-name")}>{t(`topics.${podcastTopic}`)}</h5>
-        <h6 className={cx("podcast-desc")}>
-          {t(`description.${podcastDescription}`)}
-        </h6>
+        <div className={cx("desc")}>
+          <h5 className={cx("podcast-name")}>{t(`topics.${podcastTopic}`)}</h5>
+          <h6 className={cx("podcast-desc")}>
+            {t(`description.${podcastDescription}`)}
+          </h6>
+        </div>
       </div>
     </div>
   );

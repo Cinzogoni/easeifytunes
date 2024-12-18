@@ -86,6 +86,7 @@ const ja = {
   playlistModeCurrent: "現在のプレイリスト",
   playlistModePinned: "固定されたプレイリスト",
   podcastTopicSearch: "ポッドキャストトピック",
+  podcastInterestLevel: "興味レベル",
   topics: {
     socialIssues: "社会問題",
     popCulture: "ポップカルチャー",

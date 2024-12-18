@@ -23,8 +23,6 @@ function AlbumPage() {
       })) || []
   );
 
-  // console.log(Albums);
-
   const findAlbum = Albums.find(
     (t) => t.albumName === albumName && t.albumPerformer === albumPerformer
   );
@@ -36,6 +34,9 @@ function AlbumPage() {
   const socialAlbums = Albums.filter(
     (t) => t.albumName !== albumName || t.albumPerformer !== albumPerformer
   );
+
+  console.log(findAlbum);
+
   return (
     <Track
       info={<AlbumInfo albumInfo={findAlbum} />}

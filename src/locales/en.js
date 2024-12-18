@@ -88,6 +88,7 @@ const en = {
   playlistModeCurrent: "Your current playlist",
   playlistModePinned: "Your pinned playlist",
   podcastTopicSearch: "Podcast Topic",
+  podcastInterestLevel: "Interest Level",
   topics: {
     socialIssues: "Social Issues",
     popCulture: "Pop Culture",

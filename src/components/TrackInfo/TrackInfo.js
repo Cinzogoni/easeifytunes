@@ -18,7 +18,6 @@ function TrackInfo({
   link,
   avatar,
   title,
-  name,
   stageName,
   trackType,
   genre,

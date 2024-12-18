@@ -1,5 +1,5 @@
 .wrapper {
-  flex: 3;
+  flex: 1;
   background: var(--3rd--background-linear);
   border-right: var(--1st--border-element);
 }
@@ -104,4 +104,17 @@
   font-size: 1.2rem;
   line-height: 1.5;
   opacity: 0.6;
+}
+
+@media (max-width: 853px) {
+  .wrapper {
+    display: block;
+    border-top-right-radius: var(--border--radius-rounded-corners);
+    border-bottom-right-radius: var(--border--radius-rounded-corners);
+  }
+
+  .title {
+    margin: 0 30px;
+    padding: 15px 0;
+  }
 }

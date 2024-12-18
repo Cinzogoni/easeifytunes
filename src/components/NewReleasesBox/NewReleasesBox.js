@@ -86,40 +86,40 @@ function NewReleasesBox({
           onPlay={handlePlayTrack}
           onPause={() => handlePause(trackId)}
         />
-      </div>
 
-      <div className={cx("menu")}>
-        <div className={cx("streams")}>
-          <FontAwesomeIcon className={cx("headphone")} icon={faHeadphones} />
-          <div className={cx("listens")}>
-            <h6 className={cx("listener")}>{formatStreamed(streamed)}</h6>
+        <div className={cx("menu")}>
+          <div className={cx("streams")}>
+            <FontAwesomeIcon className={cx("headphone")} icon={faHeadphones} />
+            <div className={cx("listens")}>
+              <h6 className={cx("listener")}>{formatStreamed(streamed)}</h6>
+            </div>
           </div>
-        </div>
 
-        <TrackPopper
-          trackPerformer={trackPerformer}
-          trackTitle={trackTitle}
-          trackType={trackType}
-          trackGenre={trackGenre}
-          releaseDay={releaseDay}
-        >
-          <div className={cx("info")}>
-            <FontAwesomeIcon className={cx("icon")} icon={faInfo} />
-          </div>
-        </TrackPopper>
-
-        <div className={cx("your-playlist")}>
-          <YourPlaylistCheck
-            trackId={trackId}
-            trackAvatar={trackAvatar}
-            trackTitle={trackTitle}
+          <TrackPopper
             trackPerformer={trackPerformer}
-            trackLink={trackLink}
-            trackGenre={trackGenre}
+            trackTitle={trackTitle}
             trackType={trackType}
+            trackGenre={trackGenre}
             releaseDay={releaseDay}
-            streamed={streamed}
-          />
+          >
+            <div className={cx("info")}>
+              <FontAwesomeIcon className={cx("icon")} icon={faInfo} />
+            </div>
+          </TrackPopper>
+
+          <div className={cx("your-playlist")}>
+            <YourPlaylistCheck
+              trackId={trackId}
+              trackAvatar={trackAvatar}
+              trackTitle={trackTitle}
+              trackPerformer={trackPerformer}
+              trackLink={trackLink}
+              trackGenre={trackGenre}
+              trackType={trackType}
+              releaseDay={releaseDay}
+              streamed={streamed}
+            />
+          </div>
         </div>
       </div>
     </div>

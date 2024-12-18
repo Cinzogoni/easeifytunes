@@ -1,5 +1,5 @@
 .wrapper {
-  flex: 5;
+  flex: 1;
   background: var(--2nd--background-linear);
   border-left: var(--1st--border-element);
 }
@@ -90,6 +90,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
+
+  overflow: hidden;
 }
 
 .link {
@@ -100,11 +102,17 @@
 
 .single-title {
   font-size: 1.6rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .performer {
   font-size: 1.3rem;
   opacity: 0.6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu {
@@ -164,4 +172,14 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+
+@media (max-width: 853px) {
+  .wrapper {
+    display: block;
+    padding-top: 3px;
+    height: 100%;
+    max-height: calc(100% - 227px);
+    border-top-left-radius: var(--border--radius-rounded-corners);
+  }
 }

@@ -50,14 +50,12 @@ function PodcastInfo({ podcastInfo }) {
             {t(`description.${info[0].description}`)}
           </h4>
 
-          <div className={cx("more")}>
-            <h4 className={cx("care")}>Interest Level:</h4>
-            <div className={cx("percent-bar")}>
-              <div
-                className={cx("ratio")}
-                style={{ width: `${info[0].care}%` }}
-              ></div>
-              <h1 className={cx("desc")}>{info[0].care}/100%</h1>
+          <h4 className={cx("care")}>{t("podcastInterestLevel")}</h4>
+          <div className={cx("percent-bar")}>
+            <div className={cx("ratio")} style={{ width: `${info[0].care}%` }}>
+              <div className={cx("frame")}>
+                <h1 className={cx("desc")}>{info[0].care}/100%</h1>
+              </div>
             </div>
           </div>
 

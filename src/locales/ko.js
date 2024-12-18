@@ -88,6 +88,7 @@ const ko = {
   playlistModeCurrent: "현재 재생 목록",
   playlistModePinned: "고정된 재생 목록",
   podcastTopicSearch: "팟캐스트 주제",
+  podcastInterestLevel: "관심도",
   topics: {
     socialIssues: "사회 문제",
     popCulture: "대중 문화",

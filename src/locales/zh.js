@@ -86,6 +86,7 @@ const zh = {
   playlistModeCurrent: "您当前的播放列表",
   playlistModePinned: "您固定的播放列表",
   podcastTopicSearch: "播客主题",
+  podcastInterestLevel: "兴趣程度",
   topics: {
     socialIssues: "社会问题",
     popCulture: "流行文化",

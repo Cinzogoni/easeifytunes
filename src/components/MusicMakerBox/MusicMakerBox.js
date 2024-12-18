@@ -20,11 +20,11 @@ function MusicMakerBox({ makerAvatar, makerName, role }) {
 
       <div className={cx("frame")}>
         <img className={cx("avatar")} src={makerAvatar} alt={makerName} />
-      </div>
 
-      <div className={cx("desc")}>
-        <h5 className={cx("name")}>{makerName}</h5>
-        <h6 className={cx("role")}>{rolesSplit.join("/")}</h6>
+        <div className={cx("desc")}>
+          <h5 className={cx("name")}>{makerName}</h5>
+          <h6 className={cx("role")}>{rolesSplit.join("/")}</h6>
+        </div>
       </div>
     </div>
   );

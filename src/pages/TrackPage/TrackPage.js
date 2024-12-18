@@ -6,6 +6,7 @@ import TrackInfo from "~/components/TrackInfo";
 
 import { useParams, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 import { useTrackInfo } from "~/components/TrackInfoProvider";
 
@@ -24,12 +25,14 @@ function TrackPage() {
   const allTrack = musicMaker.flatMap((maker) => [
     ...(maker.singles?.map((single) => ({
       ...single,
+      ...maker,
     })) || []),
 
     ...(maker.albums?.flatMap(
       (album) =>
         album.tracks?.map((track) => ({
           ...track,
+          ...maker,
           albumAvatar: album.albumAvatar,
           albumName: album.albumName,
           albumPerformer: album.albumPerformer,
@@ -48,11 +51,12 @@ function TrackPage() {
   const musicMakerName = track && track.stageName ? track.stageName : "";
   const mainMusicMaker =
     track && track.mainMusicMaker ? track.mainMusicMaker : "";
-  const name = track && track.name ? track.name : "";
   const trackType = track && track.type ? track.type : "";
   const genre = track && track.genre ? track.genre : "";
   const releaseDay = track && track.releaseDay ? track.releaseDay : "";
   const streamed = track && track.streamed ? track.streamed : "";
+
+  const makerName = track && track.makerName ? track.makerName : "";
 
   const lyrics = track && track.lyric ? track.lyric.split("\n") : "";
 
@@ -66,12 +70,12 @@ function TrackPage() {
         ? routesConfig.albumPage
             .replace(
               ":albumPerformer",
-              foundTrack.stageName.replace(/\//g, "-")
+              foundTrack.albumPerformer.replace(/\//g, "-")
             )
             .replace(":albumName", foundTrack.albumName.replace(/\//g, "-"))
         : routesConfig.musicMakerPage.replace(
             ":stageName",
-            foundTrack.mainMusicMaker.replace(/,/g, "-")
+            foundTrack.makerName.replace(/,/g, "-")
           );
 
       navigate(linkToNavigate);
@@ -82,6 +86,12 @@ function TrackPage() {
     (t) =>
       t.stageName !== stageName && t.title !== trackTitle && t.genre === genre
   );
+
+  useEffect(() => {
+    // console.log("musicMaker:", musicMaker);
+    // console.log("stageName:", stageName);
+    // console.log("trackTitle:", trackTitle);
+  }, [musicMaker, stageName, trackTitle]);
 
   return (
     <Track
