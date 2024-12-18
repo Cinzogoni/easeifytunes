@@ -37,7 +37,7 @@ function MusicMakerPage() {
   // console.log("isTracks:", isTracks);
   // console.log("musicSingles:", musicSingles);
   // console.log("musicAlbums:", musicAlbums);
-  console.log("musicMakerInfo:", makerFilter);
+  // console.log("musicMakerInfo:", makerFilter);
 
   return (
     <div className={cx("wrapper")}>

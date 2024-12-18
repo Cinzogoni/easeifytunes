@@ -28,7 +28,7 @@ function PodcastInfo({ podcastInfo }) {
     care: inner.care,
   }));
 
-  console.log(info);
+  // console.log(info);
 
   return (
     <div className={cx("wrapper")}>
@@ -67,7 +67,7 @@ function PodcastInfo({ podcastInfo }) {
               setActiveLoopClick={setActiveLoopClick}
               activeRandomClick={activeRandomClick}
               setActiveRandomClick={setActiveRandomClick}
-              frameAlbumInfo
+              framePodcastResize
               playerAlbumInfoResize
               playerAlbumInfo
               actionsAlbumInfo

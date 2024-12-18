@@ -54,6 +54,7 @@ function PodcastAudioInfo({
 
       <div className={cx("container")}>
         <img className={cx("avatar")} src={avatar} alt={title} />
+
         <div className={cx("info")}>
           <h3 className={cx("title")}>{title}</h3>
           <h4 className={cx("publisher")}>
@@ -92,52 +93,55 @@ function PodcastAudioInfo({
             </div>
           </div>
 
-          <Player
-            trackId={id}
-            trackLink={link}
-            trackTitle={title}
-            trackPerformer={publisher}
-            trackType={type}
-            //
-            isStatus={id === currentTrackId}
-            onPlay={() =>
-              handlePlay(
-                id,
-                {
-                  trackTitle: title,
-                  trackPerformer: publisher,
-                },
-                link
-              )
-            }
-            onPause={() => handlePause(id)}
-            onLoop={() => handleLoop()}
-            activeLoopClick={activeLoopClick}
-            setActiveLoopClick={setActiveLoopClick}
-            //
-            waveformBoxFooter
-            frameTrackInfoResize
-            playerTrackInfoResize
-            loopTrackInfo
-            loopBGTrackInfo
-            pauseTrackInfo
-            pauseBGTrackInfo
-            playerTrackInfo
-            playIconTrackInfo
-            playFooterIcon
-            stopperTrackInfo
-            stopIconTrackInfo
-            stopFooterIcon
-            playtimeTrackInfo
-            actionTrackInfoLeft
-            actionTrackInfoRight
-            randomTrackInfo
-            prevTrackInfo
-            nextTrackInfo
-            volumeBarTrackInfo
-            volumeBGTrackInfo
-            volumeIconTrackInfo
-          />
+          <div className={cx("player")}>
+            <Player
+              trackId={id}
+              trackLink={link}
+              trackTitle={title}
+              trackPerformer={publisher}
+              trackType={type}
+              //
+              isStatus={id === currentTrackId}
+              onPlay={() =>
+                handlePlay(
+                  id,
+                  {
+                    trackTitle: title,
+                    trackPerformer: publisher,
+                  },
+                  link
+                )
+              }
+              onPause={() => handlePause(id)}
+              onLoop={() => handleLoop()}
+              activeLoopClick={activeLoopClick}
+              setActiveLoopClick={setActiveLoopClick}
+              //
+              waveformBoxFooter
+              frameTrackInfoResize
+              playerTrackInfoResize
+              loopTrackInfo
+              loopBGTrackInfo
+              pauseTrackInfo
+              pauseBGTrackInfo
+              playerTrackInfo
+              playIconTrackInfo
+              playFooterIcon
+              stopperTrackInfo
+              stopIconTrackInfo
+              stopFooterIcon
+              playtimeTrackInfo
+              actionTrackInfoLeft
+              actionTrackInfoRight
+              randomTrackInfo
+              prevTrackInfo
+              nextTrackInfo
+              volumeBarTrackInfo
+              volumeBGTrackInfo
+              volumeIconTrackInfo
+              playerBtnFrameTrackInfo
+            />
+          </div>
         </div>
       </div>
     </div>

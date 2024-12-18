@@ -139,3 +139,9 @@
   align-items: center;
   justify-content: center;
 }
+
+@media (max-width: 540px) {
+  .streams {
+    width: 100%;
+  }
+}

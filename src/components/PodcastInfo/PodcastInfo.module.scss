@@ -48,11 +48,16 @@
   display: flex;
   flex-direction: column;
   position: relative;
+
+  overflow: hidden;
 }
 
 .topic {
   font-size: 3.6rem;
   margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .performer {
@@ -68,7 +73,7 @@
 
 .percent-bar {
   width: 250px;
-  height: 32px;
+  height: 33px;
   background-color: var(--3rd--element-bg);
   border: var(--1st--border-element);
   border-radius: var(--2nd--border-radius);
@@ -97,7 +102,7 @@
 
 .player-func {
   width: 100%;
-  height: 38px;
+  height: 43px;
   display: flex;
   align-items: center;
 }
@@ -118,4 +123,25 @@
   color: var(--main-move-color);
   width: 32px;
   height: 32px;
+}
+
+@media (max-width: 540px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .avatar {
+    width: 100%;
+    height: 120px;
+  }
+
+  .info {
+    margin: 30px 0 0 0;
+  }
+
+  .title {
+    white-space: unset;
+    overflow: unset;
+    text-overflow: unset;
+  }
 }

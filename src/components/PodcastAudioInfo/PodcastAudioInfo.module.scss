@@ -1,18 +1,20 @@
 .wrapper {
   width: 100%;
-  display: flex;
-  align-items: center;
+  height: 100%;
+  padding: 15px 30px 30px 30px;
+  background: var(--2nd--background-linear);
+  border-bottom-left-radius: var(--border--radius-rounded-corners);
 }
 
 .back {
   width: 40px;
   height: 40px;
-  margin: 15px;
-  background-color: var(--main-move-color);
-  border: var(--main-border);
+  margin: 0 30px 15px 0;
+  background-color: var(--main--button-color);
+  border: var(--1st--border-element);
   border-radius: 999px;
-  transform: translateY(-84px);
   position: relative;
+  cursor: pointer;
 }
 
 .arrow-left {
@@ -27,52 +29,62 @@
 
 .container {
   width: 100%;
-  margin: 15px 0;
   display: flex;
 }
 
 .avatar {
-  width: 210px;
-  height: 210px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
-  border: var(--main-border);
-  border-radius: var(--main-border-radius);
+  border: var(--3rd--border-element);
+  border-radius: var(--2nd--border-radius);
+  box-shadow: var(--2nd--box-shadow);
 }
 
 .info {
+  width: 100%;
+  height: 100%;
   margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
 }
 
 .title {
-  font-size: 1.1rem;
-  margin-bottom: 3px;
+  font-size: 2.2rem;
+  margin-bottom: 6px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .publisher {
-  font-size: 0.9rem;
-  margin-bottom: 3px;
+  font-size: 1.6rem;
+  margin-bottom: 8px;
 }
 
 .author {
-  font-size: 0.9rem;
-  margin-bottom: 3px;
+  font-size: 1.6rem;
+  margin-bottom: 6px;
 }
 
 .release-day {
-  font-size: 0.7rem;
+  font-size: 1.4rem;
   opacity: 0.6;
-  margin-bottom: 3px;
+  margin-top: 5px;
 }
 
 .more {
+  width: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: 3px;
+  margin: 10px 0;
 }
 
 .streams {
-  width: 158px;
-  height: 35px;
+  width: 170px;
+  height: 30px;
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 7px;
   display: flex;
@@ -81,7 +93,7 @@
 }
 
 .listeners {
-  color: var(--main-move-color);
+  color: var(--main--button-color);
   width: 20px;
   height: 20px;
   margin-left: 10px;
@@ -90,7 +102,7 @@
 .streamed {
   width: 100%;
   height: 100%;
-  font-size: 0.5rem;
+  font-size: 1.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -98,7 +110,7 @@
 
 .share {
   width: 30px;
-  height: 35px;
+  height: 30px;
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 7px;
   display: flex;
@@ -108,14 +120,14 @@
 }
 
 .link {
-  color: var(--main-move-color);
+  color: var(--main--button-color);
   width: 20px;
   height: 20px;
 }
 
 .add {
   width: 30px;
-  height: 35px;
+  height: 30px;
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 7px;
   display: flex;
@@ -123,139 +135,32 @@
   justify-content: center;
 }
 
-.plus {
-  color: var(--main-move-color);
-  width: 20px;
-  height: 20px;
+.player {
+  width: 250px;
+  height: 54px;
+  position: relative;
+  background: var(--4th--element-bg);
+  border-radius: var(--2nd--border-radius);
+  border: var(--5th--border-element);
 }
 
-@media (min-width: 980px) and (max-width: 1256px) {
-  .back-home {
-    margin: 10px;
-    transform: translateY(-84px);
-  }
-
-  .avatar {
-    width: 207px;
-    height: 207px;
-  }
-
-  .title {
-    font-size: 1.2rem;
-  }
-
-  .publisher,
-  .author {
-    font-size: 0.85rem;
-  }
-}
-
-@media (min-width: 887px) and (max-width: 979px) {
-  .back-home {
-    margin: 10px;
-    transform: translateY(-80px);
-  }
-
-  .avatar {
-    width: 201px;
-    height: 201px;
-  }
-
-  .title {
-    font-size: 1rem;
-  }
-
-  .publisher,
-  .author {
-    font-size: 0.7rem;
-  }
-
-  .streams {
-    width: 159px;
-  }
-
-  .listeners {
-    width: 20px;
-    height: 20px;
-  }
-
-  .streamed {
-    font-size: 0.5rem;
-    display: flex;
+@media (max-width: 540px) {
+  .container {
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
-
-  .link {
-    width: 20px;
-    height: 20px;
-  }
-
-  .plus {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-@media (max-width: 886px) {
-  .back-home {
-    margin: 10px;
-    transform: translateY(-74px);
-  }
-
   .avatar {
-    width: 192px;
-    height: 192px;
+    width: 100%;
+    height: 120px;
+  }
+
+  .info {
+    margin: 30px 0 0 0;
   }
 
   .title {
-    font-size: 0.9rem;
-    margin: 5px 0;
-  }
-
-  .publisher,
-  .author {
-    font-size: 0.65rem;
-    margin: 5px 0;
-  }
-  .release-day {
-    font-size: 0.6rem;
-  }
-
-  .streams {
-    width: 170px;
-    height: 33px;
-  }
-
-  .listeners {
-    width: 20px;
-    height: 20px;
-  }
-
-  .streamed {
-    font-size: 0.45rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .share {
-    width: 30px;
-    height: 33px;
-  }
-
-  .link {
-    width: 20px;
-    height: 20px;
-  }
-
-  .add {
-    width: 30px;
-    height: 33px;
-  }
-
-  .plus {
-    width: 20px;
-    height: 20px;
+    white-space: unset;
+    overflow: unset;
+    text-overflow: unset;
   }
 }

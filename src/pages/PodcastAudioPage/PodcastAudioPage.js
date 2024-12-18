@@ -47,7 +47,7 @@ function PodcastAudioPage() {
         />
       }
       list={
-        <div className={cx("desc-box")}>
+        <div className={cx("frame")}>
           {desc.length > 0 ? (
             desc.map((index) => <h4 key={index} className={cx("desc")}></h4>)
           ) : (
