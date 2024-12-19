@@ -10,7 +10,7 @@ import { faListCheck, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 import { useUser } from "../UserProvider";
 import { useSearchFocus } from "../SearchFocusProvider/SearchFocusProvider";
-import { usePopUp } from "../PopUpProvider";
+import { useModal } from "../ModalProvider";
 import { useYourPlaylist } from "../YourPlaylistProvider";
 
 import YourPlaylistBox from "../YourPlaylistBox";
@@ -26,7 +26,7 @@ function YourPlaylist({
   const { t } = useTranslation();
   const { currentUser } = useUser();
   const { focus } = useSearchFocus();
-  const { openLoginPopUp } = usePopUp();
+  const { openLoginModal } = useModal();
   const { activePlaylist, showPlaylist, showNotify, isVisible } =
     useYourPlaylist();
 
@@ -41,7 +41,7 @@ function YourPlaylist({
   const handleLogin = (e) => {
     setIsVisible(false);
     setTimeout(() => {
-      openLoginPopUp();
+      openLoginModal();
     }, 100);
   };
 

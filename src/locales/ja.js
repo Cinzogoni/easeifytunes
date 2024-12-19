@@ -27,6 +27,8 @@ const ja = {
   verified: "認証済み",
   verify: "認証",
   changePassword: "パスワードを変更",
+  userChangePassword:
+    "パスワードが変更されました. [OK」を押して新しいパスワードでログインしてください.",
   noImage: "画像なし",
   currentPassword: "現在のパスワード",
   newPassword: "新しいパスワード",

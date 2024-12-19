@@ -16,17 +16,17 @@ function YourPlaylistBox(audioProps) {
   const {
     playlistItem,
     clickFooterAdd,
-    handleAddPlaylistPopUp,
-    handleAddPlaylistPopUp1,
+    handleAddPlaylistModal,
+    handleAddPlaylistModal1,
   } = useYourPlaylist();
 
   const checkClick = () => {
     if (clickFooterAdd) {
-      handleAddPlaylistPopUp();
+      handleAddPlaylistModal();
     }
 
     if (audioProps) {
-      handleAddPlaylistPopUp1(audioProps);
+      handleAddPlaylistModal1(audioProps);
     }
   };
 
@@ -37,7 +37,7 @@ function YourPlaylistBox(audioProps) {
         <div onClick={checkClick} className={cx("add-playlistItem")}>
           <FontAwesomeIcon
             className={cx("icon", {
-              showPopUp: clickFooterAdd,
+              showModal: clickFooterAdd,
             })}
             icon={faPlus}
           />

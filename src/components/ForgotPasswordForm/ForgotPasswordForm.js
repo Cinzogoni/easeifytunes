@@ -5,13 +5,13 @@ const cx = classNames.bind(styles);
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { usePopUp } from "../PopUpProvider";
+import { useModal } from "../ModalProvider";
 // import { useUser } from "../UserProvider";
 
 function ForgotPasswordForm() {
   const { t } = useTranslation();
   // const { user } = useUser();
-  const { closeForgotPasswordPopUp, openLoginPopUp } = usePopUp();
+  const { closeForgotPasswordModal, openLoginModal } = useModal();
 
   const [emailOrPhone, setEmailOrPhone] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -22,8 +22,8 @@ function ForgotPasswordForm() {
   };
 
   const handleLoginForm = () => {
-    openLoginPopUp();
-    closeForgotPasswordPopUp();
+    openLoginModal();
+    closeForgotPasswordModal();
     setSubmitted(false);
   };
 

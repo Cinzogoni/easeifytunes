@@ -29,6 +29,8 @@ const ko = {
   verified: "인증됨",
   verify: "인증",
   changePassword: "비밀번호 변경",
+  userChangePassword:
+    "비밀번호가 변경되었습니다. 확인을 눌러 새 비밀번호로 로그인하세요.",
   noImage: "이미지 없음",
   currentPassword: "현재 비밀번호",
   newPassword: "새 비밀번호",

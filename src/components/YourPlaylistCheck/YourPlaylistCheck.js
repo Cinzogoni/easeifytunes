@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 import { useYourPlaylist } from "../YourPlaylistProvider";
 import { useSearchFocus } from "../SearchFocusProvider/SearchFocusProvider";
 import { useUser } from "../UserProvider";
-import { usePopUp } from "../PopUpProvider";
+import { useModal } from "../ModalProvider";
 
 import Tippy from "@tippyjs/react";
 import YourPlaylistBox from "../YourPlaylistBox";
@@ -31,7 +31,7 @@ function YourPlaylistCheck({
   const { t } = useTranslation();
   const { focus } = useSearchFocus();
   const { currentUser } = useUser();
-  const { openLoginPopUp } = usePopUp();
+  const { openLoginModal } = useModal();
   const {
     setIsNewReleasesVisible,
     isNewReleasesVisible,
@@ -44,7 +44,7 @@ function YourPlaylistCheck({
   const handleLogin = () => {
     setIsNewReleasesVisible(false);
     setTimeout(() => {
-      openLoginPopUp();
+      openLoginModal();
     }, 100);
   };
 

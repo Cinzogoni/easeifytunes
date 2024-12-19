@@ -27,6 +27,7 @@ const zh = {
   verified: "已验证",
   verify: "验证",
   changePassword: "更改密码",
+  userChangePassword: "密码已更改. 按确定以使用新密码登录.",
   noImage: "无图片",
   currentPassword: "当前密码",
   newPassword: "新密码",

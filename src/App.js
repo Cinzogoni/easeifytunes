@@ -13,7 +13,7 @@ import i18n from "./i18n";
 import { I18nextProvider } from "react-i18next";
 import { LanguageProvider } from "./components/LanguageProvider";
 import { UserProvider } from "./components/UserProvider";
-import { PopUpProvider } from "./components/PopUpProvider";
+import { ModalProvider } from "./components/ModalProvider";
 import { TrackInfoProvider } from "./components/TrackInfoProvider";
 import { AudioPlayerProvider } from "./components/AudioPlayerProvider";
 import { SearchFocusProvider } from "./components/SearchFocusProvider/SearchFocusProvider";
@@ -26,7 +26,7 @@ function AppProviders({ children }) {
     <I18nextProvider i18n={i18n}>
       <LanguageProvider>
         <UserProvider>
-          <PopUpProvider>
+          <ModalProvider>
             <TrackInfoProvider>
               <AudioPlayerProvider>
                 <SearchFocusProvider>
@@ -34,7 +34,7 @@ function AppProviders({ children }) {
                 </SearchFocusProvider>
               </AudioPlayerProvider>
             </TrackInfoProvider>
-          </PopUpProvider>
+          </ModalProvider>
         </UserProvider>
       </LanguageProvider>
     </I18nextProvider>

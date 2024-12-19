@@ -6,9 +6,9 @@ import React, {
   useMemo,
 } from "react";
 
-const PopUpContext = createContext();
+const ModalContext = createContext();
 
-export function PopUpProvider({ children }) {
+export function ModalProvider({ children }) {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isSignUpOpen, setIsSignUpOpen] = useState(false);
   const [isForgotPasswordOpen, setIsForgotPasswordOpen] = useState(false);
@@ -16,35 +16,35 @@ export function PopUpProvider({ children }) {
   const [isAddPlaylistItem, setIsAddPlaylistItem] = useState(false);
 
   //Login
-  const openLoginPopUp = useCallback(() => setIsLoginOpen(true), []);
-  const closeLoginPopUp = useCallback(() => setIsLoginOpen(false), []);
+  const openLoginModal = useCallback(() => setIsLoginOpen(true), []);
+  const closeLoginModal = useCallback(() => setIsLoginOpen(false), []);
   //Sign Up
-  const openSignUpPopUp = useCallback(() => setIsSignUpOpen(true), []);
-  const closeSignUpPopUp = useCallback(() => setIsSignUpOpen(false), []);
+  const openSignUpModal = useCallback(() => setIsSignUpOpen(true), []);
+  const closeSignUpModal = useCallback(() => setIsSignUpOpen(false), []);
   //Forgot password
-  const openForgotPasswordPopUp = useCallback(
+  const openForgotPasswordModal = useCallback(
     () => setIsForgotPasswordOpen(true),
     []
   );
-  const closeForgotPasswordPopUp = useCallback(
+  const closeForgotPasswordModal = useCallback(
     () => setIsForgotPasswordOpen(false),
     []
   );
   //Change password
-  const openChangePasswordPopUp = useCallback(
+  const openChangePasswordModal = useCallback(
     () => setIsChangePassword(true),
     []
   );
-  const closeChangePasswordPopUp = useCallback(
+  const closeChangePasswordModal = useCallback(
     () => setIsChangePassword(false),
     []
   );
   //YourPlaylist
-  const openAddPlaylistItemPopUp = useCallback(
+  const openAddPlaylistItemModal = useCallback(
     () => setIsAddPlaylistItem(true),
     []
   );
-  const closeAddPlaylistItemPopUp = useCallback(
+  const closeAddPlaylistItemModal = useCallback(
     () => setIsAddPlaylistItem(false),
     []
   );
@@ -56,16 +56,16 @@ export function PopUpProvider({ children }) {
       isForgotPasswordOpen,
       isChangePassword,
       isAddPlaylistItem,
-      openLoginPopUp,
-      closeLoginPopUp,
-      openSignUpPopUp,
-      closeSignUpPopUp,
-      openForgotPasswordPopUp,
-      closeForgotPasswordPopUp,
-      openChangePasswordPopUp,
-      closeChangePasswordPopUp,
-      openAddPlaylistItemPopUp,
-      closeAddPlaylistItemPopUp,
+      openLoginModal,
+      closeLoginModal,
+      openSignUpModal,
+      closeSignUpModal,
+      openForgotPasswordModal,
+      closeForgotPasswordModal,
+      openChangePasswordModal,
+      closeChangePasswordModal,
+      openAddPlaylistItemModal,
+      closeAddPlaylistItemModal,
     }),
     [
       isLoginOpen,
@@ -76,10 +76,10 @@ export function PopUpProvider({ children }) {
     ]
   );
   return (
-    <PopUpContext.Provider value={value}>{children}</PopUpContext.Provider>
+    <ModalContext.Provider value={value}>{children}</ModalContext.Provider>
   );
 }
 
-export function usePopUp() {
-  return useContext(PopUpContext);
+export function useModal() {
+  return useContext(ModalContext);
 }

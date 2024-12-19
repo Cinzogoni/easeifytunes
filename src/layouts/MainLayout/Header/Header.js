@@ -14,11 +14,11 @@ import HeaderActions from "../HeaderActions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-import { usePopUp } from "~/components/PopUpProvider";
+import { useModal } from "~/components/ModalProvider";
 import { useUser } from "~/components/UserProvider";
 import { useTranslation } from "react-i18next";
 
-import PopUp from "~/components/PopUp";
+import Modal from "~/components/Modal/Modal";
 import LoginForm from "~/components/LoginForm";
 import SignUpForm from "~/components/SignUpForm";
 import ForgotPasswordForm from "~/components/ForgotPasswordForm";
@@ -30,12 +30,12 @@ function Header() {
     isLoginOpen,
     isSignUpOpen,
     isForgotPasswordOpen,
-    openLoginPopUp,
-    closeLoginPopUp,
-    openSignUpPopUp,
-    closeSignUpPopUp,
-    closeForgotPasswordPopUp,
-  } = usePopUp();
+    openLoginModal,
+    closeLoginModal,
+    openSignUpModal,
+    closeSignUpModal,
+    closeForgotPasswordModal,
+  } = useModal();
 
   const [emailOrPhoneError, setEmailOrPhoneError] = useState(false);
   const [passwordError, setPasswordError] = useState(false);
@@ -51,7 +51,7 @@ function Header() {
     );
 
     if (isValid) {
-      closeLoginPopUp();
+      closeLoginModal();
     }
   };
 
@@ -60,9 +60,9 @@ function Header() {
 
     if (newUser) {
       alert(t("signUpSuccessful"));
-      closeSignUpPopUp();
+      closeSignUpModal();
       setTimeout(() => {
-        openLoginPopUp();
+        openLoginModal();
       }, 100);
     }
   };
@@ -74,38 +74,38 @@ function Header() {
         <HeaderActions />
       ) : (
         <div className={cx("actions")}>
-          <button className={cx("sign-up")} onClick={openSignUpPopUp}>
+          <button className={cx("sign-up")} onClick={openSignUpModal}>
             <h5>{t("signUp")}</h5>
           </button>
-          <button className={cx("log-in")} onClick={openLoginPopUp}>
+          <button className={cx("log-in")} onClick={openLoginModal}>
             <h5 className={cx("action-btn")}>{t("login")}</h5>
           </button>
           <FontAwesomeIcon className={cx("menu")} icon={faBars} />
         </div>
       )}
       {isLoginOpen && (
-        <PopUp isOpen={isLoginOpen} closePopUp={closeLoginPopUp}>
+        <Modal isOpen={isLoginOpen} closeModal={closeLoginModal}>
           <LoginForm
             onLogin={handleLogin}
             emailOrPhoneError={emailOrPhoneError}
             passwordError={passwordError}
           />
-        </PopUp>
+        </Modal>
       )}
 
       {isSignUpOpen && (
-        <PopUp isOpen={isSignUpOpen} closePopUp={closeSignUpPopUp}>
+        <Modal isOpen={isSignUpOpen} closeModal={closeSignUpModal}>
           <SignUpForm onSignUp={handleSignUp} />
-        </PopUp>
+        </Modal>
       )}
 
       {isForgotPasswordOpen && (
-        <PopUp
+        <Modal
           isOpen={isForgotPasswordOpen}
-          closePopUp={closeForgotPasswordPopUp}
+          closeModal={closeForgotPasswordModal}
         >
           <ForgotPasswordForm />
-        </PopUp>
+        </Modal>
       )}
     </div>
   );

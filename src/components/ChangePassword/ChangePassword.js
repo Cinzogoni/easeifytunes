@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import { useUser } from "../UserProvider";
-import { usePopUp } from "../PopUpProvider";
+import { useModal } from "../ModalProvider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 
@@ -15,7 +15,7 @@ import ChangePasswordService from "~/services/ChangePassService";
 function ChangePassword() {
   const { t } = useTranslation();
   const { currentUser, setCurrentUser } = useUser();
-  const { openLoginPopUp, closeChangePasswordPopUp } = usePopUp();
+  const { openLoginModal, closeChangePasswordModal } = useModal();
 
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
@@ -61,9 +61,9 @@ function ChangePassword() {
 
   const handlePasswordUpdated = () => {
     setCurrentUser(false);
-    closeChangePasswordPopUp();
+    closeChangePasswordModal();
     setTimeout(() => {
-      openLoginPopUp();
+      openLoginModal();
     }, 100);
   };
 
@@ -75,6 +75,7 @@ function ChangePassword() {
             <input className={cx("none")} type="text" autoComplete="username" />
 
             <h4 className={cx("title")}>{t("changePassword")}</h4>
+
             <div className={cx("insert")}>
               <h5 className={cx("text")}>{t("currentPassword")}</h5>
               <div className={cx("box")}>
@@ -131,9 +132,7 @@ function ChangePassword() {
           </form>
         ) : (
           <div className={cx("notifications")}>
-            <h5 className={cx("notification")}>
-              Password changed. Press OK to log in with the new password.
-            </h5>
+            <h5 className={cx("notification")}>{t("userChangePassword")}</h5>
             <div className={cx("submit-bg")}>
               <button
                 className={cx("submit-button")}

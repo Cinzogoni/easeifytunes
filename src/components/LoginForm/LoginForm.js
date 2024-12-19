@@ -7,12 +7,12 @@ import { useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 
-import { usePopUp } from "../PopUpProvider";
+import { useModal } from "../ModalProvider";
 
 function LoginForm({ onLogin, emailOrPhoneError, passwordError }) {
   const { t } = useTranslation();
-  const { closeLoginPopUp, openSignUpPopUp, openForgotPasswordPopUp } =
-    usePopUp();
+  const { closeLoginModal, openSignUpModal, openForgotPasswordModal } =
+    useModal();
   const [showPassword, setShowPassword] = useState(false);
   const [emailOrPhone, setEmailOrPhone] = useState("");
   const [password, setPassword] = useState("");
@@ -23,16 +23,16 @@ function LoginForm({ onLogin, emailOrPhoneError, passwordError }) {
   };
 
   const handleForgotPassword = () => {
-    closeLoginPopUp();
+    closeLoginModal();
     setTimeout(() => {
-      openForgotPasswordPopUp();
+      openForgotPasswordModal();
     }, 100);
   };
 
   const handleSignUpForm = () => {
-    closeLoginPopUp();
+    closeLoginModal();
     setTimeout(() => {
-      openSignUpPopUp();
+      openSignUpModal();
     }, 100);
   };
 
@@ -45,6 +45,7 @@ function LoginForm({ onLogin, emailOrPhoneError, passwordError }) {
       <div className={cx("container")}>
         <form className={cx("form")} onSubmit={handleSubmit}>
           <h4 className={cx("title")}>{t("login")}</h4>
+
           <div className={cx("login")}>
             <h5 className={cx("text")}>{t("emailOrPhone")}</h5>
             <div className={cx("box")}>

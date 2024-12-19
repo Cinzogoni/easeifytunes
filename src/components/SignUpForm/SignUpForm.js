@@ -6,13 +6,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 
 import { useState } from "react";
-import { usePopUp } from "../PopUpProvider";
+import { useModal } from "../ModalProvider";
 import { useTranslation } from "react-i18next";
 import { useUser } from "../UserProvider";
 
 function SignUpForm({ onSignUp }) {
   const { t } = useTranslation();
-  const { closeSignUpPopUp, openLoginPopUp } = usePopUp();
+  const { closeSignUpModal, openLoginModal } = useModal();
   const { user } = useUser();
 
   const [showPassword, setShowPassword] = useState(false);
@@ -62,9 +62,9 @@ function SignUpForm({ onSignUp }) {
   };
 
   const handleLoginForm = () => {
-    closeSignUpPopUp();
+    closeSignUpModal();
     setTimeout(() => {
-      openLoginPopUp();
+      openLoginModal();
     }, 100);
   };
 
@@ -74,79 +74,87 @@ function SignUpForm({ onSignUp }) {
         <form className={cx("form")} onSubmit={handleSubmit}>
           <h4 className={cx("title")}>{t("signUp")}</h4>
 
-          <div className={cx("full-name")}>
-            <div className={cx("box")}>
-              <input
-                className={cx("frame")}
-                placeholder={t("fullName")}
-                type="text"
-                autoComplete="username"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-                required
-              />
+          <div className={cx("sign-up")}>
+            <div className={cx("full-name")}>
+              <div className={cx("box")}>
+                <input
+                  className={cx("frame")}
+                  placeholder={t("fullName")}
+                  type="text"
+                  autoComplete="username"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  required
+                />
+              </div>
             </div>
           </div>
 
-          <div className={cx("phone-number")}>
-            <div className={cx("box")}>
-              <input
-                placeholder={t("phoneNumber")}
-                className={cx("frame")}
-                type="text"
-                value={phoneNumber}
-                onChange={(e) => setPhoneNumber(e.target.value)}
-                required
-              />
-            </div>
+          <div className={cx("sign-up")}>
+            <div className={cx("phone-number")}>
+              <div className={cx("box")}>
+                <input
+                  placeholder={t("phoneNumber")}
+                  className={cx("frame")}
+                  type="text"
+                  value={phoneNumber}
+                  onChange={(e) => setPhoneNumber(e.target.value)}
+                  required
+                />
+              </div>
 
-            {phoneExists && (
-              <p className={cx("notification")}>{t("signUpPhoneNotify")}</p>
-            )}
+              {phoneExists && (
+                <p className={cx("notification")}>{t("signUpPhoneNotify")}</p>
+              )}
+            </div>
           </div>
 
-          <div className={cx("email")}>
-            <div className={cx("box")}>
-              <input
-                className={cx("frame")}
-                placeholder={t("email")}
-                type="text"
-                autoComplete="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
+          <div className={cx("sign-up")}>
+            <div className={cx("email")}>
+              <div className={cx("box")}>
+                <input
+                  className={cx("frame")}
+                  placeholder={t("email")}
+                  type="text"
+                  autoComplete="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />
+              </div>
+              {emailExists && (
+                <p className={cx("notification")}>{t("signUpEmailNotify")}</p>
+              )}
             </div>
-            {emailExists && (
-              <p className={cx("notification")}>{t("signUpEmailNotify")}</p>
-            )}
           </div>
 
-          <div className={cx("password")}>
-            <div className={cx("box")}>
-              <input
-                className={cx("frame")}
-                placeholder={t("password")}
-                type={showPassword ? "text" : "password"}
-                autoComplete="current-password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
+          <div className={cx("sign-up")}>
+            <div className={cx("password")}>
+              <div className={cx("box")}>
+                <input
+                  className={cx("frame")}
+                  placeholder={t("password")}
+                  type={showPassword ? "text" : "password"}
+                  autoComplete="current-password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />
 
-              <FontAwesomeIcon
-                className={cx("hide-show")}
-                icon={faEye}
-                onMouseDown={() => setShowPassword(true)}
-                onMouseUp={() => setShowPassword(false)}
-                onMouseLeave={() => setShowPassword(false)}
-              />
+                <FontAwesomeIcon
+                  className={cx("hide-show")}
+                  icon={faEye}
+                  onMouseDown={() => setShowPassword(true)}
+                  onMouseUp={() => setShowPassword(false)}
+                  onMouseLeave={() => setShowPassword(false)}
+                />
+              </div>
+              {passwordDesc ? (
+                <p className={cx("notification")}>{t("signUpPassDesc")}</p>
+              ) : (
+                <p className={cx("desc")}>{t("signUpPassDesc")}</p>
+              )}
             </div>
-            {passwordDesc ? (
-              <p className={cx("notification")}>{t("signUpPassDesc")}</p>
-            ) : (
-              <p className={cx("desc")}>{t("signUpPassDesc")}</p>
-            )}
           </div>
 
           <div className={cx("submit-bg")}>

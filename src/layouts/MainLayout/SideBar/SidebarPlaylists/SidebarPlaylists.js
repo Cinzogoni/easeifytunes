@@ -9,22 +9,22 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 
 import { useUser } from "~/components/UserProvider";
-import { usePopUp } from "~/components/PopUpProvider";
+import { useModal } from "~/components/ModalProvider";
 import { useYourPlaylist } from "~/components/YourPlaylistProvider";
 
 function SidebarPlaylists({ children }) {
   const { t } = useTranslation();
   const { currentUser } = useUser();
-  const { openLoginPopUp, openSignUpPopUp } = usePopUp();
-  const { playlistItem, clickSidebarAdd, handleAddPlaylistPopUp } =
+  const { openLoginModal, openSignUpModal } = useModal();
+  const { playlistItem, clickSidebarAdd, handleAddPlaylistModal } =
     useYourPlaylist();
 
   const handleLoginForm = () => {
-    openLoginPopUp();
+    openLoginModal();
   };
 
   const handleSignUpForm = () => {
-    openSignUpPopUp();
+    openSignUpModal();
   };
 
   return (
@@ -32,7 +32,7 @@ function SidebarPlaylists({ children }) {
       <div className={cx("heading")}>
         <h3 className={cx("title")}>{t("yourPlaylists")}</h3>
         <div
-          onClick={handleAddPlaylistPopUp}
+          onClick={handleAddPlaylistModal}
           className={cx("add-playlistItem")}
         >
           <FontAwesomeIcon
@@ -46,7 +46,7 @@ function SidebarPlaylists({ children }) {
         {currentUser ? (
           React.Children.map(children, (child) =>
             React.cloneElement(child, {
-              handleAddPlaylistPopUp,
+              handleAddPlaylistModal,
               playlistItem,
             })
           )

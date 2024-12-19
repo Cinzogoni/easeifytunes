@@ -1,7 +1,7 @@
 import API_USER from "~/Api/API_User";
 
 function ChangePasswordService(currentUserId, currentPassword, newPassword) {
-  const user = API_USER.find((user) => user.id === currentUserId);
+  const user = API_USER.userList.find((user) => user.id === currentUserId);
 
   if (!user || user.password !== currentPassword) {
     return false;

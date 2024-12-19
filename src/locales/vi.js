@@ -28,6 +28,8 @@ const vi = {
   verified: "Đã Xác Thực",
   verify: "Xác Thực",
   changePassword: "Đổi Mật Khẩu",
+  userChangePassword:
+    "Mật khẩu đã thay đổi, nhấn OK đăng nhập với mật khẩu mới.",
   noImage: "Chưa Có Hình",
   currentPassword: "Mật Khẩu Hiện Tại",
   newPassword: "Mật Khẩu Mới",

@@ -8,11 +8,11 @@ import React, {
 } from "react";
 
 import { useUser } from "./UserProvider";
-import { usePopUp } from "./PopUpProvider";
+import { useModal } from "./ModalProvider";
 import { useTranslation } from "react-i18next";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import PopUp from "./PopUp";
+import Modal from "./Modal/Modal";
 import YourPlaylistAdd from "./YourPlaylistAdd";
 
 const YourPlaylistStates = createContext();
@@ -21,11 +21,11 @@ export function YourPlaylistProvider({ children }) {
   const { t } = useTranslation();
   const { currentUser } = useUser();
   const {
-    openAddPlaylistItemPopUp,
-    closeAddPlaylistItemPopUp,
+    openAddPlaylistItemModal,
+    closeAddPlaylistItemModal,
     isAddPlaylistItem,
-    openLoginPopUp,
-  } = usePopUp();
+    openLoginModal,
+  } = useModal();
 
   const navigate = useNavigate();
 
@@ -141,32 +141,32 @@ export function YourPlaylistProvider({ children }) {
     }
   };
 
-  const handleAddPlaylistPopUp = () => {
+  const handleAddPlaylistModal = () => {
     if (currentUser) {
       setIsNewReleasesVisible(false);
       setActiveNewReleasesPlaylist(false);
       setShowNewReleasesPlaylist(false);
-      openAddPlaylistItemPopUp();
+      openAddPlaylistItemModal();
     }
 
     if (!currentUser) {
       setClickSidebarAdd(false);
       setClickFooterAdd(false);
 
-      openLoginPopUp();
+      openLoginModal();
     }
   };
 
-  const handleAddPlaylistPopUp1 = () => {
+  const handleAddPlaylistModal1 = () => {
     if (currentUser) {
       setIsNewReleasesVisible(false);
       setActiveNewReleasesPlaylist(false);
       setShowNewReleasesPlaylist(false);
-      openAddPlaylistItemPopUp();
+      openAddPlaylistItemModal();
     }
 
     if (!currentUser) {
-      openLoginPopUp();
+      openLoginModal();
     }
   };
 
@@ -211,7 +211,7 @@ export function YourPlaylistProvider({ children }) {
 
     setItemName("");
     setItemDescription("");
-    closeAddPlaylistItemPopUp();
+    closeAddPlaylistItemModal();
   };
 
   const handleDeletePlaylistItem = (
@@ -256,7 +256,7 @@ export function YourPlaylistProvider({ children }) {
       setItemDescription(description);
     }
 
-    openAddPlaylistItemPopUp();
+    openAddPlaylistItemModal();
   };
 
   const handleAddAudioTrack = (audioInfo, playlistIndex) => {
@@ -402,8 +402,8 @@ export function YourPlaylistProvider({ children }) {
         setActivePlaylist,
         setShowPlaylist,
         setShowNotify,
-        handleAddPlaylistPopUp,
-        handleAddPlaylistPopUp1,
+        handleAddPlaylistModal,
+        handleAddPlaylistModal1,
         handleToggleYourPlaylist,
         handleAddAudioTrack,
         isNewReleasesVisible,
@@ -433,9 +433,9 @@ export function YourPlaylistProvider({ children }) {
     >
       {children}
       {isAddPlaylistItem && (
-        <PopUp
+        <Modal
           isOpen={isAddPlaylistItem}
-          closePopUp={closeAddPlaylistItemPopUp}
+          closeModal={closeAddPlaylistItemModal}
         >
           <YourPlaylistAdd
             itemName={itemName}
@@ -453,7 +453,7 @@ export function YourPlaylistProvider({ children }) {
             setShowNewReleasesPlaylist={setShowNewReleasesPlaylist}
             trackId={trackId}
           />
-        </PopUp>
+        </Modal>
       )}
     </YourPlaylistStates.Provider>
   );

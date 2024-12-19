@@ -16,18 +16,18 @@
 .icon {
   width: 40px;
   height: 40px;
-  color: rgba(255, 255, 255, 1);
+  color: var(--main--button-color);
 }
 .avatar {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: var(--main-border);
+  border: var(--1st--border-element);
 }
 
 .desc {
-  font-size: 0.4rem;
-  color: rgba(12, 12, 20, 1);
+  font-size: 1rem;
+  color: var(--2nd--text-color);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -36,10 +36,10 @@
 }
 
 .wrapper {
-  width: 350px;
-  background-color: var(--main--text-color);
-  border: 1px solid #746c6b75;
-  border-radius: 10px;
+  width: 280px;
+  background: var(--1st--element-bg);
+  border: var(--1st--border-element);
+  border-radius: var(--2nd--border-radius);
   transform: translateY(-20px);
 }
 
@@ -54,12 +54,10 @@
 }
 
 .box:hover {
-  background-color: rgba(255, 255, 255, 1);
-  border-radius: 10px;
+  background-color: var(--6th-background-color);
 }
 
 .title {
-  line-height: 2;
   display: flex;
   align-items: center;
   margin-left: 24px;
@@ -67,8 +65,8 @@
 
 .logout,
 .info {
-  font-size: 0.9rem;
-  color: rgba(12, 12, 20, 1);
+  font-size: 1.6rem;
+  color: var(--2nd--text-color);
 }
 
 .icon {
@@ -81,7 +79,7 @@
 
 .icon-logout,
 .icon-info {
-  color: rgba(12, 12, 20, 1);
+  color: var(--2nd--text-color);
   width: 24px;
   height: 24px;
 }

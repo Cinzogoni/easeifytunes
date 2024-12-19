@@ -28,6 +28,8 @@ const en = {
   verified: "Verified",
   verify: "Verify",
   changePassword: "Change Password",
+  userChangePassword:
+    "Password changed. Press OK to log in with the new password.",
   noImage: "No Image",
   currentPassword: "Current Password",
   newPassword: "New Password",
