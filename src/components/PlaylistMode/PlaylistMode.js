@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import { useTrackInfo } from "~/components/TrackInfoProvider";
 import { useUser } from "../UserProvider";
 import { useYourPlaylist } from "../YourPlaylistProvider";

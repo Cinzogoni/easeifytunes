@@ -271,15 +271,15 @@ export function AudioPlayerProvider({ children }) {
     // console.log("Check time:", checkListeningTime);
   }, []);
 
-  const handleLoop = useCallback(() => {
+  const handleLoop = () => {
     setIsLooping((prevIsLooping) => {
       const newIsLooping = !prevIsLooping;
       // console.log(`Looping is now ${newIsLooping ? "enabled" : "disabled"}.`);
       return newIsLooping;
     });
-  }, []);
+  };
 
-  const handleNextTrack = useCallback(() => {
+  const handleNextTrack = () => {
     const listToUse = isRandom ? shuffledTrackList : trackList;
     const nextIndex = (trackIndex + 1) % listToUse.length;
     const nextTrack = listToUse[nextIndex];
@@ -306,9 +306,9 @@ export function AudioPlayerProvider({ children }) {
       nextTrack.link || nextTrack.trackLink
     );
     // console.log("Next Track!", nextTrack);
-  }, []);
+  };
 
-  const handlePrevTrack = useCallback(() => {
+  const handlePrevTrack = () => {
     const listToUse = isRandom ? shuffledTrackList : trackList;
     const prevIndex = (trackIndex - 1 + listToUse.length) % listToUse.length;
     const prevTrack = listToUse[prevIndex];
@@ -335,12 +335,12 @@ export function AudioPlayerProvider({ children }) {
       prevTrack.link || prevTrack.trackLink
     );
     // console.log("Prev Track!", prevTrack);
-  }, []);
+  };
 
-  const handleRandomTrack = useCallback(() => {
+  const handleRandomTrack = () => {
     const newRandomState = !isRandom;
     setIsRandom(newRandomState);
-  }, []);
+  };
 
   useEffect(() => {
     if (activeMemo && storedTrackListMap.size > 0) {

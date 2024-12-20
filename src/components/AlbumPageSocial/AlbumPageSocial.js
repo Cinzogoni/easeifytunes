@@ -40,6 +40,7 @@ function AlbumPageSocial({ socialAlbums }) {
               colM={cx("m-3")}
               colSM={cx("sm-3")}
               colS={cx("s-3")}
+              colMo={cx("mo-4")}
             >
               <div className={cx("boxes")}>
                 <div className={cx("box")}>

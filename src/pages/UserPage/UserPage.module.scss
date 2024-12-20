@@ -144,8 +144,33 @@
   margin-bottom: 15px;
 }
 
+.title {
+  width: 25%;
+  font-size: 2rem;
+}
+
+.bold {
+  width: 55.2%;
+  font-size: 2rem;
+  padding-left: 15px;
+  color: var(--1st--text-color);
+  overflow: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.verified {
+  width: 18%;
+  height: 40px;
+  background-color: var(--5th-background-color);
+  border: var(--1st--border-element);
+  border-radius: var(--2nd--border-radius);
+  transform: translateX(12px);
+}
+
 .change-password {
-  width: 25.33333%;
+  width: 18%;
   height: 40px;
   background-color: var(--5th-background-color);
   border: var(--1st--border-element);
@@ -158,29 +183,10 @@
   }
 }
 
-.verified {
-  width: 25.33333%;
-  height: 40px;
-  background-color: var(--5th-background-color);
-  border: var(--1st--border-element);
-  border-radius: var(--2nd--border-radius);
-  transform: translateX(12px);
-}
-
-.title {
-  width: 30.33333%;
-  font-size: 1.6rem;
-}
-
-.bold {
-  width: 41.33333%;
-  font-size: 1.6rem;
-  padding-left: 15px;
-  color: var(--1st--text-color);
-}
-
 .desc {
-  color: rgba(12, 12, 20, 1);
+  font-size: 1.4rem;
+  color: var(--2nd--text-color);
+  font-weight: 600;
 }
 
 @media (max-width: 630px) {
@@ -204,10 +210,26 @@
     margin-top: 15px;
   }
 
+  .title {
+    font-size: 1.6rem;
+    width: 30.33333%;
+  }
+
   .bold {
+    width: 41.33333%;
+    font-size: 1.6rem;
     overflow: hidden;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  .verified,
+  .change-password {
+    width: 25.33333%;
+  }
+
+  .desc {
+    font-size: 1.2rem;
   }
 }

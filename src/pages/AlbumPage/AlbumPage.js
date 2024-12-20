@@ -35,7 +35,7 @@ function AlbumPage() {
     (t) => t.albumName !== albumName || t.albumPerformer !== albumPerformer
   );
 
-  console.log(findAlbum);
+  // console.log(findAlbum);
 
   return (
     <Track

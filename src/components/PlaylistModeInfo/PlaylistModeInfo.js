@@ -26,36 +26,40 @@ function PlaylistModeInfo({ defaultTitle }) {
 
   return (
     <div className={cx("wrapper")}>
-      <div className={cx("info")}>
-        <h1 className={cx("title")}>
-          {!defaultTitle
-            ? `${t("playlistModeCurrent")}: ${t("playlistNameNull")}`
-            : activeMemo
-            ? `${t("playlistModePinned")}: ${activeTitle}`
-            : `${t("playlistModeCurrent")}: ${defaultTitle}`}
-        </h1>
-      </div>
+      <div className={cx("container")}>
+        <div className={cx("info")}>
+          <h1 className={cx("title")}>
+            {!defaultTitle
+              ? `${t("playlistModeCurrent")}: ${t("playlistNameNull")}`
+              : activeMemo
+              ? `${t("playlistModePinned")}: ${activeTitle}`
+              : `${t("playlistModeCurrent")}: ${defaultTitle}`}
+          </h1>
+        </div>
 
-      <div className={cx("action")}>
-        <div
-          className={cx("bg")}
-          onClick={handleMemo}
-          style={{
-            backgroundColor: activeMemo
-              ? "rgba(255, 255, 255, 1)"
-              : "transparent",
-            backgroundImage: activeMemo
-              ? "linear-gradient(to top, rgba(102, 128, 150, 0.1) 30%, rgba(58, 123, 189, 0.2) 50%, rgba(145, 187, 229, 0.1) 100%)"
-              : undefined,
-          }}
-        >
-          <FontAwesomeIcon
-            className={cx("memo")}
-            icon={faThumbTack}
+        <div className={cx("action")}>
+          <div
+            className={cx("bg")}
+            onClick={handleMemo}
             style={{
-              color: activeMemo ? "rgb(12, 12, 20)" : "rgba(255, 255, 255, 1)",
+              backgroundColor: activeMemo
+                ? "rgba(255, 255, 255, 1)"
+                : "transparent",
+              backgroundImage: activeMemo
+                ? "linear-gradient(to top, rgba(102, 128, 150, 0.1) 30%, rgba(58, 123, 189, 0.2) 50%, rgba(145, 187, 229, 0.1) 100%)"
+                : undefined,
             }}
-          />
+          >
+            <FontAwesomeIcon
+              className={cx("memo")}
+              icon={faThumbTack}
+              style={{
+                color: activeMemo
+                  ? "rgb(12, 12, 20)"
+                  : "rgba(255, 255, 255, 1)",
+              }}
+            />
+          </div>
         </div>
       </div>
     </div>

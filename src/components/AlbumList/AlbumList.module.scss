@@ -82,6 +82,8 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
+
+  overflow: hidden;
 }
 
 .link {
@@ -94,6 +96,9 @@
 .title {
   font-size: 2.2rem;
   line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .performer {
@@ -103,10 +108,12 @@
 }
 
 .more {
+  width: 100%;
   height: 100%;
   margin: 6px;
   display: flex;
   align-items: center;
+  justify-content: end;
 }
 
 .share,
@@ -150,4 +157,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 630px) {
+  .streams {
+    display: none;
+  }
 }

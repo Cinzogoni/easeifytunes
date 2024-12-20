@@ -1,11 +1,21 @@
 .wrapper {
   width: 100%;
   height: 80px;
+  border-bottom: var(--3rd--border-element);
+  border-bottom-left-radius: var(--border--radius-rounded-corners);
+  border-bottom-right-radius: var(--border--radius-rounded-corners);
+}
+
+.container {
+  width: 100%;
+  height: 100%;
   display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
 }
 
 .info {
-  width: 700px;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -13,31 +23,36 @@
 }
 
 .title {
-  color: var(--main-move-color);
-  font-size: 1.1rem;
-  margin: 8px 0 0 32px;
+  color: var(--1st--text-color);
+  font-size: 2.8rem;
+  padding-right: 30px;
 }
 
 .action {
-  width: 66px;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
 }
 
 .bg {
   width: 45px;
   height: 45px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 7px;
+  border: var(--6th--border-element);
+  border-radius: var(--2nd--border-radius);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .memo {
-  color: var(--main-move-color);
+  color: var(--main--button-color);
   width: 30px;
   height: 30px;
+}
+
+@media (max-width: 630px) {
+  .title {
+    font-size: 2.4rem;
+  }
 }

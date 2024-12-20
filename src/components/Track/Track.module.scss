@@ -50,10 +50,9 @@
   width: 100%;
 }
 
-.framePlaylistMode {
-  background-image: none;
-  background-color: rgba(12, 12, 20, 1);
-  transform: translateY(15px);
+.framePlaylistMode,
+.boxPlaylistMode {
+  background-color: var(--5th--element-bg);
 }
 
 .social {
@@ -82,9 +81,4 @@
   &::-webkit-scrollbar-thumb:hover {
     background: var(--3rd--element-bg);
   }
-}
-
-.boxPlaylistMode {
-  background-image: none;
-  background-color: rgba(12, 12, 20, 1);
 }
